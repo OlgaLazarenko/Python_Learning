@@ -7,3 +7,4 @@ Author: Olga Lazarenko
 Description: 
 '''
 print("this is my new project")
+print("to practice Python coding")
