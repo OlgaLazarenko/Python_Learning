@@ -8,3 +8,7 @@ Description:
 '''
 print("my new project")
 print("to practice Python coding")
+a = 2
+b = 3
+c = a + b
+print('c =' + str(c))
