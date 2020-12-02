@@ -11,4 +11,6 @@ print("to practice Python coding")
 a = 2
 b = 3
 c = a + b
-print('c =' + str(c))
+print('c = ' + str(c))
+d = c*2
+print('d = ' + str(d))
