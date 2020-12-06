@@ -33,5 +33,10 @@ cars_details = {'Honda':['Civic','Accord','Acura','Pilot','Odyssey','Fit','Ringl
                  
                  }
 df_cars_details = pd.DataFrame(cars_details)
-print('df_cars_details')
 print(df_cars_details)
+print()
+print('-----------------------------------')
+print()
+print(df_cars_details.loc[df_cars_details.Price <= 15000])
+
+
