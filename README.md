@@ -7,3 +7,10 @@ Each part has its own list of goals.
 
 ## Section: Python_Pandas
 ### Series
+- [] create an empty series
+- [] create a series from a list with default/ and customized index
+- [] create a series from a dict with index 
+- [] create a series from scalar, provide an index
+- [] access data from series with position
+- [] access data from series using label( index)
+- 
