@@ -25,6 +25,7 @@ import numpy as np
 empty_series = pd.Series()
 print(empty_series)
 print()
+print('lenth = ' + str(len(empty_series)))
 print('****')
 print()
 
@@ -36,13 +37,23 @@ print(country_series)
 print()
 print()
 
-country_series_2 = pd.Series(data_country, index = [1,2,3,4,5]) # with the passed indexes ( in this case, starts with 1)
+country_series_2 = pd.Series(data_country, index = [1,2,3,4,5]) # with the passed/customized indexes ( in this case, starts with 1)
 print(country_series_2)
 print()
 print()
 
+# create series from dict
+country_capital_dict = {'Germany':'Berlin', 'US':'Washington',
+                         'Italy':'Rome', 'France':'Paris',
+                         'Russia':'Moscow','Spaine':'Madrid',
+                         'Austria':'Viena','Greece':'Athens'}
+country_capital_series = pd.Series(country_capital_dict)
+print(country_capital_series)
+print()
+print()
 
 
+# create a series from 
 # create a DataFrame using a single list
 cars = ['Ford','Honda','Chevy','Nissan','Kia']
 df_cars = pd.DataFrame(cars)
