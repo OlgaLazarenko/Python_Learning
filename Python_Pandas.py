@@ -30,11 +30,18 @@ print()
 
 
 # create a series from ndarray with default/or passed index
-data_country = np.array(['Canada','USA','Germany','France','Italy'])
+data_country = np.array(['Canada','USA','Germany','France','Italy']) # with the default indexes (starts with zero)
 country_series = pd.Series(data_country)
 print(country_series)
 print()
 print()
+
+country_series_2 = pd.Series(data_country, index = [1,2,3,4,5]) # with the passed indexes ( in this case, starts with 1)
+print(country_series_2)
+print()
+print()
+
+
 
 # create a DataFrame using a single list
 cars = ['Ford','Honda','Chevy','Nissan','Kia']
