@@ -16,6 +16,26 @@ print("Started on Dec 02, 2020")
 import pandas as pd
 import numpy as np
 
+#   ***** SERIES *****
+
+# create series: pandas.Series( data, index, dtype, copy) 
+# using (array, dict, scalar value/ or constant)
+
+# create empty series
+empty_series = pd.Series()
+print(empty_series)
+print()
+print('****')
+print()
+
+
+# create a series from ndarray with default/or passed index
+data_country = np.array(['Canada','USA','Germany','France','Italy'])
+country_series = pd.Series(data_country)
+print(country_series)
+print()
+print()
+
 # create a DataFrame using a single list
 cars = ['Ford','Honda','Chevy','Nissan','Kia']
 df_cars = pd.DataFrame(cars)
