@@ -43,15 +43,22 @@ print()
 print()
 
 # create series from dict
+np.iinfo(np.int32).max
+np.iinfo(np.int64).max
 country_capital_dict = {'Germany':'Berlin', 'US':'Washington',
                          'Italy':'Rome', 'France':'Paris',
-                         'Russia':'Moscow','Spaine':'Madrid',
-                         'Austria':'Viena','Greece':'Athens'}
-country_capital_series = pd.Series(country_capital_dict)
+                         'Russia':'Moscow','Spain':'Madrid',
+                         'Austria':'Vienna','Greece':'Athens'}
+country_capital_series = pd.Series(country_capital_dict, index = ['a','b','c','d','e','f','g','h'])
 print(country_capital_series)
 print()
 print()
-
+# pandas gives NaN data with large index values
+country_capital_dict = {'Germany':'Berlin', 'US':'Washington',
+                         'Italy':'Rome', 'France':'Paris',
+                         }
+country_capital_series = pd.Series(country_capital_dict, index = ['a','b','c','d'])
+print(country_capital_series)
 
 # create a series from 
 # create a DataFrame using a single list
