@@ -94,5 +94,15 @@ print(df_cars_details.loc[df_cars_details.Price <= 15000])
 df_cars_details.index = ['1','2','3','4','5','6','7','8','9']
 print('df_cars_details with new indexes')
 print(df_cars_details)
+print()
+print('--------------------------------------')
+print()
+# assign series
+ser1 = pd.Series('Mary','Smith','01/24/2000')
+ser2 = pd.Series('Paul','Logan','03/15/1988')
+ser3 = pd.Series('Lorna','Berrian','11/22/1999')
+# framing the series into data frame
+df_employee = pd.DataFrame([ser1,ser2,ser3])
+print(df_employee)
 
 
