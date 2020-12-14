@@ -97,12 +97,24 @@ print(df_cars_details)
 print()
 print('--------------------------------------')
 print()
-# assign series
+# assign series 
 ser1 = pd.Series(['Mary','Smith','01/24/2000'])
 ser2 = pd.Series(['Paul','Logan','03/15/1988'])
 ser3 = pd.Series(['Lorna','Berrian','11/22/1999'])
 # framing the series into data frame
 df_employee = pd.DataFrame([ser1,ser2,ser3])
 print(df_employee)
+print()
+ 
+'''
+# change the index
+df_employee.index = ['1','2','3']
+print()
+print(df_employee)
+'''
+# framing in another way
+df_employee2 = pd.DataFrame([ser1,ser2,ser3],
+                             index = ['row1','row2','row3'],
+                              columns = ['FirstName', 'LastName', 'DOB'])
 
-
+print(df_employee2)
