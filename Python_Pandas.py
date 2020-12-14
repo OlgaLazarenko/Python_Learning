@@ -113,8 +113,8 @@ print()
 print(df_employee)
 '''
 # framing in another way
-df_employee.index = index = ['row1','row2','row3'] 
-                             
-                              
-
+df_employee.index = ['row1','row2','row3'] 
+df_employee.columns = ['FirstName', 'LastName', 'DOB']
 print(df_employee)
+print()
+
