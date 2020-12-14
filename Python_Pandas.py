@@ -30,37 +30,43 @@ print('****')
 print()
 
 
-# create a series from ndarray with default/or passed index
+#  ***  create a series from ndarray with default/or passed index
 data_country = np.array(['Canada','USA','Germany','France','Italy']) # with the default indexes (starts with zero)
 country_series = pd.Series(data_country)
 print(country_series)
 print()
 print()
 
-country_series_2 = pd.Series(data_country, index = [1,2,3,4,5]) # with the passed/customized indexes ( in this case, starts with 1)
+country_series_2 = pd.Series(data_country) # with the passed/customized indexes ( in this case, starts with 1)
 print(country_series_2)
 print()
 print()
 
-# create series from dict
+# **** create series from dict
 np.iinfo(np.int32).max
 np.iinfo(np.int64).max
 country_capital_dict = {'Germany':'Berlin', 'US':'Washington',
                          'Italy':'Rome', 'France':'Paris',
                          'Russia':'Moscow','Spain':'Madrid',
                          'Austria':'Vienna','Greece':'Athens'}
-country_capital_series = pd.Series(country_capital_dict, index = ['a','b','c','d','e','f','g','h'])
+country_capital_series = pd.Series(country_capital_dict)
 print(country_capital_series)
 print()
 print()
-# pandas gives NaN data with large index values
+
 country_capital_dict = {'Germany':'Berlin', 'US':'Washington',
                          'Italy':'Rome', 'France':'Paris',
                          }
-country_capital_series = pd.Series(country_capital_dict, index = ['a','b','c','d'])
+country_capital_series = pd.Series(country_capital_dict)
 print(country_capital_series)
 
-# create a series from 
+#  (!)  to change index
+country_capital_series.index = ['1','2','3','4']
+print()
+print(country_capital_series)
+print()
+
+
 # create a DataFrame using a single list
 cars = ['Ford','Honda','Chevy','Nissan','Kia']
 df_cars = pd.DataFrame(cars)
@@ -83,5 +89,10 @@ print()
 print('-----------------------------------')
 print()
 print(df_cars_details.loc[df_cars_details.Price <= 15000])
+
+# try to change the index at df_cars_details
+df_cars_details.index = ['1','2','3','4','5','6','7','8','9']
+print('df_cars_details with new indexes')
+print(df_cars_details)
 
 
