@@ -11,9 +11,10 @@ Each part has its own list of goals.
 - [x] create a series from a list with default/ and customized index
 - [x] create a series from a dict with index 
 - [] create a series from scalar, provide an index
-- [] access data from series with position
-- [] access data from series using label( index)
-- [x] perform indexing DataFrame using iloc, loc methonds
+- [x] access data  from series with position (iloc[] method)
+- [x] access data from series using label (loc [] methond)
+- [] sort the dataframe asc/desc, by multiple columns 
+
 - [] compute summary statistics
 
 
