@@ -245,3 +245,13 @@ print()
 #   *** compute numerical data ranks *** ???????
 print('Numerical data ranks')
 print(df_cars_details.rank())
+print()
+print()
+
+# ***   Sorting the dataframe   ***
+print('sort by year asc')
+print(df_cars_details.sort_values(by = ["Year"], inplace = False)) 
+# inplace = False, thus the copy of the dataframe is returned
+print()
+print('sort by year desc')
+print(df_cars_details.sort_values(by = ["Year"], inplace = False, ascending = False))
