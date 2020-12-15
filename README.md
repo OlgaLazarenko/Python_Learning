@@ -13,6 +13,7 @@ Each part has its own list of goals.
 - [] create a series from scalar, provide an index
 - [] access data from series with position
 - [] access data from series using label( index)
+- [x] perform indexing DataFrame using iloc, loc methonds
 
 
 ### DataFrame
