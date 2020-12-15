@@ -226,3 +226,22 @@ print()
 
 print(df_cars_details2.loc["Row 2" : "Row 6","Mileage" : "Price"])
 # (!) I started from the required row, not one row ahead
+print()
+print()
+
+
+#   ***   compute the summary statistics for the dataframe df_cars_details  ***
+print('The summary statistics')
+print(df_cars_details.describe())
+print()
+print()
+
+#   *** compute the correlations ***
+print('Correlations')
+print(df_cars_details.corr())
+print()
+print()
+
+#   *** compute numerical data ranks *** ???????
+print('Numerical data ranks')
+print(df_cars_details.rank())
