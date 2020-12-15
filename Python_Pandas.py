@@ -129,4 +129,7 @@ print()
 # print the first five rows
 print('Data Frame df_cars_details, the first five rows ')
 print(df_cars_details.head())
-
+print()
+print('Data Frame df_cars_details, without four last rows')
+print(df_cars_details.head(-4))
+print('------------')
