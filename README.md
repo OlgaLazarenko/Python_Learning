@@ -14,6 +14,7 @@ Each part has its own list of goals.
 - [] access data from series with position
 - [] access data from series using label( index)
 - [x] perform indexing DataFrame using iloc, loc methonds
+- [] compute summary statistics
 
 
 ### DataFrame
