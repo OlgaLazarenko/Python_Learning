@@ -151,21 +151,46 @@ print(df_employee.shape)
 print()
 print()
 
-# indexing the DataFrame using iloc[:,:] methond
+# ***    Indexing the DataFrame using iloc[:,:] methond    ***
 print('* Indexing the DataFrame, iloc method')
 print('DataFrame df_cars_details') 
 print(df_cars_details)
 print()
+
 # print the entire DataFrame
 print('df.iloc[:,:] , the entire DataFrame is retrieved')
 print(df_cars_details.iloc[:,:])
 print()
 print()
+
 # print the first three rows and the first two columns
 print('first 3 rows and first 2 columns')
 print(df_cars_details.iloc[:3,:2])
 print()
 print()
+
 # print rows starting from 2nd to 5th, and columns from 3rd to 4th
 print('print rows from 2 to 5 and columns from 3 to 4')
-print(df_cars_details.iloc[2:5,])
+print(df_cars_details.iloc[1:5,2:4]) 
+# (!) started from the less index that is required to obtain 
+print()
+print()
+
+print('print the last 2 rows of the DataFrame')
+print(df_cars_details.iloc[-2:]) # or iloc[-2:,:]
+print()
+print()
+
+# print the last 2 rows of the last column
+print('last 2 rows for the last column')
+print(df_cars_details.iloc[-2:,-1])
+print()
+print()
+
+# use tail() methond to obtain last n rows
+print('tail() method to obtain  last n rows')
+print(df_cars_details.tail(1))
+print()
+print(df_cars_details.tail(3))
+
+
