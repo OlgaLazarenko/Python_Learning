@@ -255,3 +255,13 @@ print(df_cars_details.sort_values(by = ["Year"], inplace = False))
 print()
 print('sort by year desc')
 print(df_cars_details.sort_values(by = ["Year"], inplace = False, ascending = False))
+print()
+print()
+# sorting by multiple columns: Year,Mileage asc
+print('sorting by multiple columns: Year, Mileage')
+print(df_cars_details.sort_values(by = ['Year','Mileage'], inplace = False))
+print()
+print()
+print('sorting by multiple columns: Category, Price')
+print(df_cars_details.sort_values(by = ['Category','Price'] , inplace = False ))
+
