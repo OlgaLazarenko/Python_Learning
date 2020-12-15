@@ -148,3 +148,24 @@ print()
 print('DataFrame df_employee')
 print(df_employee)
 print(df_employee.shape)
+print()
+print()
+
+# indexing the DataFrame using iloc[:,:] methond
+print('* Indexing the DataFrame, iloc method')
+print('DataFrame df_cars_details') 
+print(df_cars_details)
+print()
+# print the entire DataFrame
+print('df.iloc[:,:] , the entire DataFrame is retrieved')
+print(df_cars_details.iloc[:,:])
+print()
+print()
+# print the first three rows and the first two columns
+print('first 3 rows and first 2 columns')
+print(df_cars_details.iloc[:3,:2])
+print()
+print()
+# print rows starting from 2nd to 5th, and columns from 3rd to 4th
+print('print rows from 2 to 5 and columns from 3 to 4')
+print(df_cars_details.iloc[2:5,])
