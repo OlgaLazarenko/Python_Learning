@@ -218,3 +218,7 @@ df_cars_details2.index = [
                           'Row 9'
                         ]
 print(df_cars_details2)
+
+# now at the dataframe df_cars_details2 we retrieve the elements uning loc[] method
+# elements from the Row 2 to Row 6 and from the column Mileage, Price
+print(df_cars_details2.loc['Row 2':'Row 6', 'Mileage':'Price'])
