@@ -192,5 +192,29 @@ print('tail() method to obtain  last n rows')
 print(df_cars_details.tail(1))
 print()
 print(df_cars_details.tail(3))
+print()
+print()
+
+# Indexing the DataFrame by the rows/columns labels, using .loc[:,:] methond
+# row/column label is row/column name
+# let's look at the DataFrame df_cars_details
+print(df_cars_details)
+df_cars_details2 = df_cars_details.copy() # create the copy
+print()
+print('the copy')
+print(df_cars_details2)
+print()
 
 
+df_cars_details2.index = [
+                          'Row 1',
+                          'Row 2',
+                          'Row 3',
+                          'Row 4',
+                          'Row 5',
+                          'Row 6',
+                          'Row 7',
+                          'Row 8',
+                          'Row 9'
+                        ]
+print(df_cars_details2)
