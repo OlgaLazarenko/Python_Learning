@@ -112,9 +112,21 @@ df_employee.index = ['1','2','3']
 print()
 print(df_employee)
 '''
-# framing in another way
+# framing in another way, add the index and the columns name
 df_employee.index = ['row1','row2','row3'] 
 df_employee.columns = ['FirstName', 'LastName', 'DOB']
 print(df_employee)
 print()
+print('*******')
+# print the first row of the data frame df_employee
+print('Data Frame df_empoyee, the first row')
+print(df_employee.head(1))
+print()
+# print the first two row of the data frame df_cars_details
+print('Data Frame df_cars_detail the first two rows')
+print(df_cars_details.head(2))
+print()
+# print the first five rows
+print('Data Frame df_cars_details, the first five rows ')
+print(df_cars_details.head())
 
