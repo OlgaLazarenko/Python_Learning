@@ -264,4 +264,7 @@ print()
 print()
 print('sorting by multiple columns: Category, Price')
 print(df_cars_details.sort_values(by = ['Category','Price'] , inplace = False ))
+print()
+print()
+print(df_cars_details.sort_values(by = ['Year','Mileage'], inplace = False , ascending = [True , False]))
 
