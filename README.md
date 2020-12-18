@@ -13,7 +13,9 @@ Each part has its own list of goals.
 - [] create a series from scalar, provide an index
 - [x] access data  from series with position (iloc[] method)
 - [x] access data from series using label (loc [] methond)
-- [] sort the dataframe asc/desc, by multiple columns 
+- [x] sort the dataframe asc/desc, by multiple columns 
+- [x] sort the datafram by multiple columns but different orders
+
 
 - [] compute summary statistics
 
