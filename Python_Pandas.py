@@ -230,23 +230,7 @@ print()
 print()
 
 
-#   ***   compute the summary statistics for the dataframe df_cars_details  ***
-print('The summary statistics')
-print(df_cars_details.describe())
-print()
-print()
 
-#   *** compute the correlations ***
-print('Correlations')
-print(df_cars_details.corr())
-print()
-print()
-
-#   *** compute numerical data ranks *** ???????
-print('Numerical data ranks')
-print(df_cars_details.rank())
-print()
-print()
 
 # ***   Sorting the dataframe   ***
 print('sort by year asc')
@@ -267,4 +251,24 @@ print(df_cars_details.sort_values(by = ['Category','Price'] , inplace = False ))
 print()
 print()
 print(df_cars_details.sort_values(by = ['Year','Mileage'], inplace = False , ascending = [True , False]))
+print()
+print()
 
+
+#   ***   compute the summary statistics for the dataframe df_cars_details  ***
+print('The summary statistics')
+print(df_cars_details.describe())
+print()
+print()
+
+#   *** compute the correlations ***
+print('Correlations')
+print(df_cars_details.corr())
+print()
+print()
+
+#   *** compute numerical data ranks *** ???????
+print('Numerical data ranks')
+print(df_cars_details.rank())
+print()
+print()
