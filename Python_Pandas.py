@@ -272,3 +272,8 @@ print('Numerical data ranks')
 print(df_cars_details.rank())
 print()
 print()
+
+#   *** read a data file
+df_patents = pd.read_csv('E:\_Python_Projects_Data\Patents\Patents.csv', index_col=0)
+print(df_patents.head())
+
