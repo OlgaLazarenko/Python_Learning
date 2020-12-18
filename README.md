@@ -17,7 +17,9 @@ Each part has its own list of goals.
 - [x] sort the datafram by multiple columns but different orders
 
 
-- [] compute summary statistics
+- [x] compute summary statistics
+- [x] compute the correlation
+- [x] compute the numerical data ranks
 
 
 ### DataFrame
