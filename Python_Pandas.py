@@ -275,5 +275,27 @@ print()
 
 #   *** read a data file
 df_patents = pd.read_csv('E:\_Python_Projects_Data\Patents\Patents.csv', index_col=0)
-print(df_patents.head())
+print(df_patents.head()) # print the first 5 rows of the data file
+print()
+print()
+
+# compute the summary statistics 
+df_patents.describe()
+print('Summary statistics for Patents.csv data ')
+print(df_patents.describe())
+print()
+print()
+
+# compute correlations
+df_patents.corr()
+print('Correlations for Patents.csv data')
+print(df_patents.corr())
+print()
+print()
+
+# compute numberical data ranks
+df_patents.rank()
+print('Numerical data ranks for Patents.csv data')
+print(df_patents.rank())
+
 
