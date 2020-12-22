@@ -321,13 +321,24 @@ df_patents.['year']
 
 
 # basic plot 
-df = pd.DataFrame({'lab':['A', 'B', 'C'], 'val':[10, 30, 20]})
 
-ax = df.plot.bar(x='lab', y='val', rot=0)
-print(ax)
+df = pd.DataFrame({
+                    'Department' : ['Human Resources', 'Sales', 'Marketing','IT','Finance'], 
+                    'Number of Employees' : [10 , 30 , 20 , 15 , 25]
+                    })
+
+ax = df.plot.bar(x='Department', y='Number of Employees', rot=0)
+plt.show()
+
 print('***************************')
 print()
 
+
 from matplotlib import pyplot as plot
-plt.plot([0,1,2,3,4])
+'''
+plt.plot([1,1,1,1,1])
+# plt.show()
+
+plt.plot([0,1,2,3,4,5,6,7])
 plt.show()
+'''
