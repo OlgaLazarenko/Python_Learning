@@ -303,6 +303,13 @@ print()
 
 
 #  ***   Pandas Plotting   ***
+# for the data from  Patents.csv file
+print(df_patents) 
+dev_x = [2000,2005,2006,2007,2008,2009,2010]
+dev_y = [185,427,475,312,354,445,499]
+
+plt.plot(dev_x,dev_y)
+
 
 
 
