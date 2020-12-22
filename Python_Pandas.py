@@ -15,6 +15,7 @@ print("Started on Dec 02, 2020")
 
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 #   ***** SERIES *****
 
@@ -297,5 +298,11 @@ print()
 df_patents.rank()
 print('Numerical data ranks for Patents.csv data')
 print(df_patents.rank())
+print()
+print()
+
+
+#  ***   Pandas Plotting   ***
+
 
 

@@ -14,12 +14,13 @@ Each part has its own list of goals.
 - [x] access data  from series with position (iloc[] method)
 - [x] access data from series using label (loc [] methond)
 - [x] sort the dataframe asc/desc, by multiple columns 
-- [x] sort the datafram by multiple columns but different orders
+- [x] sort the dataframe by multiple columns but different orders
 
 
 - [x] compute summary statistics
 - [x] compute the correlation
 - [x] compute the numerical data ranks
+- [] create plotting with Matplotlib
 
 
 ### DataFrame
