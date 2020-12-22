@@ -16,6 +16,7 @@ print("Started on Dec 02, 2020")
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib import pyplot as plt
 
 #   ***** SERIES *****
 
@@ -304,12 +305,29 @@ print()
 
 #  ***   Pandas Plotting   ***
 # for the data from  Patents.csv file
-print(df_patents) 
+print(df_patents.head())
+'''
 dev_x = [2000,2005,2006,2007,2008,2009,2010]
 dev_y = [185,427,475,312,354,445,499]
 
 plt.plot(dev_x,dev_y)
+print()
+print()
+# plot a histogram
+df_patents.['year']
+'''
 
 
 
 
+# basic plot 
+df = pd.DataFrame({'lab':['A', 'B', 'C'], 'val':[10, 30, 20]})
+
+ax = df.plot.bar(x='lab', y='val', rot=0)
+print(ax)
+print('***************************')
+print()
+
+from matplotlib import pyplot as plot
+plt.plot([0,1,2,3,4])
+plt.show()
