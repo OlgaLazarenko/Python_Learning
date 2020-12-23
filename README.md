@@ -24,3 +24,8 @@ Each part has its own list of goals.
 
 
 ### DataFrame
+
+## Section: Python_Numpy
+- [] plot data from .csv file (single graph)
+- [] plot data from .csv file (multiple graphs)
+
