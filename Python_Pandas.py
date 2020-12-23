@@ -16,7 +16,8 @@ print("Started on Dec 02, 2020")
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib import pyplot as plt
+from matplotlib import pyplot as plot
+
 
 #   ***** SERIES *****
 
@@ -321,7 +322,7 @@ df_patents.['year']
 
 
 # basic plot 
-
+'''
 df = pd.DataFrame({
                     'Department' : ['Human Resources', 'Sales', 'Marketing','IT','Finance'], 
                     'Number of Employees' : [10 , 30 , 20 , 15 , 25]
@@ -332,9 +333,9 @@ plt.show()
 
 print('***************************')
 print()
+'''
 
 
-from matplotlib import pyplot as plot
 '''
 plt.plot([1,1,1,1,1])
 # plt.show()
@@ -342,3 +343,13 @@ plt.plot([1,1,1,1,1])
 plt.plot([0,1,2,3,4,5,6,7])
 plt.show()
 '''
+
+# plot data from a csv file using numpy.genfromtext()
+data = np.genfromtxt(
+                      "E:\_Python_Projects_Data\Data_Sales.csv" ,
+                      delimiter = ',' , names = ['year' , 'sale']
+                      )
+plt.plot(data['year'] ,
+         data['sale'])
+
+plt.show()
