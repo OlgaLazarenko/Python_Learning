@@ -16,6 +16,7 @@ with open('E:\_Python_Projects_Data\Public_Assistance_Programs_US\SNAP_History.c
         x.append(int(row[0])) # populate the list with the values of the first column "Fiscal Year" of the data file
         y.append(int(row[1])) # populate the list with the values of the second column "Average Participation" of the data file
         
+        
 
     print(x)
     print()
@@ -29,4 +30,21 @@ plt.xlabel('fiscal year')
 plt.ylabel('average participation')
 plt.title('Public Assistance, US')
 plt.legend()
-plt.show()
+# plt.show()
+print()
+print()
+# ------------------------------------------------------------------------
+# plot the data from the file Patents.csv
+# load the data from the file
+import pandas as pd
+patent_data = pd.read_csv("E:\_Python_Projects_Data\Patents\Patents.csv")
+print('type: ')
+print(type(patent_data))
+print()
+print(patent_data.head()) # display the first 5 rows 
+print()
+# retrieve the data to create a plot year/patents_applied for public and private sector
+private_patents = patent_data[patent_data.sector == "Private Sector"]
+print("Patents at Private Sector")
+print(private_patents)
+
