@@ -253,7 +253,11 @@ print('sorting by multiple columns: Category, Price')
 print(df_cars_details.sort_values(by = ['Category','Price'] , inplace = False ))
 print()
 print()
-print(df_cars_details.sort_values(by = ['Year','Mileage'], inplace = False , ascending = [True , False]))
+# sorting the dataframe by multiple columns but different orders
+print(df_cars_details.sort_values(by = ['Year','Mileage'], inplace = False , ascending = [False , True]))
+print()
+print()
+print(df_cars_details.sort_values(by = ['Year','Mileage'], inplace = False , ascending = [0 , 1]))
 print()
 print()
 
@@ -353,3 +357,6 @@ plt.plot(data['year'] ,
          data['sale'])
 
 plt.show()
+
+print()
+print()
