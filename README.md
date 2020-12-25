@@ -30,3 +30,11 @@ Each part has its own list of goals.
 - [] plot the data from .csv file (multiple graphs)
 - [] plot the data from .csv file (skip the header)
 
+
+## Section: Python_Matplotlib
+-[] plot the dasta from csv file(singtle and multiple plots)
+-[] create different types of plots(line, bar chart, area, pie, scatter 3D plot, histogram)
+-[] create plotes with customized features(color, legend, markers, scale)
+
+
+
