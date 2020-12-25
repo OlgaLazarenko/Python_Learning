@@ -55,7 +55,7 @@ x = private_patents_data.year
 y = private_patents_data.patents_applied
 
 plt.plot(x,y)
-plt.show()
+
 
 
 
