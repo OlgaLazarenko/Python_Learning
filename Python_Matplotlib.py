@@ -63,6 +63,8 @@ print(public_patents_data)
 z = public_patents_data.patents_applied
 plt.plot(x,z)
 plt.legend(["Private Sector", "Public Sector"])
+plt.xlabel("Year")
+plt.ylabel("Number of Patents")
 plt.show()
 
 
