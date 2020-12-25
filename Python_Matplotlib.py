@@ -5,7 +5,7 @@
 
 import matplotlib.pyplot as plt
 import csv # use this module to load .csv file
-
+'''
 x = [] # declare the list for x-axis
 y = [] # declare the list for y-axis
 
@@ -33,6 +33,7 @@ plt.legend()
 # plt.show()
 print()
 print()
+'''
 # ------------------------------------------------------------------------
 # plot the data from the file Patents.csv
 # load the data from the file
@@ -50,10 +51,23 @@ private_patents_data = patent_data[patent_data.sector == "Private Sector"]
 print("Patents at Private Sector")
 print(private_patents_data)
 print()
-private_patents_applied = private_patents_data[private_patents_data.patents_applied]
+x = private_patents_data.year
+y = private_patents_data.patents_applied
+
+plt.plot(x,y)
+plt.show()
 
 
+
+'''
 # patents at public sector
 public_patents_data = patent_data[patent_data.sector == "Public Sector"]
 print("Patents at Public Sector")
 print(public_patents_data)
+
+# x-axis will be the column 'year'
+# at y-axis will show the number of patents applied 
+# display the number of applied patents over time for the private and public sector
+
+
+'''
