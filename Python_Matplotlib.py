@@ -59,15 +59,18 @@ plt.show()
 
 
 
-'''
+
+
+
 # patents at public sector
 public_patents_data = patent_data[patent_data.sector == "Public Sector"]
 print("Patents at Public Sector")
 print(public_patents_data)
+z = public_patents_data.patents_applied
+plt.plot(x,z)
+plt.show()
 
 # x-axis will be the column 'year'
 # at y-axis will show the number of patents applied 
 # display the number of applied patents over time for the private and public sector
 
-
-'''
