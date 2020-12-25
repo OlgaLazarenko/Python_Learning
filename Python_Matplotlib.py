@@ -44,7 +44,16 @@ print()
 print(patent_data.head()) # display the first 5 rows 
 print()
 # retrieve the data to create a plot year/patents_applied for public and private sector
-private_patents = patent_data[patent_data.sector == "Private Sector"]
-print("Patents at Private Sector")
-print(private_patents)
 
+# patents at private sector
+private_patents_data = patent_data[patent_data.sector == "Private Sector"]
+print("Patents at Private Sector")
+print(private_patents_data)
+print()
+private_patents_applied = private_patents_data[private_patents_data.patents_applied]
+
+
+# patents at public sector
+public_patents_data = patent_data[patent_data.sector == "Public Sector"]
+print("Patents at Public Sector")
+print(public_patents_data)
