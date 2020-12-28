@@ -1,14 +1,15 @@
 #!/bin/python3
 
 import pandas as pd
+import numpy as np
 
 # cread a DataFrame using a list of lists
-honda_cars = {'Honda Model':['Civic','Accord','Acura','Pilot','Odyssey','Fit','Ringline', 'Civic','HR-V','Civic', 'Accord'] ,
-                 'Year':['2005','2012','2018','2020','2013','2019','2020','2019', '2014','2000','2001'] , 
-                 'Mileage':[98600,55000,16000,126000,150000,17000,55000,10000,110000,95000,100000] ,
-                 'Price': [6500,12300,15500,18000,17000,16600,34000,19000,12000,5000,6500] ,
-                 'Category': ['sedan','sedan','sedan','suv','minivan','hatchback','truck', 'sedan','suv','sedan','sedan'],
-                 'Condition': ['good','fair','good','excellent','good','fair','excellent','fair','bad','good','bad']
+honda_cars = {'Honda Model':['Civic','Accord','Acura','Pilot','Odyssey','Fit','Ringline', 'Civic','HR-V','Civic',np.nan, 'Accord', np.nan] ,
+                 'Year':['2005','2012','2018','2020','2013','2019','2020','2019', '2014','2000','2002','2001','2005'] , 
+                 'Mileage':[98600,55000,16000,126000,150000,17000,55000,10000,110000,95000,66000,100000, 75000] ,
+                 'Price': [6500,12300,15500,18000,17000,16600,34000,19000,12000,5000,2200,6500,11000] ,
+                 'Category': ['sedan','sedan','sedan','suv','minivan','hatchback','truck', 'sedan','suv','sedan','sub','sedan', 'van'],
+                 'Condition': ['good','fair','good','excellent','good','fair','excellent','fair','bad','good','good','bad','good']
                  
                  }
 
@@ -25,16 +26,20 @@ print()
 
 #   ***   pandas.DataFrame.sort_values    ***
 # ---  dataframe.sort_values(by, axis,ascending,inplace,kind,na_position,ignore_index, key)  ---
-
 # inplace = False is the default option, if not mentioned
 
+# sort_values, with the parameter 'by = ['...','...']
 print('1)  sort by the price(desc) without updating the initial dataframe(inplace parameter is not mentioned, by the default = False)')
 print(df_honda_cars.sort_values(by = 'Price' , ascending = False))
 print('-*-*-*-') 
 print()
 print('2) sort by the model/asc, year/desc, mileage/desc without the updating the dataframe')
 print(df_honda_cars.sort_values( by = ['Honda Model','Year','Mileage'] , ascending = [True, False, False]))
+print('-*-*-*-')
 print()
+print()
+
+
 
 
 # sort the dataframe with inplace = True, the initial dataframe will be upadated
