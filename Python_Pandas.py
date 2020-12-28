@@ -79,11 +79,11 @@ print()
 print()
 
 # cread a DataFrame using a list of lists
-cars_details = {'Honda':['Civic','Accord','Acura','Pilot','Odyssey','Fit','Ringline', 'Civic Hatchback','HR-V'] ,
-                 'Year':['2005','2012','2018','2020','2013','2019','2020','2019', '2014'] , 
-                 'Mileage':[98600,55000,16000,126000,150000,17000,500,10000,110000] ,
-                 'Price': [6500,12300,15500,18000,77000,16600,34000,19000,12000] ,
-                 'Category': ['sedan','sedan','sedan','suv','minivan','hatchback','truck', 'hatchback','suv']
+cars_details = {'Honda':['Civic','Accord','Acura','Pilot','Odyssey','Fit','Ringline', 'Civic Hatchback','HR-V','Civic'] ,
+                 'Year':['2005','2012','2018','2020','2013','2019','2020','2019', '2014','2000'] , 
+                 'Mileage':[98600,55000,16000,126000,150000,17000,500,10000,110000,95000] ,
+                 'Price': [6500,12300,15500,18000,77000,16600,34000,19000,12000,5000] ,
+                 'Category': ['sedan','sedan','sedan','suv','minivan','hatchback','truck', 'hatchback','suv','sedan']
                  
                  }
 df_cars_details = pd.DataFrame(cars_details)
@@ -94,7 +94,7 @@ print()
 print(df_cars_details.loc[df_cars_details.Price <= 15000])
 
 # try to change the index at df_cars_details
-df_cars_details.index = ['1','2','3','4','5','6','7','8','9']
+df_cars_details.index = ['1','2','3','4','5','6','7','8','9','10']
 print('df_cars_details with new indexes')
 print(df_cars_details)
 print()
@@ -104,7 +104,7 @@ print()
 ser1 = pd.Series(['Mary','Smith','01/24/2000'])
 ser2 = pd.Series(['Paul','Logan','03/15/1988'])
 ser3 = pd.Series(['Lorna','Berrian','11/22/1999'])
-# framing the series into data frame
+# framing the series into a data frame
 df_employee = pd.DataFrame([ser1,ser2,ser3])
 print(df_employee)
 print()
@@ -218,7 +218,8 @@ df_cars_details2.index = [
                           'Row 6',
                           'Row 7',
                           'Row 8',
-                          'Row 9'
+                          'Row 9',
+                          'Row 10'
                         ]
 print(df_cars_details2)
 print()
@@ -359,4 +360,24 @@ plt.plot(data['year'] ,
 plt.show()
 
 print()
-print("8888"
+print()
+print("df_cars")
+print(df_cars)
+print()
+print("df_cars_details")
+print(df_cars_details)
+df_cars_details_2 = df_cars_details 
+print()
+print("df_cars_details_2")
+print(df_cars_details_2)
+
+# sort the dataframes with inplace = True and inplace = False/the default
+df_cars_details_2.sort_values( by = 'Year', inplace = True) # sorting by the column "Honda"
+print('-------')
+print()
+print("sorted the dataframe df_cars_details_2 , inplace = True, the dataframe is updated")
+print(df_cars_details_2)
+print()
+print('*****')
+df_cars_details.sort_values( by = 'Year' , inplace = False) # the copy of the object is retured it is assigned to a new varible
+print(df_cars_details)
