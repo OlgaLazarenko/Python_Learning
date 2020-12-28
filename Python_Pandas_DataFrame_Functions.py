@@ -51,7 +51,7 @@ print()
 print()
 
 # put NaN values first
-print('3) putting NaN values first')
+print('4) putting NaN values first')
 print(df_honda_cars.sort_values( by = "Honda Model" , na_position = 'first') )
 print('-*-*-*-')
 print()
