@@ -31,10 +31,28 @@ print()
 # sort_values, with the parameter 'by = ['...','...']
 print('1)  sort by the price(desc) without updating the initial dataframe(inplace parameter is not mentioned, by the default = False)')
 print(df_honda_cars.sort_values(by = 'Price' , ascending = False))
-print('-*-*-*-') 
+print('-*-*-*-')
 print()
+print()
+
+
 print('2) sort by the model/asc, year/desc, mileage/desc without the updating the dataframe')
 print(df_honda_cars.sort_values( by = ['Honda Model','Year','Mileage'] , ascending = [True, False, False]))
+print('-*-*-*-')
+print('the NaN values at the model column now located at the bottom of the column') 
+print()
+print()
+
+# put NaN values last
+print('3) putting NaN values last')
+print(df_honda_cars.sort_values( by = "Honda Model") )
+print('-*-*-*-')
+print()
+print()
+
+# put NaN values first
+print('3) putting NaN values first')
+print(df_honda_cars.sort_values( by = "Honda Model" , na_position = 'first') )
 print('-*-*-*-')
 print()
 print()
