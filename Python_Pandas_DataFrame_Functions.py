@@ -16,3 +16,19 @@ df_honda_cars = pd.DataFrame(honda_cars)
 
 print('dataframe "honda_cars"')
 print(df_honda_cars)
+print()
+
+# sort the dataframe with inplace = True, the initial dataframe will be upadated
+df_honda_cars.sort_values( by = 'Honda Model' , inplace = True)
+print('sorted and updated dataframe')
+print(df_honda_cars)
+print()
+
+# sort the dataframe with inplce = False, the default option; 
+# in this case only a sorted copy is returned, the dataframe stayed without changes
+print('the copy of the dataframe, sorted by year column')
+print(df_honda_cars.sort_values( by = 'Year'))
+print()
+print('*--------*')
+print("the dataframe df_honda_cars")
+print(df_honda_cars)
