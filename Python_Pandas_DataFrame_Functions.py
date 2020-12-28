@@ -25,7 +25,8 @@ print()
 
 
 #   ***   pandas.DataFrame.sort_values    ***
-# ---  dataframe.sort_values(by, axis,ascending,inplace,kind,na_position,ignore_index, key)  ---
+# ---  dataframe.sort_values(by,axis,ascending,inplace,kind,na_position,ignore_index, key)  ---
+# --- by the default axis = 0, ascending = True, inplace = False, na_position = 'last' , kind = 'quicksort', ignore_index=False, key = None
 # inplace = False is the default option, if not mentioned
 
 # sort_values, with the parameter 'by = ['...','...']
@@ -43,15 +44,45 @@ print('the NaN values at the model column now located at the bottom of the colum
 print()
 print()
 
+# sort the dataframe with inplace = True, the initial dataframe will be upadated
+print('3) sort the dataframe by the model, the parameter inplace=True and update dataframe')
+print(df_honda_cars.sort_values( by = 'Honda Model' , inplace = True)) # nothing will be returned
+print('---')
+print('the updated dataframe with models sorted asc')
+print(df_honda_cars)
+print()
+
+# sort the dataframe with inplce = False, the default option; 
+# in this case only a sorted copy is returned, the dataframe stayed without changes
+print('4) sort the dataframe with the paramert input = False, create a copy of the dataframe, sorted by year column')
+print(df_honda_cars.sort_values( by = 'Year'))  
+print()
+print('*--------*')
+print("the dataframe df_honda_cars")
+print(df_honda_cars)
+print()
+print('5) sort with inplace = False , Mileage desc ,assign the copy to a new variable df_honda_cars_sort_mileage')
+df_honda_cars_sort_mileage = df_honda_cars.sort_values( by = 'Mileage')
+print()
+print('new dataframe  df_honda_cars_sort_mileage')
+print(df_honda_cars_sort_mileage)
+print('-*-*-*-')
+print()
+print()
+
+# thus now we have two dataframes: 
+# the updated df_honda_cars arranged by "Honda Model" column in ascending way
+# and the dataframe df_honda_cars_sorted_mileage the result of sorting by "Mileage" column and assigning to the new dataframe
+
 # put NaN values last
-print('3) putting NaN values last')
-print(df_honda_cars.sort_values( by = "Honda Model") )
+print('6) NaN values are last')
+print(df_honda_cars.sort_values( by = "Honda Model"))
 print('-*-*-*-')
 print()
 print()
 
 # put NaN values first
-print('4) putting NaN values first')
+print('6) putting NaN values first')
 print(df_honda_cars.sort_values( by = "Honda Model" , na_position = 'first') )
 print('-*-*-*-')
 print()
@@ -60,26 +91,9 @@ print()
 
 
 
-# sort the dataframe with inplace = True, the initial dataframe will be upadated
-df_honda_cars.sort_values( by = 'Honda Model' , inplace = True)
-print('sorted and updated dataframe')
-print(df_honda_cars)
-print()
 
-# sort the dataframe with inplce = False, the default option; 
-# in this case only a sorted copy is returned, the dataframe stayed without changes
-print('the copy of the dataframe, sorted by year column')
-print(df_honda_cars.sort_values( by = 'Year'))
-print()
-print('*--------*')
-print("the dataframe df_honda_cars")
-print(df_honda_cars)
-print()
-print('sort with inplace = False and assign this copy to a new variable df_honda_cars_sorted_mileage')
-df_honda_cars_sorted_copy = df_honda_cars.sort_values( by = 'Mileage')
-print(df_honda_cars_sorted_copy)
 
-# thus now we have two dataframes: 
-# the updated df_honda_cars arranged by "Honda Model" column in ascending way
-# and the dataframe df_honda_cars_sorted_mileage the result of sorting by "Mileage" column and assigning to the new dataframe
+
+
+
 
