@@ -379,5 +379,9 @@ print("sorted the dataframe df_cars_details_2 , inplace = True, the dataframe is
 print(df_cars_details_2)
 print()
 print('*****')
-df_cars_details.sort_values( by = 'Year' , inplace = False) # the copy of the object is retured it is assigned to a new varible
+df_cars_details.sort_values( by = 'Mileage' , inplace = False) # the copy of the object is retured it is assigned to a new varible
 print(df_cars_details)
+print()
+print('-------------------')
+print(df_cars_details_2)
+
