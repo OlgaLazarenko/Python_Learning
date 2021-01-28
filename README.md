@@ -25,7 +25,8 @@ Each part has its own list of goals.
 
 ### DataFrame
 ## Section: DataFrame functions
-- [] access a single value in a data frame or series using a row/column label pair
+- [] access a single value in a data frame or series using a row/column label pair / pandas.DataFrame.at()
+- [] access a group of rows and columns by label(s) / pandas.DataFrame.loc()
 
 ## Section: Python_Numpy
 - [] plot the data from .csv file (single graph)
