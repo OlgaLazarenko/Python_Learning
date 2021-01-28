@@ -110,6 +110,14 @@ print('value_row2_col2: ' + str(value_row2_col2))
 value_row3_col5 = my_df.at['row3','col5']
 print('value_row3_col5: ' + str(value_row3_col5))
 
+# we can change elements at the data frame, set them for a new values
+# df.at[row,col] = new_value
+print()
+print('Change elements at the data frame, set them for a new values')
+my_df.at['row1', 'col1'] = 500
+my_df.at['row2','col5'] = 100
+print(my_df)
+
 
 
 
