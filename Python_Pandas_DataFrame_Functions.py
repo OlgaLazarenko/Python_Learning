@@ -93,8 +93,22 @@ my_df = pd.DataFrame( [ [ 5,3,7,2,-1], [0,-6,10,1,8], [10,25,18,30,73] ] ,
                      index = ['row1','row2','row3'] ,
                      columns = ['col1', 'col2', 'col3', 'col4', 'col5']
                   )
+print("New data frame  'my_df' : ")
+print()
 print(my_df)
-    
+# get a value from the column 'col2' and the row 'row3'
+print("get a value from the column 'col2' and the row 'row3'")
+value_row3_col2 = my_df.at['row3', 'col2']
+print("value_col2_row3: " + str(value_row3_col2))
+
+value_row1_col1 = my_df.at['row1', 'col1']
+print("value_row1_col1: " + str(value_row1_col1))
+
+value_row2_col2 = my_df.at['row2','col2']
+print('value_row2_col2: ' + str(value_row2_col2))
+
+value_row3_col5 = my_df.at['row3','col5']
+print('value_row3_col5: ' + str(value_row3_col5))
 
 
 
