@@ -116,7 +116,20 @@ print()
 print('Change elements at the data frame, set them for a new values')
 my_df.at['row1', 'col1'] = 500
 my_df.at['row2','col5'] = 100
+my_df.at['row3','col4'] = 0
+
 print(my_df)
+print()
+
+# the max value of a column
+max_col1 = my_df['col1'].max()
+print('max_col1: ' +  str(max_col1))
+
+# the index of the max value of a column
+index_max_col1 = my_df['col1'].idxmax()
+print('the index of max_col1: ' + str(index_max_col1))
+
+
 
 
 
