@@ -146,3 +146,17 @@ print('min_col4 : ' + str(min_col4))
 # the index of the min value of a column
 index_min_col4 = my_df['col4'].idxmin()
 print('the index of min_col4 : ' + str(index_min_col4) )
+print('-----------------------------------')
+
+# the max value of the data frame
+max_df_rows = my_df.max(axis = 0) # index (0)
+max_df_cols = my_df.max(axis = 1) # columns(1)
+print()
+print(my_df)
+print()
+print("max_rows/axis=0")
+print(max_df_rows)
+print()
+print("max_cols/axis=1 ")
+print(max_df_cols)
+print()
