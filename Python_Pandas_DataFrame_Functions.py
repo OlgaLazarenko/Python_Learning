@@ -129,13 +129,20 @@ print('max_col1: ' +  str(max_col1))
 index_max_col1 = my_df['col1'].idxmax()
 print('the index of max_col1: ' + str(index_max_col1))
 
+# ------------------------------------------------------
+
+max_col2 = my_df['col2'].max()
+print('max_col2 : ' + str(max_col2))
+
+index_max_col2 = my_df['col2'].idxmax()
+print('the index of max_col2 : ' + str(index_max_col2))
+print()
+
+# the min value of a column
+min_col4 = my_df['col4'].min()
+print('min_col4 : ' + str(min_col4))
 
 
-
-
-
-
-
-
-
-
+# the index of the min value of a column
+index_min_col4 = my_df['col4'].idxmin()
+print('the index of min_col4 : ' + str(index_min_col4) )
