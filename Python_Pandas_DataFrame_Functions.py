@@ -159,4 +159,18 @@ print(max_df_rows)
 print()
 print("max_cols/axis=1 ")
 print(max_df_cols)
+print('-------------------------------------')
 print()
+# select rows by multiple label/index conditions
+print('select rows by multiple label conditions')
+print()
+print('Data Frame')
+print(my_df)
+print()
+print("select the values of the data frame if the values in the column 'col2' > 0")
+my_df1 = my_df.loc[my_df['col2'] > 0]
+print(my_df1)
+print()
+print("select the values of the data frame if the values in the column 'col3' >= 10")
+my_df2 = my_df.loc[my_df['col3'] >= 10]
+print(my_df2)
