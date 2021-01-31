@@ -196,6 +196,6 @@ my_df5 = my_df.loc[ (my_df['col3'] > 7) | (my_df['col5'] > 0)]
 print(my_df5)
 print()
 print("select the values of the data frame with multiple rows conditions")
-print('( col1 > 0  and col2 > 0 ) or (col3 > 7 and col5 = 100')
-my_df6 = my_df.loc[my_df[( (['col1']>0) & (['col2']>) ) | ((['col3']>7) & (['col5']== 100))]]
+print('( col1 > 0  and col2 > 0 ) or (col3 > 7 and col5 = 100)')
+my_df6 = my_df.loc[((my_df['col1']>0) & (my_df['col2']>0)) | ((my_df['col3']>7) & (my_df['col5']== 100))]
 print(my_df6)
