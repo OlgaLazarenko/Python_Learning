@@ -177,5 +177,5 @@ print(my_df2)
 print()
 print("select the values of the data frame with multiple rows conditions")
 print('col2 > 0  and col5 > 0')
-my_df3 = my_df.loc[my_df['col2'> 0] & [my_df['col5']> 0]
+my_df3 = my_df.loc[ (my_df['col2'] > 0) & (my_df['col5']> 0)]
 print(my_df3)
