@@ -40,4 +40,8 @@ print()
 print()
 print("max mileage City/Highway (axis = 0)")
 print(auto_part1.max(axis=0))
+print()
+print()
+print("max mileage City/Highway (axis = 1) ")
+print(auto_part1.max(axis=1))
 
