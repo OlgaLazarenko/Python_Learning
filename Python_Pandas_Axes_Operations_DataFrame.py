@@ -14,7 +14,11 @@ auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\A
                               'Highway mpg',  
                               'Price'])
 
-# create <auto_part1> DataFrame by selecting the desired columns from <auto> DataFrame
+# create  <auto_part1> subset DataFrame by selecting the desired columns from <auto> DataFrame
+print()
 
+auto_part1 = auto[["Make" , "City mpg" , "Highway mpg"]]
+print("auto_part1")
+print(auto_part1)
 
 
