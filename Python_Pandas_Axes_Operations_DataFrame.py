@@ -36,4 +36,8 @@ print()
 print()
 print("average mileage City/Highway (axis = 1, axis = 'column') ")
 print(auto_part1.mean(axis = 1)) # the avg value is calculated for each row
+print()
+print()
+print("max mileage City/Highway (axis = 0)")
+print(auto_part1.max(axis=0))
 
