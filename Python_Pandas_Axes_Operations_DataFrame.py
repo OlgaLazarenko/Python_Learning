@@ -25,5 +25,11 @@ auto_part1 = auto[["Make" , "City mpg" , "Highway mpg"]]
 print('auto_part1 DataFrame shape')
 print(auto_part1.shape)
 
+# ------------------------------------------------------------
 
+# Operations on Axes of DataFrame
+
+print()
+print("average mileage City/Highway ")
+print(auto_part1.mean(axis = 0)) 
 
