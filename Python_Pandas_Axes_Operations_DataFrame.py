@@ -30,6 +30,10 @@ print(auto_part1.shape)
 # Operations on Axes of DataFrame
 
 print()
-print("average mileage City/Highway ")
+print("average mileage City/Highway (axis = 0, axis = 'row') ")
 print(auto_part1.mean(axis = 0)) 
+print()
+print()
+print("average mileage City/Highway (axis = 1, axis = 'column') ")
+print(auto_part1.mean(axis = 1))
 
