@@ -31,9 +31,9 @@ print(auto_part1.shape)
 
 print()
 print("average mileage City/Highway (axis = 0, axis = 'row') ")
-print(auto_part1.mean(axis = 0)) 
+print(auto_part1.mean(axis = 0)) # the agv value is calculated for each column ('City mpg', 'Highway mgp')
 print()
 print()
 print("average mileage City/Highway (axis = 1, axis = 'column') ")
-print(auto_part1.mean(axis = 1))
+print(auto_part1.mean(axis = 1)) # the avg value is calculated for each row
 
