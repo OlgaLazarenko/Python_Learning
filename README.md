@@ -5,7 +5,7 @@ The purpose of this project is to practice and enhnace my skills at Python Panda
 The project consists of several parts each of them is dedicated to a specific topic.
 Each part has its own list of goals.
 
-## Section: Python_Pandas
+## PYTHON_PANDAS / Series, DataFrame       ----------------------------------------------------
 ### Series
 - [x] create an empty series
 - [x] create a series from a list with default/ and customized index
@@ -38,7 +38,10 @@ Each part has its own list of goals.
 -[] plot the dasta from csv file(singtle and multiple plots)
 -[] create different types of plots(line, bar chart, area, pie, scatter 3D plot, histogram)
 -[] create plotes with customized features(color, legend, markers, scale)
--[] 
+
+##  AXES OPERATIONS / DataFrame ----------------------------------------------------------
+- [x] operations (mean, min, max) on dataframe when axis = 0 
+- [x] operations (mean, min, max) on dataframe whenk axiz = 1
 
 
 
