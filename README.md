@@ -42,6 +42,9 @@ Each part has its own list of goals.
 ##  AXES OPERATIONS / DataFrame ----------------------------------------------------------
 - [x] operations (mean, min, max) on dataframe when axis = 0 
 - [x] operations (mean, min, max) on dataframe whenk axiz = 1
+- [] combine dataframes when axis = 0
+- [] combine dataframes when axis = 1
+
 
 
 
