@@ -18,3 +18,14 @@ print(auto_make_list)
 
 # write the data to a file
 # df.to_csv('file_name.csv')
+auto.to_csv("file_name")
+
+
+for make in auto_make_list :
+    file_name_part1 = "E:\\_Python_Projects_Data\\Auto_Files\\"
+    file_name_part2 = make
+    file_name_part3 = ".csv"
+    file_name = file_name_part1 + file_name_part2 + file_name_part3
+    auto.to_csv(file_name)
+   
+
