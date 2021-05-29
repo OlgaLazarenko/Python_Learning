@@ -52,3 +52,10 @@ print()
 print()
 print("min mileage City/Highway (axis = 1) ")
 print(auto_part1.min(axis=1))
+print()
+
+# create a subset of the initial dataframe
+print("<auto_volvo> dataframe
+auto_volvo = auto[auto["Make"] == 'volvo']
+print(auto_volvo)
+

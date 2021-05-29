@@ -26,6 +26,9 @@ for make in auto_make_list :
     file_name_part2 = make
     file_name_part3 = ".csv"
     file_name = file_name_part1 + file_name_part2 + file_name_part3
-    auto.to_csv(file_name)
+
+    # check if the file exists
+    
+    auto.to_csv(file_name)  # write .csv files 
    
 
