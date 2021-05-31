@@ -82,3 +82,8 @@ print()
 volvo_result_ax2 = pd.concat([auto_volvo_1, auto_volvo_2] , axis= 0)
 print('concatenated dataframes , axis=0')
 print(volvo_result_ax2)
+
+# create <auto_porshe> dataframe
+auto_bmw = auto[auto["Make"] == "bmw"]
+print("<auto_bmw> dataframe")
+print(auto_bmw)
