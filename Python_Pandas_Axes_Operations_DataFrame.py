@@ -87,3 +87,8 @@ print(volvo_result_ax2)
 auto_bmw = auto[auto["Make"] == "bmw"]
 print("<auto_bmw> dataframe")
 print(auto_bmw)
+
+# concatenate <auto_bmw> and <auto_volvo> dataframes
+auto_bmw_volvo = pd.concat([auto_bmw , auto_volvo])
+print("<auto_bmw_volvo>  dataframe")
+print(auto_bmw_volvo)
