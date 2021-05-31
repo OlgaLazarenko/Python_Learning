@@ -70,3 +70,9 @@ auto_volvo_2 = auto_volvo[["Symboling" , "Normalized Loss" , "City mpg" , "Highw
 print()
 print("auto_volvo_2")
 print(auto_volvo_2)
+print()
+
+# combine the dataframes <auto_volvo_1> and <auto_volvo_2)
+volvo_result_ax1 = pd.concat([auto_volvo_1, auto_volvo_2], axis = 1)
+print('concatenated dataframes , axis=1')
+print(volvo_result_ax1)
