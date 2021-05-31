@@ -30,5 +30,8 @@ for make in auto_make_list :
     # check if the file exists
     
     auto.to_csv(file_name)  # write .csv files 
+
+    # create a subset of the initial dataframe
+    
    
 

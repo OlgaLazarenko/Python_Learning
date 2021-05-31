@@ -58,8 +58,15 @@ print()
 print("<auto_volvo> dataframe")
 auto_volvo = auto[auto["Make"] == 'volvo']
 print(auto_volvo)
-# resent the indexes of <auto_volvo> dataframe
-auto_volvo.reset_index(drop = True)
 print()
-print('new indexes')
-print(auto_volvo)
+
+# select a subset of <auto_volvo>
+auto_volvo_1 = auto_volvo[["Make" , "Body Style" ]]
+print('auto_volvo_1')
+print(auto_volvo_1)
+print()
+
+auto_volvo_2 = auto_volvo[["Symboling" , "Normalized Loss" , "City mpg" , "Highway mpg" , "Price"]]
+print()
+print("auto_volvo_2")
+print(auto_volvo_2)
