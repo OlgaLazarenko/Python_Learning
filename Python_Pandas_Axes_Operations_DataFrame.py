@@ -107,6 +107,12 @@ print('concatenate datframe and series, <bmw_df_sr>')
 print(bmw_df_sr)
 
 # concatenate series
-sr_ID = pd.Series(["0001","0002","0003","0004","0005"])
-sr_make = pd.Series(["volvo","bmw","honda","toyota","ford"])
-sr_style = pd.Series(["sedan","couple","wagon","convertible","truck"])
+sr_ID = pd.Series(["0001","0002","0003","0004","0005"] , name = "Car ID")
+sr_make = pd.Series(["volvo","bmw","honda","toyota","ford"] , name = "Producer")
+sr_style = pd.Series(["sedan","couple","wagon","convertible","truck"] , name = "Type")
+
+#create dataframe <my_auto> from the series
+my_auto = pd.concat([sr_ID , sr_make , sr_style] , axis = 1 )
+print()
+print("<my_auto> dataframe")
+print(my_auto)
