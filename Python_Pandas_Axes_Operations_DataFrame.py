@@ -92,3 +92,16 @@ print(auto_bmw)
 auto_bmw_volvo = pd.concat([auto_bmw , auto_volvo])
 print("<auto_bmw_volvo>  dataframe")
 print(auto_bmw_volvo)
+print()
+print()
+
+# create series
+bmw_sr = pd.Series(["high","low","low","low","moderate","low","low","low"])
+print("<bmw_sr> created series")
+print(bmw_sr)
+print()
+print(auto_bmw)
+# concatentate <auto_bmw> dataframe and <bmw_sr> series
+bmw_df_sr = pd.concat([auto_bmw , bmw_sr] , axis = 1 )
+print('concatenate datframe and series, <bmw_df_sr>')
+print(bmw_df_sr)
