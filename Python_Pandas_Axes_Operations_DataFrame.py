@@ -116,3 +116,8 @@ my_auto = pd.concat([sr_ID , sr_make , sr_style] , axis = 1 )
 print()
 print("<my_auto> dataframe")
 print(my_auto)
+
+# override teh existing columns
+my_auto = pd.concat([sr_ID , sr_make , sr_style] , axis = 1 , keys = ["CarID" , "Make" , "BodyStyle"])
+print()
+print(my_auto)
