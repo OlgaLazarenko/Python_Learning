@@ -65,7 +65,7 @@ auto_volvo_1 = auto_volvo[["Make" , "Body Style" ]]
 print('auto_volvo_1')
 print(auto_volvo_1)
 print()
-
+4
 auto_volvo_2 = auto_volvo[["Symboling" , "Normalized Loss" , "City mpg" , "Highway mpg" , "Price"]]
 print()
 print("auto_volvo_2")
@@ -101,7 +101,12 @@ print("<bmw_sr> created series")
 print(bmw_sr)
 print()
 print(auto_bmw)
-# concatentate <auto_bmw> dataframe and <bmw_sr> series
+# concatentate <auto_bmw> dataframe and <bmw_sr> series ???????
 bmw_df_sr = pd.concat([auto_bmw , bmw_sr] , axis = 1 )
 print('concatenate datframe and series, <bmw_df_sr>')
 print(bmw_df_sr)
+
+# concatenate series
+sr_ID = pd.Series(["0001","0002","0003","0004","0005"])
+sr_make = pd.Series(["volvo","bmw","honda","toyota","ford"])
+sr_style = pd.Series(["sedan","couple","wagon","convertible","truck"])
