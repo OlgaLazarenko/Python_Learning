@@ -19,7 +19,12 @@ print("<auto> DataFrame")
 print(auto.head())
 
 # 1) Filter the data, DataFrame way
-new_auto_1 = auto[auto["Make"] == "toyota"]
+new_auto1_toyota = auto[auto["Make"] == "toyota"]
 print()
-print("<new_auto_1>  DataFrame")
-print(new_auto_1)
+print("<new_auto1_toyota>  DataFrame")
+print(new_auto1_toyota)
+print()
+print()
+new_auto1_bmw_volvo = auto[ (auto["Make"] == ["bmw", "volvo"])]
+print("<new_auto1_bmw_volvo>  DataFrame")
+print(new_auto1_bmw_volvo)
