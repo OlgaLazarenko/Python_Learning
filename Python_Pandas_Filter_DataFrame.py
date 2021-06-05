@@ -25,6 +25,6 @@ print("<new_auto1_toyota>  DataFrame")
 print(new_auto1_toyota)
 print()
 print()
-new_auto1_bmw_volvo = auto[ (auto["Make"] == ["bmw", "volvo"])]
+new_auto1_bmw_volvo = auto[ (auto["Make"] == "bmw") & (auto["Make"] == "volvo")]
 print("<new_auto1_bmw_volvo>  DataFrame")
 print(new_auto1_bmw_volvo)
