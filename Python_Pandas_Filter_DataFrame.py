@@ -33,3 +33,19 @@ print(new_auto1_bmw_volvo)
 # check the columns data type
 print("columns data type")
 print(auto.dtypes)
+print()
+print()
+# convert <Make> column data type from object to string
+# change the columns data types to appropirate ones
+convert_dict = {"Symboling" : str , 
+                "Normalized Loss" : int ,
+                "Make" : str ,
+                "Body Style" : str ,
+                "City mpg" : int ,
+                "Highway" : int , 
+                "Price" : int}
+
+auto = auto.astype(convert_dict)
+
+print("converted  data type")
+print(auto.dtypes)
