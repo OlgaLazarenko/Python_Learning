@@ -17,8 +17,12 @@ auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\A
 print()
 print("<auto> DataFrame")
 print(auto.head())
-auto["Make"].astype(str)
-auto["Body Style"].astype(str)
+
+# drop empty rows
+auto.dropna()
+
+auto["Make"] = auto["Make"].str
+auto["Body Style"] = auto["Body Style"].str
 print(auto.dtypes)
 
 '''
