@@ -38,12 +38,12 @@ print()
 # convert <Make> column data type from object to string
 # change the columns data types to appropirate ones
 convert_dict = {"Symboling" : str , 
-                "Normalized Loss" : int ,
+                "Normalized Loss" : str ,
                 "Make" : str ,
                 "Body Style" : str ,
-                "City mpg" : int ,
-                "Highway" : int , 
-                "Price" : int}
+                "City mpg" : float ,
+                "Highway mpg" : float , 
+                "Price" : float}
 
 auto = auto.astype(convert_dict)
 
