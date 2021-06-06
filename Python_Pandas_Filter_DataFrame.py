@@ -3,11 +3,11 @@
 
 
 import pandas as pd
+import numpy as np
 
 # create <auto> DataFrame by reading the data file
 auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Autos_Import_1985.csv" , 
                   usecols = ['Make' ,
-                              'Normalized Loss',
                               'Symboling',
                               'Body Style' , 
                               'City mpg' ,
@@ -16,10 +16,29 @@ auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\A
 
 print()
 print("<auto> DataFrame")
-print(auto.head())
+print(auto)
+print()
+print()
+# number of rows in the initial <auto> DataFrame
+index = auto.index
+numb_of_rows =  len(index)
+print("number of rows")
+print(numb_of_rows)
+print()
+print('------------------------------')
+print('NaN values')
+print(auto.isnull().values.any())
+print('------------------------------')
 
+auto.replace(np.nan , 0 )
 # drop empty rows
+print(auto)
 auto.dropna()
+new_index = auto.index
+new_rows = len(new_index)
+print("new number of rows")
+print(new_rows)
+print()
 
 auto["Make"] = auto["Make"].str
 auto["Body Style"] = auto["Body Style"].str
