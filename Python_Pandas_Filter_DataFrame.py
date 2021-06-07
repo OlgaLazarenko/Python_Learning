@@ -81,4 +81,9 @@ honda_df = auto.query('Make == "honda"')
 print()
 print("<new_volvo>  DataFrame")
 print(honda_df)
+print("number of rows" + str(len(honda_df)))
+print()
+
+honda_sedan_high_price = auto.query('Make == "honda" & Price >= 10000')
+
 
