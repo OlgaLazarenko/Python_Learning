@@ -106,6 +106,15 @@ my_symb = 2
 toyota_df2 = auto.query("Make == @my_val  & Symboling == @my_symb")
 print("<toyota_df2>  DataFrame")
 print(toyota_df2)
+print()
+
+# pass colunm name as a varible in query
+my_var = 'Symboling'
+my_var2 = 'Make'
+sedan_df = auto.query( "{0} == '3'".format(my_var) )
+print("<sedan_df>   DataFrame, the column name is passed in the query as a variable")
+print(sedan_df)
+
 
 
 
