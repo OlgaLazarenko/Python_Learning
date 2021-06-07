@@ -88,8 +88,17 @@ print()
 honda_df["Price"] = honda_df["Price"].astype(float)
 print(honda_df.dtypes)
 print()
-honda_sedan_high_price = auto.query('Make == "honda" & Price >= "10000"')
-print("<honda_sedan_high_price>  DataFrame")
-print(honda_sedan_high_price)
+# mention value explicitly 
+honda_df2 = auto.query('Make == "honda" & Symboling == "2"')
+print("<honda_df2>  DataFrame")
+print(honda_df2)
+print()
+
+# reference method 
+my_val = 'toyota'
+toyota_df = auto.query("Make == @my_val")
+print("<toyota>  DataFrame")
+print(toyota_df)
+
 
 
