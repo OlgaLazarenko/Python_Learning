@@ -18,7 +18,7 @@ print()
 print("<auto> DataFrame")
 print(auto)
 print()
-print()
+
 # number of rows in the initial <auto> DataFrame
 index = auto.index
 numb_of_rows =  len(index)
@@ -31,6 +31,8 @@ print(auto.isnull().values.any())
 print('------------------------------')
 
 auto.replace(np.nan , 0 )
+
+print(auto)
 # drop empty rows
 print(auto)
 auto.dropna()
@@ -40,11 +42,9 @@ print("new number of rows")
 print(new_rows)
 print()
 
-auto["Make"] = auto["Make"].str
-auto["Body Style"] = auto["Body Style"].str
+print("New data types")
 print(auto.dtypes)
 
-'''
 # 1) Filter the data, DataFrame way
 new_auto1_toyota = auto[auto["Make"] == "toyota"]
 print()
@@ -52,7 +52,7 @@ print("<new_auto1_toyota>  DataFrame")
 print(new_auto1_toyota)
 print()
 print()
-bmw_volvo = auto[ (auto["Make"] == "bmw") & (auto["Make"] == "volvo")]
+bmw_volvo = auto[ (auto["Make"] == "bmw") | (auto["Make"] == "volvo")]
 print("bmw_volvo>  DataFrame")
 print(bmw_volvo)
 '''
@@ -62,6 +62,6 @@ print(bmw_volvo)
 
 # convert <Make> column data type from object to string
 # change the columns data types to appropirate ones
-
+'''
 
 
