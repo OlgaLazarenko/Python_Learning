@@ -84,6 +84,12 @@ print(honda_df)
 print("number of rows" + str(len(honda_df)))
 print()
 
-honda_sedan_high_price = auto.query('Make == "honda" & Price >= 10000')
+# convert <Price> column from object data type to int data type
+honda_df["Price"] = honda_df["Price"].astype(float)
+print(honda_df.dtypes)
+print()
+honda_sedan_high_price = auto.query('Make == "honda" & Price >= "10000"')
+print("<honda_sedan_high_price>  DataFrame")
+print(honda_sedan_high_price)
 
 
