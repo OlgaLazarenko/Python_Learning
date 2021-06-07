@@ -8,6 +8,7 @@ import numpy as np
 # create <auto> DataFrame by reading the data file
 auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Autos_Import_1985.csv" , 
                   usecols = ['Make' ,
+                              'Normalized Loss' ,
                               'Symboling',
                               'Body Style' , 
                               'City mpg' ,
@@ -45,7 +46,7 @@ print()
 print("New data types")
 print(auto.dtypes)
 
-# 1) Filter the data, DataFrame way
+# ****   1) Filter the data, DataFrame way
 new_auto1_toyota = auto[auto["Make"] == "toyota"]
 print()
 print("<new_auto1_toyota>  DataFrame")
@@ -70,8 +71,14 @@ print(bmw_volvo_high_mpg)
 # number of rows
 print("number of rows")
 print(len(bmw_volvo_high_mpg))
-# <Empty DatFrame> notification is returned 
-# check the columns data type
+print()
+print('-----------------------------------------------')
 
-# convert <Make> column data type from object to string
-# change the columns data types to appropirate ones
+# --------------------------------------------------------------------------------------------------------
+
+# ****  2) Filter the data, Query Function
+honda_df = auto.query('Make == "honda"')
+print()
+print("<new_volvo>  DataFrame")
+print(honda_df)
+
