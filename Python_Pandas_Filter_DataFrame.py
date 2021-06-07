@@ -55,13 +55,23 @@ print()
 bmw_volvo = auto[ (auto["Make"] == "bmw") | (auto["Make"] == "volvo")]
 print("bmw_volvo>  DataFrame")
 print(bmw_volvo)
-'''
+# number of rows
+print("number of rows")
+print(len(bmw_volvo))
+print()
+print()
 
+# select data with hight mileage: city mpg >= 20, highway  mpg >=25
+bmw_volvo_high_mpg = bmw_volvo[ (bmw_volvo["Make"] == "bmw") | (bmw_volvo["Make"] == "volvo") &
+                                 (  (bmw_volvo["City mpg"] >= 20) & (bmw_volvo["Highway mpg"] >= 25))]
+
+print("<bmw_volvo_high_mpg>  DataFrame") 
+print(bmw_volvo_high_mpg)
+# number of rows
+print("number of rows")
+print(len(bmw_volvo_high_mpg))
 # <Empty DatFrame> notification is returned 
 # check the columns data type
 
 # convert <Make> column data type from object to string
 # change the columns data types to appropirate ones
-'''
-
-
