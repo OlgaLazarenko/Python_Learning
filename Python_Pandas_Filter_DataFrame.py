@@ -96,9 +96,16 @@ print()
 
 # reference method 
 my_val = 'toyota'
+
 toyota_df = auto.query("Make == @my_val")
-print("<toyota>  DataFrame")
+print("<toyota_df>  DataFrame")
 print(toyota_df)
+print()
+
+my_symb = 2
+toyota_df2 = auto.query("Make == @my_val  & Symboling == @my_symb")
+print("<toyota_df2>  DataFrame")
+print(toyota_df2)
 
 
 
