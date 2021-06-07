@@ -39,11 +39,18 @@ Each part has its own list of goals.
 -[] create different types of plots(line, bar chart, area, pie, scatter 3D plot, histogram)
 -[] create plotes with customized features(color, legend, markers, scale)
 
-##  AXES OPERATIONS / DataFrame ----------------------------------------------------------
+##  Section: Axes Operations on DataFrame 
 - [x] operations (mean, min, max) on dataframe when axis = 0 
 - [x] operations (mean, min, max) on dataframe whenk axiz = 1
 - [] combine dataframes when axis = 0
 - [] combine dataframes when axis = 1
+
+## Section: Filter DataFrame
+- [x] dataframe way to filter a dataframe
+- [] query function to filter a dataframe
+    - [x] one column/condition
+    - [x] multiple columns/conditions
+    - [] pass variables in query function
 
 
 
