@@ -50,7 +50,11 @@ Each part has its own list of goals.
 - [] query function to filter a dataframe
     - [x] one column/condition
     - [x] multiple columns/conditions
-    - [] pass variables in query function
+    - [x] reference method 
+    - [x] pass variables in query function
+- [] loc[] function
+- [] iloc[] function
+
 
 
 

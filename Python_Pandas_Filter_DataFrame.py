@@ -111,7 +111,7 @@ print()
 # pass colunm name as a varible in query
 my_var = 'Symboling'
 my_var2 = 'Make'
-sedan_df = auto.query( "{0} == '3'".format(my_var) )
+sedan_df = auto.query( "{0} == '3'".format(my_var))
 print("<sedan_df>   DataFrame, the column name is passed in the query as a variable")
 print(sedan_df)
 
