@@ -103,17 +103,29 @@ print(toyota_df)
 print()
 
 my_symb = 2
-toyota_df2 = auto.query("Make == @my_val  & Symboling == @my_symb")
+toyota_df2 = auto.query("Make == @my_val  & Symboling == @my_symb") # multiple conditions
 print("<toyota_df2>  DataFrame")
 print(toyota_df2)
 print()
 
 # pass colunm name as a varible in query
-my_var = 'Symboling'
-my_var2 = 'Make'
-sedan_df = auto.query( "{0} == '3'".format(my_var))
+my_var = 'Make'
+sedan_df = auto.query( "{0} == 'sedan'".format(my_var) )
 print("<sedan_df>   DataFrame, the column name is passed in the query as a variable")
-print(sedan_df)
+print(sedan_df) # >??????? 
+print()
+# ---------------------------------------------------------------------------------------------
+
+# ****  3) Use <loc> function to filter data frame
+# use <bmw_volvo> data frame
+print('bmw_volvo  DataFrame')
+print(bmw_volvo)
+print()
+print('indexes')
+print(bmw_volvo.index)
+
+
+
 
 
 
