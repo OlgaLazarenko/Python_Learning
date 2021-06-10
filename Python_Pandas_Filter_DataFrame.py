@@ -136,11 +136,18 @@ print("new df")
 print(sorted_bmw_volvo)
 print()
 print()
-# --- inplace = True
+# --- inplace = True ----------------------------------
 bmw_volvo2 = bmw_volvo # create a copy of bmw_volvo data frame, in oder to keep it untouched
 bmw_volvo2.sort_values( by = ['Price'], ascending = False , inplace = True)
 print("sorted , inplace = True")
-print(bmw_volvo2)
+print(bmw_volvo2) # the data frame <bmw_volvo2> was modified/updated after sorting 
+print()
+print()
+
+# --- loc function for filter data frame
+honda_toyota_sedan = auto.loc[ (auto.Make == 'honda') & (auto.Make == 'toyota') & (auto.'Body Style' == 'sedan')]
+print('<honda_toyota_sedan>  data frame')
+print(honda_toyota_sedan)
 
 
 
