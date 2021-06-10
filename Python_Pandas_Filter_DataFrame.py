@@ -125,10 +125,14 @@ print('indexes')
 print(bmw_volvo.index)
 print()
 # sort by the column "Price" desc way
+# inpalce = False/True 
 bmw_volvo.sort_values( by =['Price'] , ascending = False , inplace = False) # default <inplace>
 print('sorted bmw_volvo , inplace = False')
 print(bmw_volvo) # the initial <bmw_volvo> data frame is not changed
 print()
+sorted_bmw_volvo = bmw_volvo.sort_values( by =['Price'] , ascending = False , inplace = False)
+print("new df")
+print(sorted_bmw_volvo)
 
 
 '''
