@@ -145,7 +145,10 @@ print()
 print()
 
 # --- loc function for filter data frame
-honda_toyota_sedan = auto.loc[ (auto.Make == 'honda') & (auto.Make == 'toyota') & (auto.'Body Style' == 'sedan')]
+# rename columns
+auto.rename( columns = {'Normalized Loss':'Normalized_Loss' , 'Body Style':'Body_Style'} , inplace = True)
+print(auto)
+honda_toyota_sedan = auto.loc[ (auto.Make == 'honda') & (auto.Make == 'toyota') & (auto.Body_Style == 'sedan')]
 print('<honda_toyota_sedan>  data frame')
 print(honda_toyota_sedan)
 
