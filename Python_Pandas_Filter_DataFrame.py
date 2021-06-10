@@ -150,7 +150,7 @@ auto.rename( columns = {'Normalized Loss':'Normalized_Loss' , 'Body Style':'Body
 print(auto)
 honda_toyota_sedan = auto.loc[ (auto.Make == 'honda') & (auto.Make == 'toyota') & (auto.Body_Style == 'sedan')]
 print('<honda_toyota_sedan>  data frame')
-print(honda_toyota_sedan)
+print(honda_toyota_sedan) # Empty DataFrame is returned
 
 
 
