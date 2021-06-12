@@ -147,15 +147,11 @@ print()
 # --- loc function for filter data frame
 # rename columns
 auto.rename( columns = {'Normalized Loss':'Normalized_Loss' , 'Body Style':'Body_Style'} , inplace = True)
-print(auto)
-honda_toyota_sedan = auto.loc[ (auto.Make == 'honda') & (auto.Make == 'toyota') & (auto.Body_Style == 'sedan')]
-print('<honda_toyota_sedan>  data frame')
-print(honda_toyota_sedan) # Empty DataFrame is returned
 
-auto_honda_sedan = auto.loc((auto['Make']=='toyota') & (auto['Body_Style']=='sedan'))
+auto_toyota_sedan = auto.loc[((auto['Make']=='toyota') & (auto['Body_Style']=='sedan'))]
 print()
-print("<auto_honda_sedan>  DataFrame")
-print(auto_honda_sedan)
+print("<auto_toyota_sedan>  DataFrame")
+print(auto_toyota_sedan)
 
 
 
