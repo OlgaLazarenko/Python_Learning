@@ -152,6 +152,11 @@ honda_toyota_sedan = auto.loc[ (auto.Make == 'honda') & (auto.Make == 'toyota') 
 print('<honda_toyota_sedan>  data frame')
 print(honda_toyota_sedan) # Empty DataFrame is returned
 
+auto_honda_sedan = auto.loc((auto['Make']=='honda') & (auto['Body_Style']=='sedan'))
+print()
+print("<auto_honda_sedan>  DataFrame")
+print(auto_honda_sedan)
+
 
 
 '''
