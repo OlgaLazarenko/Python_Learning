@@ -46,6 +46,7 @@ print()
 print("New data types")
 print(auto.dtypes)
 
+
 # ****   1) Filter the data, DataFrame way
 new_auto1_toyota = auto[auto["Make"] == "toyota"]
 print()
@@ -152,6 +153,10 @@ auto_toyota_sedan = auto.loc[((auto['Make']=='toyota') & (auto['Body_Style']=='s
 print()
 print("<auto_toyota_sedan>  DataFrame")
 print(auto_toyota_sedan)
+
+# convert <Price> column to integer data type
+auto_toyota_sedan['Price'] = auto_toyota_sedan['Price'].astype(str).astype(float)
+print(auto_toyota_sedan.dtypes)
 
 
 
