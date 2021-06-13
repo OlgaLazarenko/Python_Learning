@@ -35,7 +35,7 @@ auto.replace(np.nan , 0 )
 auto['Price'] = auto['Price'].astype(str)
 print(auto.dtypes)
 
-auto.replace[(auto['Price'] == '?')] = 0
+auto.replace(['?'],'0')
 
 # drop empty rows
 auto.dropna()
