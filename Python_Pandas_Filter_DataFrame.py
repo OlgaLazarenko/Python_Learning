@@ -32,10 +32,8 @@ print(auto.isnull().values.any())
 print('------------------------------')
 
 auto.replace(np.nan , 0 )
-auto['Price'] = auto['Price'].astype(str)
-print(auto.dtypes)
-
 auto.replace(['?'],'0')
+
 
 # drop empty rows
 auto.dropna()
