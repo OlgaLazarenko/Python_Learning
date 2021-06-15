@@ -163,13 +163,18 @@ print(auto_toyota_sedan)
 
 # convert <Price> column to integer data type
 
-print(auto.dtypes)
 
-auto['Price'] = auto['Price'].astype(float)
 print()
 print(auto.dtypes)
 
-
+# replace '?' in the columns 'Price' with 0
+auto['Price'] = np.where(auto['Price'] == '?' , '0', auto['Price'] )
+print('******')
+print(auto.dtypes)
+print()
+print()
+print("unique Price values")
+print(auto['Price'].unique())
 
 
 '''
