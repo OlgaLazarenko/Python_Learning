@@ -176,6 +176,11 @@ print()
 print("unique Price values")
 print(auto['Price'].unique())
 
+auto['Price'] = auto['Price'].astype(int)
+print()
+print(auto.dtypes)
+
+
 
 '''
 new_sorted_bmw_volvo = bmw_volvo.sort_values( by =['Price'] , ascending = False , inplace = False) # default <inplace>
