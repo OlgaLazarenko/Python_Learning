@@ -19,7 +19,9 @@ print()
 print("<auto> DataFrame")
 print(auto)
 print()
-
+print(auto.dtypes)
+print("******************************")
+print("HELLO")
 # number of rows in the initial <auto> DataFrame
 index = auto.index
 numb_of_rows =  len(index)
@@ -35,9 +37,14 @@ auto.replace(np.nan , 0 )
 auto.replace(['?'],'0')
 
 
+print(auto.dtypes)
+print('**********************************')
+
 # drop empty rows
 auto.dropna()
 new_index = auto.index
+
+
 new_rows = len(new_index)
 print("new number of rows")
 print(new_rows)
@@ -155,8 +162,13 @@ print("<auto_toyota_sedan>  DataFrame")
 print(auto_toyota_sedan)
 
 # convert <Price> column to integer data type
-auto_toyota_sedan['Price'] = auto_toyota_sedan['Price'].astype(str).astype(float)
-print(auto_toyota_sedan.dtypes)
+
+print(auto.dtypes)
+
+auto['Price'] = auto['Price'].astype(float)
+print()
+print(auto.dtypes)
+
 
 
 
