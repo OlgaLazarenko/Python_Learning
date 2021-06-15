@@ -169,7 +169,7 @@ print()
 # rename columns
 auto.rename( columns = {'Normalized Loss':'Normalized_Loss' , 'Body Style':'Body_Style'} , inplace = True)
 
-auto_toyota_sedan = auto.loc[((auto['Make']=='toyota') & (auto['Body_Style']=='sedan'))]
+auto_toyota_sedan = auto.loc[((auto['Make']=='toyota') & (auto['Body_Style']=='sedan') & (auto['Price'] >= 10000))]
 print()
 print("<auto_toyota_sedan>  DataFrame")
 print(auto_toyota_sedan)
