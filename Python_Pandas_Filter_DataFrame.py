@@ -20,8 +20,21 @@ print("<auto> DataFrame")
 print(auto)
 print()
 print(auto.dtypes)
-print("******************************")
-print("HELLO")
+
+# replace '?' in the columns 'Price' with 0
+auto['Price'] = np.where(auto['Price'] == '?' , '0', auto['Price'] )
+print('******')
+print(auto.dtypes)
+print()
+print()
+print("unique Price values")
+print(auto['Price'].unique())
+
+auto['Price'] = auto['Price'].astype(int)
+print()
+print(auto.dtypes)
+
+
 # number of rows in the initial <auto> DataFrame
 index = auto.index
 numb_of_rows =  len(index)
@@ -167,18 +180,7 @@ print(auto_toyota_sedan)
 print()
 print(auto.dtypes)
 
-# replace '?' in the columns 'Price' with 0
-auto['Price'] = np.where(auto['Price'] == '?' , '0', auto['Price'] )
-print('******')
-print(auto.dtypes)
-print()
-print()
-print("unique Price values")
-print(auto['Price'].unique())
 
-auto['Price'] = auto['Price'].astype(int)
-print()
-print(auto.dtypes)
 
 
 
