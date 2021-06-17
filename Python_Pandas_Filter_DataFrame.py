@@ -174,6 +174,11 @@ auto.rename( columns = {'Normalized Loss':'Normalized_Loss' , 'Body Style':'Body
 
 auto_toyota_sedan = auto.loc[((auto['Make']=='toyota') & (auto['Body_Style']=='sedan') & (auto['Price'] >= 10000))]
 print()
+auto_toyota =  auto.loc[ (auto['Make']=='toyota') ]
+print("<auto_toyota>  data frame")
+print(auto_toyota)
+print()
+print()
 print("<auto_toyota_sedan>  DataFrame")
 print(auto_toyota_sedan)
 print(auto.dtypes)
