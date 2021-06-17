@@ -182,6 +182,12 @@ print()
 print("<auto_toyota_sedan>  DataFrame")
 print(auto_toyota_sedan)
 print(auto.dtypes)
+print()
+
+# sort <auto_toyota> data frame
+toyota_sorted = auto_toyota.sort_values( by = ['Price'] , ascending = False , inplace = False)
+print('<toyota_sorted>  data frame')
+print(toyota_sorted)
 
 
 
