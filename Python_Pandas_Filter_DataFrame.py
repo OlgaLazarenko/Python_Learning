@@ -193,9 +193,13 @@ print()
 # --- iloc filtering -----------------------------------------------
 # 5 most expensive Toyota cars
 toyota_5max_price = toyota_sorted.iloc[0:5]
-print(" 5 most expensive toyota cars")
+print(" 5 most expensive imported Toyota")
 print(toyota_5max_price)
-
+print()
+# 5 most cheapes Toyota cars
+toyota_5min_price = toyota_sorted.iloc[-5:0]
+print("5 cheapest imported Toyota ")
+print(toyota_5min_price)
 
 
 
