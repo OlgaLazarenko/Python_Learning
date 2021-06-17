@@ -188,7 +188,13 @@ print()
 toyota_sorted = auto_toyota.sort_values( by = ['Price'] , ascending = False , inplace = False)
 print('<toyota_sorted>  data frame')
 print(toyota_sorted)
+print()
 
+# --- iloc filtering -----------------------------------------------
+# 5 most expensive Toyota cars
+toyota_5max_price = toyota_sorted.iloc[0:5]
+print(" 5 most expensive toyota cars")
+print(toyota_5max_price)
 
 
 
