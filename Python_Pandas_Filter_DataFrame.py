@@ -31,6 +31,9 @@ print("unique Price values")
 print(auto['Price'].unique())
 
 auto['Price'] = auto['Price'].astype(int)
+
+auto['Normalized Loss'] = np.where(auto['Normalized Loss'] == '?' , '0', auto['Price'] )
+auto['Normalized Loss'] = auto['Normalized Loss'].astype(int)
 print()
 print(auto.dtypes)
 
@@ -173,11 +176,6 @@ auto_toyota_sedan = auto.loc[((auto['Make']=='toyota') & (auto['Body_Style']=='s
 print()
 print("<auto_toyota_sedan>  DataFrame")
 print(auto_toyota_sedan)
-
-# convert <Price> column to integer data type
-
-
-print()
 print(auto.dtypes)
 
 
