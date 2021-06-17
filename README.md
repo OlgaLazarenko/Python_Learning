@@ -47,13 +47,14 @@ Each part has its own list of goals.
 
 ## Section: Filter DataFrame
 - [x] dataframe way to filter a dataframe
-- [] query function to filter a dataframe
+- [x] query function to filter a dataframe
     - [x] one column/condition
     - [x] multiple columns/conditions
     - [x] reference method 
     - [x] pass variables in query function
-- [] loc[] function
-- [] iloc[] function
+    - [] features inplace = False/True
+- [x] loc() function
+- [x] iloc() function
 
 
 
