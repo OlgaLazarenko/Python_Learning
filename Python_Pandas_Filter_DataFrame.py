@@ -191,16 +191,24 @@ print(toyota_sorted)
 print()
 
 # --- iloc filtering -----------------------------------------------
-# 5 most expensive Toyota cars
+# 5 most expensive imported Toyota cars
 toyota_5max_price = toyota_sorted.iloc[0:5]
-print(" 5 most expensive imported Toyota")
+print(" 5 most expensive imported Toyota cars")
 print(toyota_5max_price)
+print()
+
+# 10 most expensive imported Toyota cars
+toyota_10max_price = toyota_sorted.iloc[0:10]
+print("10 most expesive imported Toyota cars")
+print(toyota_10max_price)
 print()
 # 5 most cheapes Toyota cars
 toyota_len = len(toyota_sorted)
 toyota_5min_price = toyota_sorted.iloc[(toyota_len - 5): (toyota_len)]
 print("5 cheapest imported Toyota ")
 print(toyota_5min_price)
+
+
 
 
 
