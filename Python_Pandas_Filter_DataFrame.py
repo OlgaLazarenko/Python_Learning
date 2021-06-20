@@ -233,11 +233,10 @@ print()
 
 # generate a list of random numbers as invoice numbers
 invoice_list = []
-n = lenght_auto_df
-
-while 
-invoice_num = random.randint(300,700)
+invoice_list = random.sample(range(1000,3000) , 205 )
 print(invoice_list)
+
+
 
 
 
