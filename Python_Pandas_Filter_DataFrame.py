@@ -236,10 +236,12 @@ for col in auto.columns:
     print(col)
 print()
 print()
-auto["Invoice_Number"] = invoice_list
+
+auto.insert(0, "Invoice_List" , invoice_list , True)
+#  auto["Invoice_Number"] = invoice_list
 for col in auto.columns:
     print(col)
-    
+
 
 
 
