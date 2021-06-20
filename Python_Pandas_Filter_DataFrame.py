@@ -4,18 +4,21 @@
 
 import pandas as pd
 import numpy as np
+import random
 
 # create <auto> DataFrame by reading the data file
-auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Autos_Import_1985.csv" ), 
-'''
+auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Autos_Import_1985.csv" , 
+
                   usecols = ['Make' ,
                               'Normalized Loss' ,
                               'Symboling',
                               'Body Style' , 
                               'City mpg' ,
                               'Highway mpg',  
-                              'Price'])
-'''
+                          'Price'])
+# add a column "Invoice_Number" to <auto> data frame
+
+
 print()
 print("<auto> DataFrame")
 print(auto)
@@ -222,7 +225,19 @@ print()
 
 print(bmw_volvo)
 '''
+print()
+lenght_auto_df = len(auto)
+print("lenght <auto> data frame")
+print(lenght_auto_df)
+print()
 
+# generate a list of random numbers as invoice numbers
+invoice_list = []
+n = lenght_auto_df
+
+while 
+invoice_num = random.randint(300,700)
+print(invoice_list)
 
 
 
