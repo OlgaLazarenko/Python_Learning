@@ -10,7 +10,29 @@ import random
 auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Autos_Import_1985.csv") 
 
 
+print()
+lenght_auto_df = len(auto)
+print("lenght <auto> data frame")
+print(lenght_auto_df)
+print()
+
+# generate a list of random numbers as invoice numbers
+invoice_list = []
+invoice_list = random.sample(range(1000,3000) , 205 )
+
+# insert the list <invoice_list> as a new column "Invoice_Number"
 print(auto)
+# columns of the data frame <auto>
+for col in auto.columns:
+    print(col)
+print()
+print()
+
+auto.insert(0, "Invoice_List" , invoice_list , True)
+#  auto["Invoice_Number"] = invoice_list
+for col in auto.columns:
+    print(col)
+
 
 
 print()
@@ -20,6 +42,7 @@ print('--------------------------------------------------')
 print()
 print(auto.dtypes)
 
+'''
 # replace '?' in the columns 'Price' with 0
 auto['Price'] = np.where(auto['Price'] == '?' , '0', auto['Price'] )
 print('******')
@@ -211,7 +234,7 @@ print(toyota_5min_price)
 
 
 
-'''
+
 new_sorted_bmw_volvo = bmw_volvo.sort_values( by =['Price'] , ascending = False , inplace = False) # default <inplace>
 print('sorted bmw_volvo, inplace = False, asigned to new data frame')
 print(new_sorted_bmw_volvo) # sorted data frame is returned the initial data frame <bmw_volvo> is not changed
@@ -219,28 +242,6 @@ print()
 
 print(bmw_volvo)
 '''
-print()
-lenght_auto_df = len(auto)
-print("lenght <auto> data frame")
-print(lenght_auto_df)
-print()
-
-# generate a list of random numbers as invoice numbers
-invoice_list = []
-invoice_list = random.sample(range(1000,3000) , 205 )
-
-# insert the list <invoice_list> as a new column "Invoice_Number"
-print(auto)
-# columns of the data frame <auto>
-for col in auto.columns:
-    print(col)
-print()
-print()
-
-auto.insert(0, "Invoice_List" , invoice_list , True)
-#  auto["Invoice_Number"] = invoice_list
-for col in auto.columns:
-    print(col)
 
 
 
