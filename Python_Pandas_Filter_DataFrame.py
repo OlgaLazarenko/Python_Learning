@@ -7,16 +7,10 @@ import numpy as np
 import random
 
 # create <auto> DataFrame by reading the data file
-auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Autos_Import_1985.csv" , 
+auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Autos_Import_1985.csv") 
 
-                  usecols = ['Make' ,
-                              'Normalized Loss' ,
-                              'Symboling',
-                              'Body Style' , 
-                              'City mpg' ,
-                              'Highway mpg',  
-                          'Price'])
-# add a column "Invoice_Number" to <auto> data frame
+
+print(auto)
 
 
 print()
@@ -234,9 +228,18 @@ print()
 # generate a list of random numbers as invoice numbers
 invoice_list = []
 invoice_list = random.sample(range(1000,3000) , 205 )
-print(invoice_list)
 
-
+# insert the list <invoice_list> as a new column "Invoice_Number"
+print(auto)
+# columns of the data frame <auto>
+for col in auto.columns:
+    print(col)
+print()
+print()
+auto["Invoice_Number"] = invoice_list
+for col in auto.columns:
+    print(col)
+    
 
 
 
