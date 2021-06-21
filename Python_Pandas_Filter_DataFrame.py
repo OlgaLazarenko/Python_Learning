@@ -34,7 +34,6 @@ for col in auto.columns:
     print(col)
 
 
-
 print()
 print("<auto> DataFrame")
 print(auto)
@@ -71,6 +70,18 @@ auto.replace(['?'],'0')
 
 # drop empty rows
 auto.dropna()
+
+
+# create a list 'Invoice_List'
+Invoice_List = list(np.random.permutation(np.arange(1000,9999))[:205])
+print(Invoice_List)
+print()
+# insert the list  'Invoice_List" as a new column 'Invoice_Number' into <auto> data frame
+auto.insert(0 , "Invoice_Number" , "Invoice_List")
+print("<auto>  data frame with a new column <Invoice_Number>")
+# print the columns
+for col in auto.columns:
+    print(col)
 
 
 
