@@ -40,7 +40,7 @@ print(auto)
 print('--------------------------------------------------')
 print()
 print(auto.dtypes)
-'''
+
 
 # replace '?' in the columns 'Price' with 0
 auto['Price'] = np.where(auto['Price'] == '?' , '0', auto['Price'] )
@@ -57,37 +57,24 @@ print(auto.dtypes)
 # number of rows in the initial <auto> DataFrame
 index = auto.index
 numb_of_rows =  len(index)
-print("number of rows")
-print(numb_of_rows)
+print()
+print('the initial number of rows ' + str(numb_of_rows))
 print()
 print('---------------------------------------------------')
 print('NaN values')
 print(auto.isnull().values.any())
-print('------------------------------')
+print('---------------------------------------------------')
 
 auto.replace(np.nan , 0 )
 auto.replace(['?'],'0')
 
 # drop empty rows
 auto.dropna()
+print()
+print('NaN values are removed, the number of rows: ' + str(len(auto))  )
 
 
-# create a list 'Invoice_List'
-Invoice_List = list(np.random.permutation(np.arange(1000,9999))[:205])
-print(Invoice_List)
-print()
-# insert the list  'Invoice_List" as a new column 'Invoice_Number' into <auto> data frame
-auto.insert(0 , "Invoice_Number" , "Invoice_List")
-print("<auto>  data frame with a new column <Invoice_Number>")
-# print the columns
-for col in auto.columns:
-    print(col)
-
-print()
-print()
-print(auto)
-print()
-print()
+'''
 # iterate over indices
 print('indices')
 for row in auto.index:
