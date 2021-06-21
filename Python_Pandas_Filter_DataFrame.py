@@ -42,18 +42,13 @@ print('--------------------------------------------------')
 print()
 print(auto.dtypes)
 
-'''
+
 # replace '?' in the columns 'Price' with 0
 auto['Price'] = np.where(auto['Price'] == '?' , '0', auto['Price'] )
 print('******')
 print(auto.dtypes)
 print()
-print()
-print("unique Price values")
-print(auto['Price'].unique())
-
 auto['Price'] = auto['Price'].astype(int)
-
 auto['Normalized Loss'] = np.where(auto['Normalized Loss'] == '?' , '0', auto['Price'] )
 auto['Normalized Loss'] = auto['Normalized Loss'].astype(int)
 print()
@@ -66,7 +61,7 @@ numb_of_rows =  len(index)
 print("number of rows")
 print(numb_of_rows)
 print()
-print('------------------------------')
+print('---------------------------------------------------')
 print('NaN values')
 print(auto.isnull().values.any())
 print('------------------------------')
@@ -74,24 +69,13 @@ print('------------------------------')
 auto.replace(np.nan , 0 )
 auto.replace(['?'],'0')
 
-
-print(auto.dtypes)
-print('**********************************')
-
 # drop empty rows
 auto.dropna()
-new_index = auto.index
 
 
-new_rows = len(new_index)
-print("new number of rows")
-print(new_rows)
-print()
-
-print("New data types")
-print(auto.dtypes)
 
 
+'''
 # ****   1) Filter the data, DataFrame way
 new_auto1_toyota = auto[auto["Make"] == "toyota"]
 print()
