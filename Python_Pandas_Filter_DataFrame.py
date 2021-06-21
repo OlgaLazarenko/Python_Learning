@@ -16,20 +16,20 @@ print("lenght <auto> data frame")
 print(lenght_auto_df)
 print()
 
-# generate a list of random numbers as invoice numbers
-invoice_list = []
-invoice_list = random.sample(range(1000,3000) , 205 )
-
-# insert the list <invoice_list> as a new column "Invoice_Number"
-print(auto)
-# columns of the data frame <auto>
+print(' --- Columns of <auto> data frame:')
 for col in auto.columns:
     print(col)
 print()
 print()
 
-auto.insert(0, "Invoice_List" , invoice_list , True)
-#  auto["Invoice_Number"] = invoice_list
+# generate a list of random numbers as invoice numbers
+invoice_list = []
+invoice_list = random.sample(range(7000,9999) , 205 )
+
+# insert the list <invoice_list> as a new column "Invoice" at the data frame <auto>
+auto.insert(0, "Invoice" , invoice_list , True)
+
+print(' ---- New column "Invoice" is inserted: ')
 for col in auto.columns:
     print(col)
 
@@ -40,7 +40,7 @@ print(auto)
 print('--------------------------------------------------')
 print()
 print(auto.dtypes)
-
+'''
 
 # replace '?' in the columns 'Price' with 0
 auto['Price'] = np.where(auto['Price'] == '?' , '0', auto['Price'] )
@@ -93,10 +93,9 @@ print('indices')
 for row in auto.index:
     print(row , end = " ")
 
+# -----------------------------------------------------------------------------------
 
 
-
-'''
 # ****   1) Filter the data, DataFrame way
 new_auto1_toyota = auto[auto["Make"] == "toyota"]
 print()
@@ -125,7 +124,7 @@ print(len(bmw_volvo_high_mpg))
 print()
 print('-----------------------------------------------')
 
-# --------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 
 # ****  2) Filter the data, Query Function
 honda_df = auto.query('Make == "honda"')
@@ -246,6 +245,7 @@ print(new_sorted_bmw_volvo) # sorted data frame is returned the initial data fra
 print()
 
 print(bmw_volvo)
+
 '''
 
 
