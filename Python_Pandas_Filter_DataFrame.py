@@ -83,6 +83,16 @@ print("<auto>  data frame with a new column <Invoice_Number>")
 for col in auto.columns:
     print(col)
 
+print()
+print()
+print(auto)
+print()
+print()
+# iterate over indices
+print('indices')
+for row in auto.index:
+    print(row , end = " ")
+
 
 
 
