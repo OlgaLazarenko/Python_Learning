@@ -9,6 +9,10 @@ auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\A
 # print the first 5 rows
 print(auto.head())
 print()
+print(' ---  Columns of <auto> data frame   ---')
+for rows in auto.columns:
+    print(rows)
+print()
 
 # --------------------------------------------------------------------------------------------------
 # write the data to files
