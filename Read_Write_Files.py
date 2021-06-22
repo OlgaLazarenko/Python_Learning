@@ -10,17 +10,12 @@ auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\A
 print(auto.head())
 print()
 
-
-# unique values of the column <Make>
-print('unique values of the column <Make>')
-auto_make_list = auto.Make.unique()
-print(auto_make_list)
-
-# write the data to a file
+# --------------------------------------------------------------------------------------------------
+# write the data to files
 # df.to_csv('file_name.csv')
 auto.to_csv("file_name")
 
-
+auto_make_list = auto.Make.unique() # list containing the unique car make
 for make in auto_make_list :
     file_name_part1 = "E:\\_Python_Projects_Data\\Auto_Files\\"
     file_name_part2 = make
@@ -33,5 +28,9 @@ for make in auto_make_list :
 
     # create a subset of the initial dataframe
     
-   
+# unique values of the column <Make>
+print('unique values of the column <Make>')
+
+for car_make in auto_make_list:
+    print(car_make)
 

@@ -7,7 +7,7 @@ import numpy as np
 import random
 
 # create <auto> DataFrame by reading the data file
-auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Autos_Import_1985.csv") 
+auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Autos_Import_1985.csv" )
 
 
 print()
@@ -58,7 +58,7 @@ print(auto.dtypes)
 index = auto.index
 numb_of_rows =  len(index)
 print()
-print('the initial number of rows ' + str(numb_of_rows))
+print('* the initial number of rows ' + str(numb_of_rows))
 print()
 print('---------------------------------------------------')
 print('NaN values')
@@ -71,10 +71,9 @@ auto.replace(['?'],'0')
 # drop empty rows
 auto.dropna()
 print()
-print('NaN values are removed, the number of rows: ' + str(len(auto))  )
+print('* NaN values are removed, the number of rows: ' + str(len(auto))  )
+print()
 
-
-'''
 # iterate over indices
 print('indices')
 for row in auto.index:
@@ -223,9 +222,6 @@ print(toyota_5min_price)
 
 
 
-
-
-
 new_sorted_bmw_volvo = bmw_volvo.sort_values( by =['Price'] , ascending = False , inplace = False) # default <inplace>
 print('sorted bmw_volvo, inplace = False, asigned to new data frame')
 print(new_sorted_bmw_volvo) # sorted data frame is returned the initial data frame <bmw_volvo> is not changed
@@ -233,7 +229,7 @@ print()
 
 print(bmw_volvo)
 
-'''
+
 
 
 
