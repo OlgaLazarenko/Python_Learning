@@ -31,15 +31,15 @@ auto.rename( columns = {
                         'City mpg' : 'City_mpg' ,
                         'Highway mpg' : 'Highway_mpg'
 
-                        }
+                        } , inplace = True
             )
 print()
 print()
-print('new column names of <auto> data frame')
+print(' ---  New column names of <auto> data frame   ---')
 for col in auto:
     print(col)
 # --------------------------------------------------------------------------------------------------
-# write the data to files
+# write the data to files according to the car make
 # df.to_csv('file_name.csv')
 auto.to_csv("file_name")
 
@@ -54,11 +54,11 @@ for make in auto_make_list :
     
     auto.to_csv(file_name)  # write .csv files 
 
-    # create a subset of the initial dataframe
-    
+  
 # unique values of the column <Make>
 print('unique values of the column <Make>')
-
 for car_make in auto_make_list:
     print(car_make)
 
+# write the data frame <auto> to a new csv file
+auto.to_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Car_Import_1985.csv")
