@@ -3,6 +3,7 @@
 
 
 import pandas as pd
+import os
 
 # read the data from the file <Auto_Import_1985.csv"
 auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Autos_Import_1985.csv")
@@ -62,3 +63,11 @@ for car_make in auto_make_list:
 
 # write the data frame <auto> to a new csv file
 auto.to_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Car_Import_1985.csv")
+
+# check of the file "Car_Import_1985.csv" exists
+print()
+if os.path.isfile("E:/_Python_Projects_Data/Data_Visualization/Autos_Data_Set/Car_Import_1985.csv") :
+    print("File  'Car_Import_1985.csv'  exists")
+else:
+    print("File  'Car_Import_1985.csv' does not exist")
+
