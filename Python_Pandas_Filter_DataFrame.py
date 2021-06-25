@@ -7,7 +7,7 @@ import numpy as np
 import random
 
 # create <auto> DataFrame by reading the data file
-auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Car_Import_1985.csv" )
+auto = pd.read_csv("E:/_Python_Projects_Data/Data_Visualization/Autos_Data_Set/Car_Import_1985.csv" )
 
 
 print()
@@ -21,7 +21,7 @@ for col in auto.columns:
     print(col)
 print()
 print()
-
+'''
 # generate a list of random numbers as invoice numbers
 invoice_list = []
 invoice_list = random.sample(range(7000,9999) , 205 )
@@ -180,7 +180,7 @@ print(bmw_volvo2) # the data frame <bmw_volvo2> was modified/updated after sorti
 print()
 print()
 
-# --- loc function for filter data frame
+
 # rename columns
 auto.rename( columns = {'Normalized Loss':'Normalized_Loss' , 'Body Style':'Body_Style'} , inplace = True)
 
@@ -228,7 +228,7 @@ print(new_sorted_bmw_volvo) # sorted data frame is returned the initial data fra
 print()
 
 print(bmw_volvo)
-
+'''
 
 
 
