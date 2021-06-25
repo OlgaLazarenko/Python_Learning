@@ -21,6 +21,14 @@ for col in auto.columns:
     print(col)
 print()
 print()
+
+auto.rename(columns = {'' : 'Index'} , inplace = True)
+
+print(' --- Columns of <auto> data frame:')
+for col in auto.columns:
+    print(col)
+print()
+print()
 '''
 # generate a list of random numbers as invoice numbers
 invoice_list = []

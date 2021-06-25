@@ -57,7 +57,8 @@ for make in auto_make_list :
 
   
 # unique values of the column <Make>
-print('unique values of the column <Make>')
+print()
+print(' -- nique values of the column <Make>')
 for car_make in auto_make_list:
     print(car_make)
 
