@@ -49,7 +49,7 @@ print('--------------------------------------------------')
 print()
 print(auto.dtypes)
 
-'''
+
 # replace '?' in the columns 'Price' with 0
 auto['Price'] = np.where(auto['Price'] == '?' , '0', auto['Price'] )
 print('******')
@@ -60,7 +60,7 @@ auto['Normalized Loss'] = np.where(auto['Normalized Loss'] == '?' , '0', auto['P
 auto['Normalized Loss'] = auto['Normalized Loss'].astype(int)
 print()
 print(auto.dtypes)
-
+'''
 
 # number of rows in the initial <auto> DataFrame
 index = auto.index
