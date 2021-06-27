@@ -29,7 +29,7 @@ for col in auto.columns:
     print(col)
 print()
 print()
-'''
+
 # generate a list of random numbers as invoice numbers
 invoice_list = []
 invoice_list = random.sample(range(7000,9999) , 205 )
@@ -49,7 +49,7 @@ print('--------------------------------------------------')
 print()
 print(auto.dtypes)
 
-
+'''
 # replace '?' in the columns 'Price' with 0
 auto['Price'] = np.where(auto['Price'] == '?' , '0', auto['Price'] )
 print('******')
