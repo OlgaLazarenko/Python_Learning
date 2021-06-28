@@ -16,7 +16,7 @@ for rows in auto.columns:
 print()
 
 # rename columns of <auto> data frame
-auto.rename( columns = {
+auto.rename( columns = { 'Normalized Loss' : 'Normalized_Loss',
                         'Fuel Type' : 'Fuel_Type' ,
                         'Num of Doors' : 'Num_of_Doors' ,
                         'Body Style' : 'Body_Style' ,
