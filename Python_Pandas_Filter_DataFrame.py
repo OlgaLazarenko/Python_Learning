@@ -237,7 +237,11 @@ print()
 
 print(bmw_volvo)
 '''
-
+# sort <auto> data frame by the column <Normalized_Loss>
+auto_sort_loss_asc = auto.sort_values( by = ['Normalized_Loss'] ,
+                                        ascending = True ,
+                                        inplace = True )
+print(auto_sort_loss_asc.head())
 
 
 
