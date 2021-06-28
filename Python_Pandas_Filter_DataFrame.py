@@ -56,8 +56,8 @@ print('******')
 print(auto.dtypes)
 print()
 auto['Price'] = auto['Price'].astype(int)
-auto['Normalized Loss'] = np.where(auto['Normalized Loss'] == '?' , '0', auto['Price'] )
-auto['Normalized Loss'] = auto['Normalized Loss'].astype(int)
+auto['Normalized_Loss'] = np.where(auto['Normalized_Loss'] == '?' , '0', auto['Price'] )
+auto['Normalized_Loss'] = auto['Normalized_Loss'].astype(int)
 print()
 print(auto.dtypes)
 '''
@@ -241,6 +241,8 @@ print(bmw_volvo)
 auto_sort_loss_asc = auto.sort_values( by = ['Normalized_Loss'] ,
                                         ascending = True ,
                                         inplace = True )
+
+print(auto_sort_loss_asc.dtypes())
 print(auto_sort_loss_asc.head())
 
 
