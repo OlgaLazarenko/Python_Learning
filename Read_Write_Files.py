@@ -65,7 +65,7 @@ for car_make in auto_make_list:
     print(car_make)
 
 # write the data frame <auto> to a new csv file
-auto.to_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Car_Import_1985.csv" , index_col = False)
+auto.to_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Car_Import_1985.csv" , index = False)
 
 # check of the file "Car_Import_1985.csv" exists
 print()
@@ -74,6 +74,8 @@ if os.path.isfile("E:/_Python_Projects_Data/Data_Visualization/Autos_Data_Set/Ca
 else:
     print("File  'Car_Import_1985.csv' does not exist")
 
+print()
+print()
 # read the data from the file <Auto_Import_1985.csv"
 auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Car_Import_1985.csv")
 # print the first 5 rows
