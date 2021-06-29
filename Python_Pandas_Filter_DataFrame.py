@@ -237,15 +237,23 @@ print()
 
 print(bmw_volvo)
 '''
+
+# filter out the column "Normalized_Loss" to get rid of '0' values
+auto_loss = auto.loc[auto["Normalized_Loss"] > 0 ]
+print()
+print()
+print(auto_loss)
 # sort <auto> data frame by the column <Normalized_Loss>
-auto_sort_loss_asc = auto.sort_values( by = ['Normalized_Loss'] ,
+auto_loss_asc = auto_loss.sort_values( by = ['Normalized_Loss'] ,
                                         ascending = True ,
                                         inplace = False )
 
 print()
 print()
 print(' <auto_sort_loss_asc>  data frame : ')
-print(auto_sort_loss_asc)
+print(auto_loss_asc)
+
+
 
 
 
