@@ -58,7 +58,7 @@ for make in auto_make_list :
   
 # unique values of the column <Make>
 print()
-print(' -- nique values of the column <Make>')
+print(' -- unique values of the column <Make>')
 for car_make in auto_make_list:
     print(car_make)
 
@@ -72,3 +72,8 @@ if os.path.isfile("E:/_Python_Projects_Data/Data_Visualization/Autos_Data_Set/Ca
 else:
     print("File  'Car_Import_1985.csv' does not exist")
 
+# read the data from the file <Auto_Import_1985.csv"
+auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Car_Import_1985.csv")
+# print the first 5 rows
+print(auto.head())
+print()
