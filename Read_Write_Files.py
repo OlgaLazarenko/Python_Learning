@@ -53,7 +53,9 @@ for make in auto_make_list :
 
     # check if the file exists
     
-    auto.to_csv(file_name)  # write .csv files 
+# avoid index column to be written to new csv. file
+
+auto.to_csv(file_name)  # write .csv files 
 
   
 # unique values of the column <Make>
@@ -63,7 +65,7 @@ for car_make in auto_make_list:
     print(car_make)
 
 # write the data frame <auto> to a new csv file
-auto.to_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Car_Import_1985.csv")
+auto.to_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\Car_Import_1985.csv" , index_col = False)
 
 # check of the file "Car_Import_1985.csv" exists
 print()
@@ -77,3 +79,4 @@ auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\C
 # print the first 5 rows
 print(auto.head())
 print()
+
