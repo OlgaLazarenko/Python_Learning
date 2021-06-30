@@ -74,7 +74,16 @@ print()
 print(auto)
 
 
+# drop '0' values of the column 'Normalized_Loss'
+auto_loss = auto.drop(auto.index[auto['Normalized_Loss'] == 0] , inplace = False )
+print()
+print(' --- <auto_loss>  data frame')
+print(auto_loss)
 
+auto_loss_sorted = auto.sort_values( by = 'Normalized_Loss' , ascending = True , inplace = False)
+print()
+print(' --- auto_loss_sorted')
+print(auto_loss_sorted)
 
 
 '''
