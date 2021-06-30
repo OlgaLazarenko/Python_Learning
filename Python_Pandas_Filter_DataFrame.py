@@ -9,26 +9,17 @@ import random
 # create <auto> DataFrame by reading the data file
 auto = pd.read_csv("E:/_Python_Projects_Data/Data_Visualization/Autos_Data_Set/Car_Import_1985.csv" )
 
-
-print()
-lenght_auto_df = len(auto)
-print("lenght <auto> data frame")
-print(lenght_auto_df)
-print()
-
+print(auto.head())
+# columns 
 print(' --- Columns of <auto> data frame:')
 for col in auto.columns:
     print(col)
 print()
 print()
 
-auto.rename(columns = {'' : 'Index'} , inplace = True)
 
-print(' --- Columns of <auto> data frame:')
-for col in auto.columns:
-    print(col)
-print()
-print()
+
+
 
 # generate a list of random numbers as invoice numbers
 invoice_list = []
@@ -41,12 +32,11 @@ print(' ---- New column "Invoice" is inserted: ')
 for col in auto.columns:
     print(col)
 
-
 print()
-print("<auto> DataFrame")
+print()
 print(auto)
-print('--------------------------------------------------')
 print()
+print('--- column data types')
 print(auto.dtypes)
 
 
@@ -60,7 +50,7 @@ auto['Normalized_Loss'] = np.where(auto['Normalized_Loss'] == '?' , '0', auto['P
 auto['Normalized_Loss'] = auto['Normalized_Loss'].astype(int)
 print()
 print(auto.dtypes)
-'''
+
 
 # number of rows in the initial <auto> DataFrame
 index = auto.index
@@ -81,12 +71,13 @@ auto.dropna()
 print()
 print('* NaN values are removed, the number of rows: ' + str(len(auto))  )
 print()
+print(auto)
 
-# iterate over indices
-print('indices')
-for row in auto.index:
-    print(row , end = " ")
 
+
+
+
+'''
 # -----------------------------------------------------------------------------------
 
 
@@ -236,7 +227,7 @@ print(new_sorted_bmw_volvo) # sorted data frame is returned the initial data fra
 print()
 
 print(bmw_volvo)
-'''
+
 
 # filter out the column "Normalized_Loss" to get rid of '0' values
 auto_loss = auto.loc[auto["Normalized_Loss"] > 0 ]
@@ -253,13 +244,4 @@ print()
 print(' <auto_sort_loss_asc>  data frame : ')
 print(auto_loss_asc)
 
-
-
-
-
-
-
-
-
-
-
+'''
