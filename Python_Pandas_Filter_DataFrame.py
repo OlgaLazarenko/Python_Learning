@@ -18,9 +18,6 @@ print()
 print()
 
 
-
-
-
 # generate a list of random numbers as invoice numbers
 invoice_list = []
 invoice_list = random.sample(range(7000,9999) , 205 )
@@ -34,21 +31,21 @@ for col in auto.columns:
 
 print()
 print()
-print(auto)
+print(auto.head(15))
 print()
 print('--- column data types')
 print(auto.dtypes)
+print()
 
 
 # replace '?' in the columns 'Price' with 0
 auto['Price'] = np.where(auto['Price'] == '?' , '0', auto['Price'] )
-print('******')
-print(auto.dtypes)
-print()
+# convert the column 'Price' to integer data type
 auto['Price'] = auto['Price'].astype(int)
 
-
+# replace '?' at the column "Normalized_Loss" with 0
 auto['Normalized_Loss'] = np.where(auto['Normalized_Loss'] == '?' , '0', auto['Normalized_Loss'] )
+# convert the column 'Normalized_Loss' to integer data type
 auto['Normalized_Loss'] = auto['Normalized_Loss'].astype(int)
 print()
 print(auto.dtypes)
@@ -90,14 +87,13 @@ print()
 print(' min Normalized_Loss')
 print(auto_loss['Normalized_Loss'].min())
 
-'''
 auto_loss_sorted = auto_loss.sort_values( by = 'Normalized_Loss' , ascending = True , inplace = False)
 print()
 print(' --- auto_loss_sorted')
 print(auto_loss_sorted)
 
 
-'''
+
 # -----------------------------------------------------------------------------------
 
 '''
@@ -263,5 +259,4 @@ print()
 print()
 print(' <auto_sort_loss_asc>  data frame : ')
 print(auto_loss_asc)
-
 '''
