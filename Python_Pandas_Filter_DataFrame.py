@@ -100,6 +100,10 @@ print()
 #retrieve the last 10 rows with maximum 'Normalized_Loss'/ the ROWS POSITION
 print(' --  10 imported cars with max normalized loss:')
 print(auto_loss_sort_asc.iloc[-10:])
+print()
+print()
+# retrieve the invoice number of the first 12 cars with min normalized loss
+print(auto_loss_sort_asc.iloc[:12 , 0])
 
 #
 
