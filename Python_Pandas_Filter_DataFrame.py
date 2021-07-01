@@ -62,13 +62,13 @@ print('NaN values')
 print(auto.isnull().values.any())
 print('---------------------------------------------------')
 
-auto.replace(np.nan , 0 )
+auto.replace(np.nan , 0 ) # suppose it did't work ????
 auto.replace(['?'],'0')
 
 # drop empty rows
 auto.dropna()
 print()
-print('* NaN values are removed, the number of rows: ' + str(len(auto))  )
+print('* NaN values are removed, the number of rows: ' + str(len(auto))  ) # was this effective ????
 print()
 print(auto)
 
@@ -87,10 +87,22 @@ print()
 print(' min Normalized_Loss')
 print(auto_loss['Normalized_Loss'].min())
 
-auto_loss_sorted = auto_loss.sort_values( by = 'Normalized_Loss' , ascending = True , inplace = False)
+auto_loss_sort_asc = auto_loss.sort_values( by = 'Normalized_Loss' , ascending = True , inplace = False)
 print()
 print(' --- auto_loss_sorted')
-print(auto_loss_sorted)
+print(auto_loss_sort_asc)
+
+# retrieve the first 12 rows with  minimal 'Normalized_Loss' / the ROWS POSITION
+print(' -- 12 imported cars with min normalized loss:')
+print(auto_loss_sort_asc.iloc[:12])
+print()
+print()
+#retrieve the last 10 rows with maximum 'Normalized_Loss'/ the ROWS POSITION
+print(' --  10 imported cars with max normalized loss:')
+print(auto_loss_sort_asc.iloc[-10:])
+
+#
+
 
 
 
