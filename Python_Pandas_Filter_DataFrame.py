@@ -75,12 +75,21 @@ print(auto)
 
 
 # drop '0' values of the column 'Normalized_Loss'
-auto_loss = auto.drop(auto.index[auto['Normalized_Loss'] == 0] , inplace = False )
+auto_loss = auto[auto['Normalized_Loss'] > 0]
 print()
 print(' --- <auto_loss>  data frame')
 print(auto_loss)
 
-auto_loss_sorted = auto.sort_values( by = 'Normalized_Loss' , ascending = True , inplace = False)
+print()
+print(' max Normalized_Loss')
+print(auto_loss['Normalized_Loss'].max())
+print()
+
+print(' min Normalized_Loss')
+print(auto_loss['Normalized_Loss'].min())
+
+'''
+auto_loss_sorted = auto_loss.sort_values( by = 'Normalized_Loss' , ascending = True , inplace = False)
 print()
 print(' --- auto_loss_sorted')
 print(auto_loss_sorted)
@@ -89,7 +98,7 @@ print(auto_loss_sorted)
 '''
 # -----------------------------------------------------------------------------------
 
-
+'''
 # ****   1) Filter the data, DataFrame way
 new_auto1_toyota = auto[auto["Make"] == "toyota"]
 print()
