@@ -81,4 +81,5 @@ auto = pd.read_csv("E:\_Python_Projects_Data\Data_Visualization\Autos_Data_Set\C
 # print the first 5 rows
 print(auto.head())
 print()
+print(auto.dtypes)
 

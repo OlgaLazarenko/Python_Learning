@@ -46,7 +46,9 @@ print('******')
 print(auto.dtypes)
 print()
 auto['Price'] = auto['Price'].astype(int)
-auto['Normalized_Loss'] = np.where(auto['Normalized_Loss'] == '?' , '0', auto['Price'] )
+
+
+auto['Normalized_Loss'] = np.where(auto['Normalized_Loss'] == '?' , '0', auto['Normalized_Loss'] )
 auto['Normalized_Loss'] = auto['Normalized_Loss'].astype(int)
 print()
 print(auto.dtypes)
