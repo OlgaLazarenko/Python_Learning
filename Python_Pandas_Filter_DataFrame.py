@@ -105,6 +105,12 @@ print()
 # retrieve the invoice number of the first 12 cars with min normalized loss
 print(auto_loss_sort_asc.iloc[:12 , 0])
 
+# retrive the rows with indexes from 20 to 30 from <auto> data frame
+print()
+print('rows with indexes from 20 to 30:')
+print(auto.loc[20:30])
+
+
 #
 
 
