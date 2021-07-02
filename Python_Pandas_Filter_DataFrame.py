@@ -115,6 +115,10 @@ print('rows with indexes from 100 to 125 and the first three columns')
 # print(auto.loc[100:125 , 1:3])  ----   error generated !!!!
 print(auto.iloc[120:125 , 1:3])
 
+# print rows with indexes 10 to 22 and the columns from 5th column
+print('rrows with indexes 10 to 22 and the columns from 5th column')
+print(auto.iloc[10:22 , 5: ])
+
 
 
 
