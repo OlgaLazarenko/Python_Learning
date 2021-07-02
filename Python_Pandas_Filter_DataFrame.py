@@ -131,6 +131,14 @@ print(auto['Invoice'].head(12))
 print()
 # or 
 print(auto.Invoice.head(12))
+print()
+
+# select multiple columns:
+list_columns = ['Invoice' , 'Make','Body_Style' , 'Price']
+print('select multipel columns from <auto> data frame')
+auto_part = auto[ ['Invoice' , 'Make','Body_Style' , 'Price'] ]
+print(auto_part)
+
 
 
 
