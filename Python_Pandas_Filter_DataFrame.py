@@ -123,6 +123,15 @@ print(auto.iloc[10:22 , 5: ])
 # print rows with indexes 10 to 25 and last 5 columns
 print('rows with indexes 10 to 22 and last 5 columns')
 print(auto.iloc[10:25 , -3:])
+print()
+
+# 12 first rows of the column "Invoice"
+print("12 first rows of the column 'Invoice' ")
+print(auto['Invoice'].head(12))
+print()
+
+
+
 
 
 
