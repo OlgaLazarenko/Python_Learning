@@ -120,6 +120,10 @@ print('rrows with indexes 10 to 22 and the columns from 5th column')
 print(auto.iloc[10:22 , 5: ])
 
 
+# print rows with indexes 10 to 25 and last 5 columns
+print('rows with indexes 10 to 22 and last 5 columns')
+print(auto.iloc[10:25 , -3:])
+
 
 
 
