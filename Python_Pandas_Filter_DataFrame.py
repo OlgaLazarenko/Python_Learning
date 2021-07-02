@@ -110,8 +110,12 @@ print()
 print('rows with indexes from 20 to 30:')
 print(auto.loc[20:30])
 
+# retrieve rows with indexes from 100 to 125 and the first three columns
+print('rows with indexes from 100 to 125 and the first three columns')
+# print(auto.loc[100:125 , 1:3])  ----   error generated !!!!
+print(auto.iloc[120:125 , 1:3])
 
-#
+
 
 
 
