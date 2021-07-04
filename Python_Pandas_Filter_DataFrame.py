@@ -144,6 +144,9 @@ print()
 print('select rows with indexes from 22 to 44 and the columns <Invoice>, <Make>, <Price>')
 print(auto.loc[auto.index[22:44] , ['Invoice','Make','Price']])
 print()
+print()
+print('select last 33 rows and the columns <Make> , <Body_Style> , <City_mpg> , <Highway_mpg>, ')
+print(auto.loc[auto.index[-33:] , ['Make' , 'Body_Style' , 'City_mpg' , 'Highway_mpg']])
 
 
 
