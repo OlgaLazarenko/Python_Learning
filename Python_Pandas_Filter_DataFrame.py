@@ -139,6 +139,11 @@ print('select multipel columns from <auto> data frame')
 auto_part = auto[ ['Invoice' , 'Make','Body_Style' , 'Price'] ]
 print(auto_part)
 
+# filter <auto> data frame by rows position and column names
+print()
+print('select rows with indexes from 22 to 44 and the columns <Invoice>, <Make>, <Price>')
+print(auto.loc[auto.index[22:44] , ['Invoice','Make','Price']])
+print()
 
 
 
