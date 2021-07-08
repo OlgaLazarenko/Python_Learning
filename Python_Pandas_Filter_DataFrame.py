@@ -154,6 +154,12 @@ print('first 7 rows')
 print(auto.iloc[:7])
 print('last 8 rows')
 print(auto.iloc[-8:])
+print("rows from 30 to 45")
+print(auto.iloc[30:46])
+print()
+print('last 4 columns')
+print(auto.iloc[ : , -4:])
+
 
 
 
