@@ -148,6 +148,8 @@ print()
 print('select last 33 rows and the columns <Make> , <Body_Style> , <City_mpg> , <Highway_mpg>, ')
 print(auto.loc[auto.index[-33:] , ['Make' , 'Body_Style' , 'City_mpg' , 'Highway_mpg']])
 
+# --------------------------------------------------------------------------------------------------------
+
 # filter <auto> data frame by row position and column position
 print("select rows and columns by their position")
 print('first 7 rows')
@@ -159,8 +161,11 @@ print(auto.iloc[30:46])
 print()
 print('last 4 columns')
 print(auto.iloc[ : , -4:])
-
-
+print('first 20 rows, first 5 columns')
+print(auto.iloc[ :20 , : 5])
+print()
+print('rows from 55 to 105 by their position , columns from 2 to 8')
+print(auto.iloc[55:105 , 2:8])
 
 
 
