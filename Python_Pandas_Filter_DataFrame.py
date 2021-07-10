@@ -164,11 +164,15 @@ print(auto.iloc[ : , -4:])
 print('first 20 rows, first 5 columns')
 print(auto.iloc[ :20 , : 5])
 print()
-print('rows from 55 to 105 by their position , columns from 2 to 8')
+print('rows from 55 to 105 by their position , columns from 2 to 8')pandas
 print(auto.iloc[55:105 , 2:8])
 print()
 print('last 20 rows and the columns from 5 to 10')
 print(auto.iloc[-20: , 5:10])
+print()
+print('filter dataframe using a list of values')
+print(auto[auto['Make'].isin(['Honda','Toyota'])])
+
 
 # -----------------------------------------------------------------------------------
 
