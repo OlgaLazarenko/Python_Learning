@@ -166,9 +166,9 @@ print(auto.iloc[ :20 , : 5])
 print()
 print('rows from 55 to 105 by their position , columns from 2 to 8')
 print(auto.iloc[55:105 , 2:8])
-
-
-
+print()
+print('last 20 rows and the columns from 5 to 10')
+print(auto.iloc[-20: , 5:10])
 
 # -----------------------------------------------------------------------------------
 
