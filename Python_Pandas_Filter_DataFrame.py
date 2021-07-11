@@ -170,9 +170,13 @@ print()
 print('last 20 rows and the columns from 5 to 10')
 print(auto.iloc[-20: , 5:10])
 print()
-print('filter dataframe using a list of values')
-print(auto[auto['Normalized_Loss'].isin([ 150,0])])
 
+print('filter dataframe using a list of values')
+print('<auto> datarame: imported cars with normalized loss 0 and 150')
+print(auto[auto['Normalized_Loss'].isin([ 150,0])])
+print()
+print('<auto> dataframe: imported cars with make saab, peugot, mazda')
+print(auto[auto['Make'].isin(['saab','peugot','mazda'])])
 
 # -----------------------------------------------------------------------------------
 
