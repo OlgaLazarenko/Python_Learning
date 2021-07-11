@@ -181,7 +181,7 @@ print()
 
 # select multiple columns
 print('select multiple columns of <auto> dataframe')
-print(auto['Invoice','Make','Body_Style','Price'])
+print( auto[ ['Invoice','Make','Body_Style','Price'] ] )
 
 # -----------------------------------------------------------------------------------
 
