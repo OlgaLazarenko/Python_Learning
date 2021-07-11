@@ -177,6 +177,11 @@ print(auto[auto['Normalized_Loss'].isin([ 150,0])])
 print()
 print('<auto> dataframe: imported cars with make saab, peugot, mazda')
 print(auto[auto['Make'].isin(['saab','peugot','mazda'])])
+print()
+
+# select multiple columns
+print('select multiple columns of <auto> dataframe')
+print(auto['Invoice','Make','Body_Style','Price'])
 
 # -----------------------------------------------------------------------------------
 
