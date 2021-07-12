@@ -22,6 +22,7 @@ print()
 invoice_list = []
 invoice_list = random.sample(range(7000,9999) , 205 )
 
+
 # insert the list <invoice_list> as a new column "Invoice" at the data frame <auto>
 auto.insert(0, "Invoice" , invoice_list , True)
 
@@ -102,6 +103,11 @@ print(' --  10 imported cars with max normalized loss:')
 print(auto_loss_sort_asc.iloc[-10:])
 print()
 print()
+print(' --  basic information of 10 imported cars with max normalized loss:')
+print(auto_loss_sort_asc.iloc[-10: , ('Invoice','Make','Body_Style','Normalized_Loss')])
+print()
+
+'''
 # retrieve the invoice number of the first 12 cars with min normalized loss
 print(auto_loss_sort_asc.iloc[:12 , 0])
 
@@ -188,7 +194,7 @@ list_columns = ['Invoice' , 'Make','City_mpg','Highway_mpg']
 print('2) select multipel columns from <auto> data frame')
 auto_part = auto[list_columns ]
 print(auto_part)
-
+'''
 # -----------------------------------------------------------------------------------
 
 '''
