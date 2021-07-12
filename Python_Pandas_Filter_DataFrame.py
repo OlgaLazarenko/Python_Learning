@@ -180,8 +180,14 @@ print(auto[auto['Make'].isin(['saab','peugot','mazda'])])
 print()
 
 # select multiple columns
-print('select multiple columns of <auto> dataframe')
+print('1) select multiple columns of <auto> dataframe')
 print( auto[ ['Invoice','Make','Body_Style','Price'] ] )
+print()
+
+list_columns = ['Invoice' , 'Make','City_mpg','Highway_mpg']
+print('2) select multipel columns from <auto> data frame')
+auto_part = auto[list_columns ]
+print(auto_part)
 
 # -----------------------------------------------------------------------------------
 
