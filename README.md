@@ -55,17 +55,14 @@ Each part has its own list of goals.
     - [x] features inplace = False/True
 - [x] loc() function
 - [x] iloc() function
-- []  compare loc() and iloc()
-- []  filer dataframe by row and column position
-- []  filter dataframe by rows position and column names
-- []  select multiple values of a column
+- [x]  filer dataframe by row and column position
+- [x]  filter dataframe by rows position and column names
+- [x]  select multiple values of a column
 - []  select rows whose column value != a specific value
 - []  negate a column
 - []  select non-missing values in data frame
 - []  filter string in data frame
 - []  filter if a column name has a space
-
-
 
 
 
