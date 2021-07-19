@@ -46,23 +46,23 @@ Each part has its own list of goals.
 - [] combine dataframes when axis = 1
 
 ## Section: Filter DataFrame
-- [x] dataframe way to filter a dataframe
-- [x] query function to filter a dataframe
-    - [x] one column/condition
-    - [x] multiple columns/conditions
-    - [x] reference method 
-    - [x] pass variables in query function
-    - [x] features inplace = False/True
-- [x] loc() function
-- [x] iloc() function
-- [x]  filer dataframe by row and column position
-- [x]  filter dataframe by rows position and column names
-- [x]  select multiple values of a column
-- []  select rows whose column value != a specific value
-- []  negate a column
-- []  select non-missing values in data frame
-- []  filter string in data frame
-- []  filter if a column name has a space
+- [x] 1) dataframe way to filter a dataframe
+
+- [x] 2) query function to filter a dataframe
+    - [x] 2.1) one column/condition
+    - [x] 2.2) multiple columns/conditions
+    - [x] 2.3) reference method 
+    - [x] 2.4) pass variables in query function
+    - [x] 2.5) features inplace = False/True
+
+- [x] 3) loc() function
+- [x] 4) iloc() function
+- [x] 5) filer dataframe by row and column position
+- [x] 6) select rows whose column value != a specific value
+- []  7) negate a column
+- []  5) select non-missing values in data frame
+- []  6) filter string in data frame
+- []  7) filter if a column name has a space
 
 
 
