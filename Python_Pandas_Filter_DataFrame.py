@@ -9,20 +9,27 @@ import random
 # create <auto> DataFrame by reading the data file
 auto = pd.read_csv("E:/_Python_Projects_Data/Data_Visualization/Autos_Data_Set/Car_Import_1985.csv" )
 
-print(auto.head())
-# columns 
+print(auto.head()) # print the first 10 rows
+
 print(' --- Columns of <auto> data frame:')
-for col in auto.columns:
+for col in auto.columns: # columns of the dataframe
     print(col)
 print()
 print()
 
-
+# create a new column  with invoice numbers (random numbers) for each imported car
 # generate a list of random numbers as invoice numbers
+
 invoice_list = []
-invoice_list = random.sample(range(7000,9999) , 205 )
+# count the rows of the dataframe
+rows_num = len(index)
+print("number of rows of <auto> dataframe: " + str(row_num))
+print()
+invoice_list = random.sample(range(7000,9999) , rows_num)
+print('the invoice numbers to be inserted into <auto> dataframe:')
+print(invoice_list)
 
-
+'''
 # insert the list <invoice_list> as a new column "Invoice" at the data frame <auto>
 auto.insert(0, "Invoice" , invoice_list , True)
 
@@ -107,7 +114,7 @@ print(' --  basic information of 10 imported cars with max normalized loss:')
 print(auto_loss_sort_asc.iloc[-10: , ('Invoice','Make','Body_Style','Normalized_Loss')])
 print()
 
-'''
+
 # retrieve the invoice number of the first 12 cars with min normalized loss
 print(auto_loss_sort_asc.iloc[:12 , 0])
 
