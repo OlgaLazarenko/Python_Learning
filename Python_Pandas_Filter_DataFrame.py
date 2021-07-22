@@ -32,13 +32,10 @@ print(invoice_list)
 
 print()
 
-# compare iloc() and loc() methonds
-# - 
 
-
-'''
 # insert the list <invoice_list> as a new column "Invoice" at the data frame <auto>
 auto.insert(0, "Invoice" , invoice_list , True)
+print(auto.head())
 
 print(' ---- New column "Invoice" is inserted: ')
 for col in auto.columns:
@@ -47,6 +44,14 @@ for col in auto.columns:
 print()
 print()
 print(auto.head(15))
+
+auto_toyota = auto.loc[auto['Make'] == 'toyota']
+print()
+print('<auto_toyota>  dataframe')
+print(auto_toyota)
+
+
+'''
 print()
 print('--- column data types')
 print(auto.dtypes)
