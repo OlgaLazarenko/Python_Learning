@@ -22,12 +22,19 @@ print()
 
 invoice_list = []
 # count the rows of the dataframe
-rows_num = len(index)
-print("number of rows of <auto> dataframe: " + str(row_num))
+rows_num = len(auto['Make'])
+print(rows_num)
+print("number of rows of <auto> dataframe: " + str(rows_num))
 print()
 invoice_list = random.sample(range(7000,9999) , rows_num)
 print('the invoice numbers to be inserted into <auto> dataframe:')
 print(invoice_list)
+
+print()
+
+# compare iloc() and loc() methonds
+# - 
+
 
 '''
 # insert the list <invoice_list> as a new column "Invoice" at the data frame <auto>
