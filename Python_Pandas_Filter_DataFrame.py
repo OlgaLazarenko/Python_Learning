@@ -49,6 +49,11 @@ auto_toyota = auto.loc[auto['Make'] == 'toyota']
 print()
 print('<auto_toyota>  dataframe')
 print(auto_toyota)
+print()
+print('----------------------------------------------------------------------------')
+print()
+print(' ---  compare loc() and iloc() methonds   --- ')
+# compare loc() and iloc() methonds
 
 
 '''
