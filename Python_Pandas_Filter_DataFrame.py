@@ -54,6 +54,12 @@ print('-------------------------------------------------------------------------
 print()
 print(' ---  compare loc() and iloc() methonds   --- ')
 # compare loc() and iloc() methonds
+# loc()  columns/rows  labels
+# iloc() position of columns/rows
+
+# loc()
+print('first three columns of <auto_toyota> dataframe')
+print(auto_toyota.loc[[1,2,3]])
 
 
 '''
