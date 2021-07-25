@@ -38,3 +38,12 @@ college_df_my_index = pd.DataFrame(college_class, list_index)
 print(' <college_df_my_index>  dataframe')
 print(college_df_my_index)
 
+# create a dataframe <college_df_default_and_my_index>
+
+college_df_my_index.reset_index(inplace = True)
+print()
+print('<college_df_default_and_my_index>')
+print(college_df_my_index)
+print()
+
+
