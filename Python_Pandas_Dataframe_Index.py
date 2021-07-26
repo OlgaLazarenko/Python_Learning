@@ -70,12 +70,11 @@ print(college_df_my_index_col)
 print()
 print()
 
-'''
-print(college_df_my_index_col_2)
+
+# make the column <Last_Name> as index column, remove the default index column
+index_column = {'a','b','c','d','e'}
+college2 = pd.DataFrame(college_class , index_column)
+print("<college_df_2>")
+college2.set_index(['Last_Name'] , inplace = True)
+print(college2)
 print()
-print(college_df_my_index_col_2.reset_index(inpace = True))
-# print(college_df_my_index_col_2.reset_index(drop = True))
-'''
-
-
-
