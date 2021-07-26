@@ -16,6 +16,7 @@ for col in auto.columns: # columns of the dataframe
     print(col)
 print()
 print()
+print()
 
 # create a new column  with invoice numbers (random numbers) for each imported car
 # generate a list of random numbers as invoice numbers
@@ -25,6 +26,7 @@ invoice_list = []
 rows_num = len(auto['Make'])
 print(rows_num)
 print("number of rows of <auto> dataframe: " + str(rows_num))
+print()
 print()
 invoice_list = random.sample(range(7000,9999) , rows_num)
 print('the invoice numbers to be inserted into <auto> dataframe:')

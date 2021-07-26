@@ -42,8 +42,40 @@ print(college_df_my_index)
 
 college_df_my_index.reset_index(inplace = True)
 print()
+print()
 print('<college_df_default_and_my_index>')
 print(college_df_my_index)
 print()
+print()
+
+
+# create my own index column and remove the default index column
+my_index_col = { 'AAA' , 'BBB' , 'CCC' , 'DDD' , 'EEE'}
+
+# convert the dictionary <college_class> and <my_index_col> into a dataframe
+college_df_my_index_col = pd.DataFrame(college_class, my_index_col)
+college_df_my_index_col_2 = pd.DataFrame(college_class, my_index_col)
+print(' <college_df_my_index_col>  DataFrame')
+print(college_df_my_index_col)
+print()
+print()
+
+# reset/remove my own index and make the default index as index
+# use <college_df_my_index_col>
+print("Resent/remove my own index and make the default index as index")
+print(' from <college_df_my_index_col')
+# remove my own index 
+college_df_my_index_col.reset_index(inplace = True , drop = True)
+print(college_df_my_index_col)
+print()
+print()
+
+'''
+print(college_df_my_index_col_2)
+print()
+print(college_df_my_index_col_2.reset_index(inpace = True))
+# print(college_df_my_index_col_2.reset_index(drop = True))
+'''
+
 
 
