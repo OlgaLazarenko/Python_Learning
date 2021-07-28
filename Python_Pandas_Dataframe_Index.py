@@ -72,14 +72,23 @@ print()
 
 
 # make the column <Last_Name> as the index column, remove the default index column
+
 index_column = {'a','b','c','d','e'}
+print(' initial <college2> dataframe ')
 college2 = pd.DataFrame(college_class , index_column)
-print("<college_df_2>")
+print('*-------------------------------------------*')
+print(college2)
+print('*-------------------------------------------*')
+print()
+print()
+print('<Last_Name> column substituted the index column')
 college2.set_index(['Last_Name'] , inplace = True)
 print(college2)
 print()
+print()
 # make the column <First_Name" as the index column
 college2.set_index(['First_Name'] , inplace = True)
-print('---------------------------')
+print('----------------------------------------------')
 print()
+print('<First_Name> column substituted the index column <Last_Name>')
 print(college2)
