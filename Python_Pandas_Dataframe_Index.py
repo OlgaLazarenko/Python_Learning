@@ -81,6 +81,7 @@ print(college2)
 print('*-------------------------------------------*')
 print()
 print()
+# make the column <Last_Name" as the index column
 print('<Last_Name> column substituted the index column')
 college2.set_index(['Last_Name'] , inplace = True)
 print(college2)
