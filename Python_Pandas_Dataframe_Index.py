@@ -87,9 +87,31 @@ college2.set_index(['Last_Name'] , inplace = True)
 print(college2)
 print()
 print()
+# insert a new index column again, use index_column dictionary
+
 # make the column <First_Name" as the index column
 college2.set_index(['First_Name'] , inplace = True)
 print('----------------------------------------------')
 print()
 print('<First_Name> column substituted the index column <Last_Name>')
 print(college2)
+print()
+print('------------------------------------------------')
+
+# Indexing/selecting rows,columns. Indexers
+print("***  Indexing/Selecting rows, columns")
+print('1) indexing operator <dataframe_name>.[]')
+print('        select a single column <Last_Name>')
+print(college_class['Last_Name'])
+print()
+print('        select a single column <First_Name>')
+print(college_class['First_Name'])
+print()
+print('        select multiple columns')
+print(college_class['Last_Name','First_Name'])
+print()
+print(college_class['Last_Name','Grade'])
+print()
+
+print('2) loc[] indexer, rows/columns labels')
+print()

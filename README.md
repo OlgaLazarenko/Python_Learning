@@ -66,7 +66,7 @@ Each part has its own list of goals.
 
 ## Section:  Dataframe Index
 indexing => selecting some rows/columns
-4 types of indexing:
+4 types of indexing (indexers):
 1) -[] dataframe.[] => indexsing operator
 2) -[] dataframe.loc[] => rows/columns labels/names
 3) -[] dataframe.iloc[] => rows/columns position/integer
