@@ -64,5 +64,15 @@ Each part has its own list of goals.
 - []  6) filter string in data frame
 - []  7) filter if a column name has a space
 
+## Section: Index
+indexing => selecting some rows/columns
+4 types of indexing:
+1) -[] dataframe.[]
+2) -[] dataframe.loc[] => rows/columns labels/names
+3) -[] dataframe.iloc[] => rows/columns position/integer
+4) -[] dataframe .ix[] => both: labels/names and position/integer
+
+
+
 
 
