@@ -12,30 +12,31 @@ college_class = {
                 'Last_Name': ['Stephenson' , 'Pizaro' , 'Kim' , 'Williams' , 'Hua'] ,
                 'First_Name': ['Grace', 'Maria', 'Lola', 'John' , 'Sofia'] ,
                 'Age' : [22,30,27,19,45] ,
-                'Grade' : ['B-','C','A','A+','D']
+                'Grade' : ['B-','C','A','A+','D'] , 
+                'Graduate_Year' :[ '2021','2022','2000','2021','2021']
                }
 
+# the initial dictionary to be used for a dataframe
+print()
+print("The initial dictionary to be turned into a dataframe:")
+print('=====================================================')
+print(college_class)
+print('=====================================================')
+print()
 
 # create a dataframe <college_df> with the default index column
 college_df = pd.DataFrame(college_class)
 print()
-print(' <college_df> dataframe')
+print(' <college_df> DataFrame with the default index column:')
 print(college_df)
 print()
-
-# create a dataframe <college_df_my_index> with my own index column
 print()
-print('dictionary:')
-print(college_class)
+
+print(" <college_df_my_index> DataFrame with my own index column")
 # dictionary  to create the index column
+my_index = { '001', '002' , '003' ,'004','005'}
+college_df_my_index = pd.DataFrame(college_class, my_index)
 print()
-print('list to create the index column')
-list_index = { '001', '002' , '003' ,'004','005'}
-print(list_index)
-print()
-
-college_df_my_index = pd.DataFrame(college_class, list_index)
-print(' <college_df_my_index>  dataframe')
 print(college_df_my_index)
 
 # create a dataframe <college_df_default_and_my_index>
@@ -108,10 +109,8 @@ print('        select a single column <First_Name>')
 print(college_class['First_Name'])
 print()
 print('        select multiple columns')
-print(college_class['Last_Name','First_Name'])
-print()
-print(college_class['Last_Name','Grade'])
-print()
 
-print('2) loc[] indexer, rows/columns labels')
-print()
+df_1 = college_class[ ["First_Name","Last_Name"] ]
+print(df_1)
+
+
