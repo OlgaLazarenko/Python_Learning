@@ -34,7 +34,7 @@ print()
 
 print(" <college_df_my_index> DataFrame with my own index column")
 # dictionary  to create the index column
-my_index = { '001', '002' , '003' ,'004','005'}
+my_index = { '0001', '0002' , '0003' ,'0004','0005'}
 college_df_my_index = pd.DataFrame(college_class, my_index)
 print()
 print(college_df_my_index)
@@ -102,16 +102,20 @@ print(college2)
 print()
 print('------------------------------------------------')
 
-# Indexing/selecting rows,columns. Indexers
-print("***  Indexing/Selecting rows, columns")
-print('1) indexing operator <dataframe_name>.[]')
-print('        select a single column <Last_Name>')
+# 1) Indexing Operator []
+print(" *** Indexing Operator [] ")
+print()
+print('select a single column <Last_Name>')
 print(college_class['Last_Name'])
 print()
-print('        select a single column <First_Name>')
+print('select a single column <First_Name>')
 print(college_class['First_Name'])
 print()
-print('        select multiple columns')
+print('select a single column <Grade>')
+print(college_class['Grade'])
+print('      -------------------------------------------')
+print()
+print(' select multiple columns')
 
 df_1 = college_class[ ["First_Name","Last_Name"] ]
 print(df_1)
