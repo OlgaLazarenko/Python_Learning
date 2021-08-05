@@ -38,9 +38,12 @@ my_index = { '001', '002' , '003' ,'004','005'}
 college_df_my_index = pd.DataFrame(college_class, my_index)
 print()
 print(college_df_my_index)
+print()
+print()
 
-# create a dataframe <college_df_default_and_my_index>
 
+print("<college_df_default_and_my_index> DataFrame")
+print("  with the default and my own index column")
 college_df_my_index.reset_index(inplace = True)
 print()
 print()
