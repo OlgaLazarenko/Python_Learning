@@ -32,6 +32,10 @@ df_size = college_df.size
 print(df_size)
 df_shape = college_df.shape
 print(df_shape)
+df_info = college_df.info
+print()
+print(df_info)
+
 
 print(" <college_df_my_index> DataFrame with my own index column")
 # dictionary  to create the index column
