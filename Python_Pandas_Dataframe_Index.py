@@ -8,7 +8,7 @@ import random
 
 # create a dataframe from a dictionary
 # dictionary
-college_class = {
+college_dict = {
                 'Last_Name': ['Stephenson' , 'Pizaro' , 'Kim' , 'Williams' , 'Hua'] ,
                 'First_Name': ['Grace', 'Maria', 'Lola', 'John' , 'Sofia'] ,
                 'Age' : [22,30,27,19,45] ,
@@ -18,19 +18,17 @@ college_class = {
 
 # the initial dictionary to be used for a dataframe
 print()
-print("The initial dictionary to be turned into a dataframe:")
+print("The initial dictionary to be turned into a dataframe <college_df> :")
 print('=====================================================')
-print(college_class)
-print('=====================================================')
-print()
-
 # create a dataframe <college_df> with the default index column
-college_df = pd.DataFrame(college_class)
+college_df = pd.DataFrame(college_dict)
 print()
 print(' <college_df> DataFrame with the default index column:')
 print(college_df)
 print()
-print()
+print('*---------------------------------------------------*')
+print('DataFrame <college_df> shape:')
+print(college_df.type())
 
 print(" <college_df_my_index> DataFrame with my own index column")
 # dictionary  to create the index column
@@ -115,9 +113,11 @@ print('select a single column <Grade>')
 print(college_class['Grade'])
 print('      -------------------------------------------')
 print()
+
+
+'''
 print(' select multiple columns')
 
 df_1 = college_class[ ["First_Name","Last_Name"] ]
 print(df_1)
-
-
+''' 
