@@ -27,8 +27,9 @@ print(' <college_df> DataFrame with the default index column:')
 print(college_df)
 print()
 print('*---------------------------------------------------*')
-print('DataFrame <college_df> shape:')
-print(college_df.type())
+print('DataFrame <college_df> size:')
+df_size = college_df.size()
+print(df_size)
 
 print(" <college_df_my_index> DataFrame with my own index column")
 # dictionary  to create the index column
