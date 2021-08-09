@@ -11,7 +11,7 @@ import random
 college_dict = {
                 'Last_Name': ['Stephenson' , 'Pizaro' , 'Kim' , 'Williams' , 'Hua'] ,
                 'First_Name': ['Grace', 'Maria', 'Lola', 'John' , 'Sofia'] ,
-                'Age' : ['22','30','27','19','45'] ,
+                'Age' : [22,30,27,19,45] ,
                 'Grade' : ['B-','C','A','A+','D'] , 
                 'Graduate_Year' :[ '2021','2022','2000','2021','2021']
                }
@@ -32,8 +32,8 @@ df_size = college_df.size
 print(df_size)
 df_shape = college_df.shape
 print(df_shape)
+print('DataFrame inforamaton:')
 df_info = college_df.info
-print()
 print(df_info)
 
 
