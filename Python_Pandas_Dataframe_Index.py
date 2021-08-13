@@ -16,23 +16,28 @@ college_dict = {
                 'Graduate_Year' :[ '2021','2022','2000','2021','2021']
                }
 
-# the initial dictionary to be used for a dataframe
+# the initial dictionary to be used for a DataFrame <college_df>
 print()
-print("The initial dictionary to be turned into a dataframe <college_df> :")
+print("The initial dictionary to be turned into a DataFrame <college_df> :")
 print('=====================================================')
-# create a dataframe <college_df> with the default index column
+
+# create a DataFrame <college_df> with the default index column
 college_df = pd.DataFrame(college_dict)
 print()
 print(' <college_df> DataFrame with the default index column:')
 print(college_df)
 print()
 print('*---------------------------------------------------*')
-print('DataFrame <college_df> size:')
+print('**  DataFrame  <college_df>  information:')
+print('--> size:')
 df_size = college_df.size
 print(df_size)
+print()
+print('--> shape')
 df_shape = college_df.shape
 print(df_shape)
-print('DataFrame inforamaton:')
+print()
+print('--> information')
 df_info = college_df.info
 print(df_info)
 
