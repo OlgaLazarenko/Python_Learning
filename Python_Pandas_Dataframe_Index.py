@@ -52,7 +52,7 @@ print()
 print()
 
 
-print("<college_df_default_and_my_index> DataFrame")
+print("<college_df_default_index_and_my_index> DataFrame")
 print("  with the default and my own index column")
 college_df_my_index.reset_index(inplace = True)
 print()
