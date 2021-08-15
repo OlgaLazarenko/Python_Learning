@@ -61,16 +61,20 @@ Each part has its own list of goals.
 - [x] 6) select rows whose column value != a specific value
 - []  7) negate a column
 - []  5) select non-missing values in data frame
-- []  6) filter string in data frame
+- []  6) filter string in DataFrame
 - []  7) filter if a column name has a space
 
 ## Section:  Dataframe Index
 indexing => selecting some rows/columns
 4 types of indexing (indexers):
-1) -[] dataframe.[] => indexsing operator
-2) -[] dataframe.loc[] => rows/columns labels/names
-3) -[] dataframe.iloc[] => rows/columns position/integer
-4) -[] dataframe .ix[] => both: labels/names and position/integer
+1) -[] dataframe[] => indexing operator
+2) -[] dataframe.loc[] => loc[] indexer => rows/columns labels/names
+3) -[] dataframe.iloc[] => iloc[] indexer => rows/columns position/integer
+4) -[] dataframe .ix[] => ix[] indexer => both: labels/names and position/integer
+
+## Section: Index Colulmn
+- [] default index column
+- [] set a colulmn as index for DataFrame
 
 
 
