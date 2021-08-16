@@ -65,6 +65,7 @@ print('Set MultiInxed for the DataFrame <college_dg>')
 print(college_df)
 college_df_multi_index = college_df.set_index(['Grade','Graduate_Year'])
 print(college_df_multi_index)
+print()
 
 
 '''
