@@ -67,9 +67,14 @@ college_df_multi_index = college_df.set_index(['Grade','Graduate_Year'])
 print(college_df_multi_index)
 print()
 
+# loc() wtih multiple conditions
+print('<college_df> if Age>=30 ')
+print(college_df.loc(['Age'] >= 30)
+
+
+
 
 '''
-
 # create my own index column and remove the default index column
 my_index_col = { 'AAA' , 'BBB' , 'CCC' , 'DDD' , 'EEE'}
 
@@ -144,4 +149,4 @@ print(' select multiple columns')
 
 df_1 = college_class[ ["First_Name","Last_Name"] ]
 print(df_1)
-''' 
+'''

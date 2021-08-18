@@ -56,6 +56,8 @@ Each part has its own list of goals.
     - [x] 2.5) features inplace = False/True
 
 - [x] 3) loc() function
+        - [] loc() with multiple condtions
+
 - [x] 4) iloc() function
 - [x] 5) filer dataframe by row and column position
 - [x] 6) select rows whose column value != a specific value
@@ -75,6 +77,7 @@ indexing => selecting some rows/columns
 ## Section: Index Colulmn
 - [] default index column
 - [] set a colulmn as index for DataFrame
+- [] set MultiIndex
 
 
 
