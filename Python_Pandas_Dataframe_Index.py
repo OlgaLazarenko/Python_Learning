@@ -40,6 +40,10 @@ print()
 print('--> information')
 df_info = college_df.info
 print(df_info)
+print()
+print('values data types ')
+print(college_df.dtypes)
+print('--------------------')
 
 
 print(" <college_df_my_index> DataFrame with my own index column")
@@ -68,9 +72,10 @@ print(college_df_multi_index)
 print()
 
 # loc() wtih multiple conditions
-print('<college_df> if Age>=30 ')
-print(college_df.loc(['Age'] >= 30)
-
+print('<college_df> with the column <Age> ') # column "Age" is intt4 data types
+print(college_df.loc('Age'))
+print()
+print('*******************************************')
 
 
 
