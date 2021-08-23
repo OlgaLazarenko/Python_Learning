@@ -66,15 +66,21 @@ print(college_df_my_index)
 print()
 print()
 print('Set MultiInxed for the DataFrame <college_dg>')
+print('** The initial DataFrame:')
 print(college_df)
+
 college_df_multi_index = college_df.set_index(['Grade','Graduate_Year'])
 print(college_df_multi_index)
 print()
+print('-----*-----*-----')
+print()
 
 # loc() wtih multiple conditions
-print('<college_df> with the column <Age> ') # column "Age" is intt4 data types
-print(college_df.loc('Age'))
+print(college_df.loc[:,:])
 print()
+print(college_df.loc[2:,:])
+print()
+print(college_df.loc[4:5 , :])
 print('*******************************************')
 
 
