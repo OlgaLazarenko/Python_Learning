@@ -49,17 +49,19 @@ print('--------------------')
 print(" <college_df_my_index> DataFrame with my own index column")
 # dictionary  to create the index column
 my_index = { 'Student1', 'Student2' , 'Student3' ,'Student4','Student5'}
-college_df_my_index = pd.DataFrame(college_df, my_index)
+college_df_my_index = pd.DataFrame(college_dict, my_index)
 print()
 print(college_df_my_index)
 print()
 print()
+college_df_my_index2 = college_df_my_index
 
 
 print("<college_df_default_index_and_my_index> DataFrame")
 print("  with the default and my own index column")
-college_df_my_index.reset_index(inplace = True)
-print()
+college_df_my_index2.reset_index(inplace = True)
+print('***************************************************************')
+print(college_df_my_index)
 print()
 print('<college_df_default_and_my_index>')
 print(college_df_my_index)
@@ -75,7 +77,18 @@ print()
 print('-----*-----*-----')
 print()
 
-# loc() wtih multiple conditions
+# loc() method
+print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+print("<college_df>  DataFrame")
+print(college_df)
+print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+print('<college_df_defulat_my_index>  DataFrame')
+print(college_df_my_index)
+print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+
+print(college_df_my_index.loc['First_Name'])
+print()
+print()
 print(college_df.loc[:,:])
 print()
 print(college_df.loc[2:,:])
