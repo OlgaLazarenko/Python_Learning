@@ -86,6 +86,20 @@ print('<college_df_defulat_my_index>  DataFrame')
 print(college_df_my_index)
 print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
 
+College_DF = pd.DataFrame
+(           [     
+                ['Stephenson' , 'Pizaro' , 'Kim' , 'Williams' , 'Hua'] ,
+                ['Grace', 'Maria', 'Lola', 'John' , 'Sofia'] ,
+                [22,30,27,19,45] ,
+                ['B-','C','A','A+','D'] , 
+                [ '2021','2022','2000','2021','2021']
+            ] ,
+            #index = ['Student_01' , 'Student_02', 'Student_03', 'Student_04','Student_05'] , 
+            columns =['FirstName' , 'LastName','Age','Grade','GraduateYear']
+)   
+print("<College_DF> :")
+print(College_DF)
+'''
 print(college_df_my_index.loc['First_Name'])
 print()
 print()
@@ -98,7 +112,7 @@ print('*******************************************')
 
 
 
-'''
+
 # create my own index column and remove the default index column
 my_index_col = { 'AAA' , 'BBB' , 'CCC' , 'DDD' , 'EEE'}
 
