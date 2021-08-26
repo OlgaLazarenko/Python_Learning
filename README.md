@@ -56,7 +56,7 @@ Each part has its own list of goals.
     - [x] 2.5) features inplace = False/True
 
 - [x] 3) loc() function
-        - [] loc() with multiple condtions
+
 
 - [x] 4) iloc() function
 - [x] 5) filer dataframe by row and column position
@@ -71,6 +71,10 @@ indexing => selecting some rows/columns
 4 types of indexing (indexers):
 1) -[] dataframe[] => indexing operator
 2) -[] dataframe.loc[] => loc[] indexer => rows/columns labels/names
+        a) [] index/label value
+        b) [] list of labels
+        c) [] logical/boolean index
+        d) [] multiple condtions
 3) -[] dataframe.iloc[] => iloc[] indexer => rows/columns position/integer
 4) -[] dataframe .ix[] => ix[] indexer => both: labels/names and position/integer
 
@@ -78,6 +82,7 @@ indexing => selecting some rows/columns
 - [] default index column
 - [] set a colulmn as index for DataFrame
 - [] set MultiIndex
+- [] drop index column
 
 
 

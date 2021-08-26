@@ -79,13 +79,14 @@ print()
 
 # loc() method
 print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
-print(" 1) <college_df>  DataFrame")
+print(" I) <college_df>  DataFrame")
 print(college_df)
 print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
 
 
 
-College_DF = pd.DataFrame(           [     
+College_DF = pd.DataFrame(           
+            [     
                 ['Stephenson' , 'Pizaro' , 'Kim' , 'Williams' , 'Hua'] ,
                 ['Grace', 'Maria', 'Lola', 'John' , 'Sofia'] ,
                 [22,30,27,19,45] ,
@@ -95,9 +96,21 @@ College_DF = pd.DataFrame(           [
             index = ['Student_01' , 'Student_02', 'Student_03', 'Student_04','Student_05'] , 
             columns =['FirstName' , 'LastName','Age','Grade','GraduateYear']
 )   
-print("2) <college_DF>  DataFrame:")
+print(" II) <college_DF>  DataFrame:")
 print(College_DF)
 print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+
+print()
+print('2) LOC() METHOD')
+print("      loc() methond and <College_DF>  data frame")
+print("             index 'Student_02")
+print(College_DF.loc['Student_02'])
+print()
+print("             index 'Student_04'")
+print(College_DF.loc['Student_04'])
+print("             column name 'First_Name'")
+print(College_DF.loc['First_Name'])
+
 '''
 print(college_df_my_index.loc['First_Name'])
 print()
