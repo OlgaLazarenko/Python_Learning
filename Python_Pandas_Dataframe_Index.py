@@ -5,7 +5,8 @@
 import pandas as pd
 import numpy as np
 import random
-
+print("\n"*3)
+print(' *-*  PROJECT:  INDEXING  *-* ', "\n")
 # create a dataframe from a dictionary
 # dictionary
 college_dict = {
@@ -25,23 +26,25 @@ print('=====================================================')
 college_df = pd.DataFrame(college_dict)
 print()
 print(' <college_df> DataFrame with the default index column:')
-print(college_df)
+print(college_df ,"\n" )
 print()
 print('*---------------------------------------------------*')
+
 print('**  DataFrame  <college_df>  information:')
-print('--> size:')
+
+print('--> Size:')
 df_size = college_df.size
-print(df_size)
-print()
-print('--> shape')
+print(df_size, "\n")
+
+print('--> Shape')
 df_shape = college_df.shape
-print(df_shape)
-print()
-print('--> information')
+print(df_shape , "\n")
+
+print('--> Information')
 df_info = college_df.info
-print(df_info)
-print()
-print('values data types ')
+print(df_info , "\n")
+
+print('Values Data Types ')
 print(college_df.dtypes)
 print('--------------------')
 
@@ -49,11 +52,8 @@ print('--------------------')
 print(" <college_df_my_index> DataFrame with my own index column")
 # dictionary  to create the index column
 my_index = { 'Student1', 'Student2' , 'Student3' ,'Student4','Student5'}
-college_df_my_index = pd.DataFrame(college_dict, my_index)
-print()
-print(college_df_my_index)
-print()
-print()
+college_df_my_index = pd.DataFrame(college_dict, my_index )
+print(college_df_my_index , "\n")
 college_df_my_index2 = college_df_my_index
 
 
@@ -61,10 +61,10 @@ print("<college_df_default_index_and_my_index> DataFrame")
 print("  with the default and my own index column")
 college_df_my_index2.reset_index(inplace = True)
 print('***************************************************************')
-print(college_df_my_index)
-print()
+print(college_df_my_index , "\n")
+
 print('<college_df_default_and_my_index>')
-print(college_df_my_index)
+print(college_df_my_index ,("\n"*2))
 print()
 print()
 print('Set MultiInxed for the DataFrame <college_dg>')
@@ -72,8 +72,8 @@ print('** The initial DataFrame:')
 print(college_df)
 
 college_df_multi_index = college_df.set_index(['Grade','Graduate_Year'])
-print(college_df_multi_index)
-print()
+print(college_df_multi_index ,"\n" )
+
 print('-----*-----*-----')
 print()
 
@@ -87,11 +87,12 @@ print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
 
 College_DF = pd.DataFrame(           
             [     
-                ['Stephenson' , 'Pizaro' , 'Kim' , 'Williams' , 'Hua'] ,
-                ['Grace', 'Maria', 'Lola', 'John' , 'Sofia'] ,
-                [22,30,27,19,45] ,
-                ['B-','C','A','A+','D'] , 
-                [ '2021','2022','2000','2021','2021']
+                ['Thomas' , 'Johnson', '22' , 'A' , '2020'] ,
+                ['Grace', 'Martinez', '25', 'B' , '2021'] ,
+                ['Maria', 'Smith', '36', 'F', '2028'] ,
+                ['Olga', 'Lazarenko', '29', 'A', '2000'] , 
+                ['Alex', 'ONeil', '18', 'D','2023'] 
+                
             ] ,
             index = ['Student_01' , 'Student_02', 'Student_03', 'Student_04','Student_05'] , 
             columns =['FirstName' , 'LastName','Age','Grade','GraduateYear']
@@ -101,28 +102,35 @@ print(College_DF)
 print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
 
 print()
-print('1) INDEXING OPERATOR/[]')
+print('1) INDEXING OPERATOR/[]' , "\n")
 
+print("            * retrieve all rows and the column 'LastName'")
+print(College_DF["LastName"], "\n")
+
+
+print('********************************************************************')
 print('2) LOC() METHOD')
 print("      loc() methond and <College_DF>  data frame")
 print("             index 'Student_02")
-print(College_DF.loc['Student_02'])
-print()
+print(College_DF.loc['Student_02'] ,"\n" )
+
 print("             * ndex 'Student_04'")
-print(College_DF.loc['Student_04'])
-print()
+print(College_DF.loc['Student_04'] ,"\n")
+
 print('!!! Notice changes: ')
-print("            * row index 'Student_01','Student_03','Student_05'")
-print()
+print("            * row index 'Student_01','Student_03','Student_05'" ,"\n")
+
 print(College_DF.loc[['Student_01','Student_03','Student_05']])
-print("             index'Grade'")
-print()
+print("             index'Grade'" ,"\n")
+
 print("           * the range for the row index from 'Student_01' to 'Student_04'")
-print(College_DF.loc['Student_01':'Student_04'] )
-print()
+print(College_DF.loc['Student_01':'Student_04'],"\n" )
+
 print("          * select all rows and the column 'LastName'")
-print(college_df.loc[ :,'Last_Name'])
-print()
+print(college_df.loc[ :,'Last_Name'], ("\n"*2))
+
+print("          * select all rows and some columns ('LastName', 'FirstName','Age')")
+print(College_DF.loc[:, ['FirstName','LastName','Age']])
 
 
 
