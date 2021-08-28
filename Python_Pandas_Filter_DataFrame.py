@@ -59,7 +59,7 @@ print(' ---  compare loc() and iloc() methonds   --- ')
 # iloc() position of columns/rows
 
 # loc()
-print(" -*-   LOC() METHOND ")
+
 print('first three columns of <auto_toyota> dataframe')
 print(auto_toyota.loc[[1,2,3]])
 
