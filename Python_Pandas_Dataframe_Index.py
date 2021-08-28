@@ -96,11 +96,13 @@ College_DF = pd.DataFrame(
             index = ['Student_01' , 'Student_02', 'Student_03', 'Student_04','Student_05'] , 
             columns =['FirstName' , 'LastName','Age','Grade','GraduateYear']
 )   
-print(" II) <college_DF>  DataFrame:")
+print(" II) <College_DF>  DataFrame:")
 print(College_DF)
 print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
 
 print()
+print('1) INDEXING OPERATOR/[]')
+
 print('2) LOC() METHOD')
 print("      loc() methond and <College_DF>  data frame")
 print("             index 'Student_02")
@@ -117,6 +119,11 @@ print("             index'Grade'")
 print()
 print("           * the range for the row index from 'Student_01' to 'Student_04'")
 print(College_DF.loc['Student_01':'Student_04'] )
+print()
+print("          * select all rows and the column 'LastName'")
+print(college_df.loc[ :,'Last_Name'])
+print()
+
 
 
 '''
