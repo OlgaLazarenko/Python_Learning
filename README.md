@@ -70,6 +70,8 @@ Each part has its own list of goals.
 indexing => selecting some rows/columns
 4 types of indexing (indexers):
 1) -[] dataframe[] => indexing operator
+        - [X] retrieve one column
+        - [X] select multiple column
 2) -[] dataframe.loc[] => loc[] indexer => rows/columns labels/names
         a) [] index/label value
         b) [] list of labels

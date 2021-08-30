@@ -108,7 +108,16 @@ print("            * retrieve all rows and the column 'LastName'")
 print(College_DF["LastName"], "\n")
 
 print("             * column 'Grade'")
-print(College_DF['Grade'])
+print(College_DF['Grade'] , "\n")
+
+print("             * column 'Grade ")
+print(College_DF['Grade'], "\n")
+
+print("              * columns 'LastName', 'Age' ")
+print(College_DF[['LastName','Age']] , "\n")
+
+print("               * columns 'LastName', 'Grade', 'GraduateYear' ")
+print(College_DF[['LastName','Grade','GraduateYear']] , "\n")
 
 
 print('********************************************************************')
@@ -120,14 +129,7 @@ print(College_DF.loc['Student_02'] ,"\n" )
 print("             * index 'Student_04'")
 print(College_DF.loc['Student_04'] ,"\n")
 
-print("             * column 'Grade ")
-print(College_DF['Grade'], "\n")
 
-print("              * columns 'LastName', 'Age' ")
-print(College_DF[['LastName','Age']] , "\n")
-
-print("               * columns 'LastName', 'Grade', 'GraduateYear' ")
-print(College_DF[['LastName','Grade','GraduateYear']] , "\n")
 
 
 print('!!! Notice changes: ')
