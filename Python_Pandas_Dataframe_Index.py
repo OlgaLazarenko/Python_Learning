@@ -145,8 +145,22 @@ print(College_DF.loc['Student_01':'Student_04'], "\n")
 print("          * select all rows and the column 'LastName'")
 print(college_df.loc[ :,'Last_Name'], "\n")
 
-print("           * select with list of labels, columns")
-print(College_DF.loc[ ['Student_01','Student_02'] , ['FirstName','Age']] )
+print("           * select with a list of labels, rows and columns, College_DF")
+print(College_DF.loc[ ['Student_01','Student_02'] , ['FirstName','Age']] , "\n" )
+
+print("           * select with a list of labels, rows and columns, college-df")
+print(college_df.loc[ [1,2,3] , ['Last_Name','Age','Grade'] ] , "\n")
+
+print("            * retrieve with a slice of rows and columns, college_df")
+print(college_df.loc[1:3 ,'First_Name' : 'Grade'] , "\n" )
+print(college_df.loc[1:3 , 'First_Name':'Graduate_Year'] , "\n")
+print(college_df.loc[2:5 , 'Age':'Graduate_Year'] , "\n")
+
+print("            * retrieve with a slice of rows and columns, College_DF")
+print(College_DF.loc[ 'Student_01':'Student_04' , 'FirstName':'Age'] , "\n")
+print(College_DF.loc[ 'Student_02':'Student_05' , 'LastName':'GraduateYear'] , "\n")
+print(College_DF.loc[ 'Student_03':'Student_05' , 'Age':'Grade'] , "\n")
+
 
 
 
