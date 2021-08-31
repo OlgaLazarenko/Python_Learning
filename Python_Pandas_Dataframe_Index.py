@@ -77,7 +77,6 @@ print(college_df_multi_index ,"\n" )
 print('-----*-----*-----')
 print()
 
-# loc() method
 print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
 print(" I) <college_df>  DataFrame")
 print(college_df)
@@ -119,6 +118,9 @@ print(College_DF[['LastName','Age']] , "\n")
 print("               * columns 'LastName', 'Grade', 'GraduateYear' ")
 print(College_DF[['LastName','Grade','GraduateYear']] , "\n")
 
+print("          * select all rows and some columns ('LastName', 'FirstName','Age')")
+print(College_DF[['FirstName','LastName','Age']], "\n")
+
 
 print('********************************************************************')
 print('2) LOC() METHOD')
@@ -134,18 +136,18 @@ print(College_DF.loc['Student_04'] ,"\n")
 
 print('!!! Notice changes: ')
 print("            * row index 'Student_01','Student_03','Student_05'" ,"\n")
+print(College_DF.loc[['Student_01','Student_03','Student_05']] , "\n")
 
-print(College_DF.loc[['Student_01','Student_03','Student_05']])
-print("             index'Grade'" ,"\n")
 
 print("           * the range for the row index from 'Student_01' to 'Student_04'")
-print(College_DF.loc['Student_01':'Student_04'],"\n" )
+print(College_DF.loc['Student_01':'Student_04'], "\n")
 
 print("          * select all rows and the column 'LastName'")
-print(college_df.loc[ :,'Last_Name'], ("\n"*2))
+print(college_df.loc[ :,'Last_Name'], "\n")
 
-print("          * select all rows and some columns ('LastName', 'FirstName','Age')")
-# print(College_DF.loc[:, ['FirstName','LastName','Age'], "\n"])
+
+
+
 
 
 
