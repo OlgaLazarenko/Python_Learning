@@ -145,11 +145,8 @@ print(College_DF.loc['Student_01':'Student_04'], "\n")
 print("          * select all rows and the column 'LastName'")
 print(college_df.loc[ :,'Last_Name'], "\n")
 
-
-
-
-
-
+print("           * select with list of labels, columns")
+print(College_DF.loc[ ['Student_01','Student_02'] , ['FirstName','Age']] )
 
 
 
