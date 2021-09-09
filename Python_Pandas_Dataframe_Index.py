@@ -123,7 +123,7 @@ print(College_DF[['FirstName','LastName','Age']], "\n")
 
 
 print('********************************************************************')
-print('2) LOC() METHOD')
+print('3) LOC() METHOD')
 print("      loc() methond and <College_DF>  data frame")
 print("             index 'Student_02")
 print(College_DF.loc['Student_02'] ,"\n" )
@@ -160,6 +160,26 @@ print("            * retrieve with a slice of rows and columns, College_DF")
 print(College_DF.loc[ 'Student_01':'Student_04' , 'FirstName':'Age'] , "\n")
 print(College_DF.loc[ 'Student_02':'Student_05' , 'LastName':'GraduateYear'] , "\n")
 print(College_DF.loc[ 'Student_03':'Student_05' , 'Age':'Grade'] , "\n")
+
+print("**************************************************************************")
+print()
+print(" 4) iloc() method") # retrieve values belonging to a row/column with a specific index
+# iloc() function accepts only integer types values as index values
+print('>>> the initial dataframe "College_DF"')
+print(College_DF, "\n") 
+# the columns: FirstName, LastName, Age, Grade, GraduateYear
+# 5 rows, the index from 0 to 4
+print('select from 2nd (index 3) to 4th (index 5) rows')
+print(College_DF.iloc[1:4] , "\n")
+print('select from 1st/index=0 to 2nd/index=1 rows')
+# n-1, n is the row number/location
+# start row, finish row
+start = 1
+finish = 2
+print(College_DF.iloc[:2], "\n")
+print(College_DF.iloc[start-1:finish+1])
+
+
 
 
 
