@@ -177,9 +177,25 @@ print('select from 1st/index=0 to 2nd/index=1 rows')
 start = 1
 finish = 2
 print(College_DF.iloc[:2], "\n")
-print(College_DF.iloc[start-1:finish+1])
+print(College_DF.iloc[start-1:finish] , "\n")
 
+print(" >>> the first row of College_DF")
+print(College_DF.iloc[0] , "\n")
 
+print(" >>> the second row of College_DF")
+print(College_DF.iloc[2] , "\n")
+
+print(" >>> the first column of College_DF")
+print(College_DF.iloc[: , 0] , "\n")
+
+print(" >>> the second column of College_DF")
+print(College_DF.iloc[: , 1] , "\n")
+
+print(" >>> the first and second row of College_DF")
+print(College_DF.iloc[:, 0:2] , "\n")
+
+print(" >>> from the  second to  fourth row of College_DF")
+print(College_DF.iloc[:, 2:5] , "\n")
 
 
 
