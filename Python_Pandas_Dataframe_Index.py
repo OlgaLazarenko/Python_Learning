@@ -191,11 +191,20 @@ print(College_DF.iloc[: , 0] , "\n")
 print(" >>> the second column of College_DF")
 print(College_DF.iloc[: , 1] , "\n")
 
-print(" >>> the first and second row of College_DF")
+print(" >>> the first and second column of College_DF")
 print(College_DF.iloc[:, 0:2] , "\n")
 
-print(" >>> from the  second to  fourth row of College_DF")
+print(" >>> from the  second to  fourth column of College_DF")
 print(College_DF.iloc[:, 2:5] , "\n")
+
+print(" >>> from the  second to  fourth column of College_DF")
+print(College_DF.iloc[:, 2:5] , "\n")
+
+print(" >>> from the second to third rows and from the first to second column of College_DF")
+print(College_DF.iloc[ 1:3, 0:2] , "\n")
+
+print(" >>> from the first to fourth rows and from the second to the last column of College_DF")
+print(College_DF.iloc[ :4, 1:] , "\n")
 
 
 
