@@ -14,7 +14,8 @@ college_dict = {
                 'First_Name': ['Grace', 'Maria', 'Lola', 'John' , 'Sofia'] ,
                 'Age' : [22,30,27,19,45] ,
                 'Grade' : ['B-','C','A','A+','D'] , 
-                'Graduate_Year' :[ '2021','2022','2000','2021','2021']
+                'Graduate_Year' :[ '2021','2022','2000','2021','2021'] , 
+                'Major' : ['Biology','Math','Engineering','Chemistry','World History']
                }
 
 # the initial dictionary to be used for a DataFrame <college_df>
@@ -161,6 +162,9 @@ print(College_DF.loc[ 'Student_01':'Student_04' , 'FirstName':'Age'] , "\n")
 print(College_DF.loc[ 'Student_02':'Student_05' , 'LastName':'GraduateYear'] , "\n")
 print(College_DF.loc[ 'Student_03':'Student_05' , 'Age':'Grade'] , "\n")
 
+print("            * retrieve the data with a list of values/rows,colulmns, College_DF dataframe")
+print(College_DF.loc[['Student_01','Student_03','Student_05'] , ['LastName','FirtsName']] )
+'''
 print("**************************************************************************")
 print()
 print(" 4) iloc() method") # retrieve values belonging to a row/column with a specific index
@@ -205,6 +209,8 @@ print(College_DF.iloc[ 1:3, 0:2] , "\n")
 
 print(" >>> from the first to fourth rows and from the second to the last column of College_DF")
 print(College_DF.iloc[ :4, 1:] , "\n")
+
+'''
 
 
 
