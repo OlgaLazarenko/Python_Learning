@@ -10,12 +10,13 @@ print(' *-*  PROJECT:  INDEXING  *-* ', "\n")
 # create a dataframe from a dictionary
 # dictionary
 college_dict = {
+                'Student_ID': ['10011','10022','10033','10044','10055'] ,
                 'Last_Name': ['Stephenson' , 'Pizaro' , 'Kim' , 'Williams' , 'Hua'] ,
                 'First_Name': ['Grace', 'Maria', 'Lola', 'John' , 'Sofia'] ,
                 'Age' : [22,30,27,19,45] ,
                 'Grade' : ['B-','C','A','A+','D'] , 
                 'Graduate_Year' :[ '2021','2022','2000','2021','2021'] , 
-                'Major' : ['Biology','Math','Engineering','Chemistry','World History']
+                'Major' : ['Biology','Math','Art','Math','History']
                }
 
 # the initial dictionary to be used for a DataFrame <college_df>
@@ -25,6 +26,7 @@ print('=====================================================')
 
 # create a DataFrame <college_df> with the default index column
 college_df = pd.DataFrame(college_dict)
+student_df = pd.DataFrame(college_dict, index_col = ['Student_ID'])
 print()
 print(' <college_df> DataFrame with the default index column:')
 print(college_df ,"\n" )
@@ -163,7 +165,21 @@ print(College_DF.loc[ 'Student_02':'Student_05' , 'LastName':'GraduateYear'] , "
 print(College_DF.loc[ 'Student_03':'Student_05' , 'Age':'Grade'] , "\n")
 
 print("            * retrieve the data with a list of values/rows,colulmns, College_DF dataframe")
-print(College_DF.loc[['Student_01','Student_03','Student_05'] , ['LastName','FirtsName']] )
+print(College_DF.loc[ ['Student_01','Student_03','Student_05' ]] , "\n" )
+print(College_DF.loc[ : , ['LastName','FirstName']] , "\n")
+print(College_DF.loc[ ['Student_01','Student_02'] , :] , "\n")
+print('>>> College_DF  dataframe')
+print(College_DF.loc[:,:] , "\n")
+print('>>> college_df  dataframe')
+print(college_df.loc[:,:] , "\n")
+print()
+print(" >>> student_df  DataFrame : ")
+print(student_df , "\n" )
+
+print("retrive a single value with iloc() function from student_df DataFrame")
+print("with Student_ID = 10044 ")
+print(student_df.iloc['10044'])
+
 '''
 print("**************************************************************************")
 print()
