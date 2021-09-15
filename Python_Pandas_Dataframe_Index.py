@@ -10,7 +10,7 @@ print(' *-*  PROJECT:  INDEXING  *-* ', "\n")
 # create a dataframe from a dictionary
 # dictionary
 college_dict = {
-                'Student_ID': ['10011','10022','10033','10044','10055'] ,
+                'Student_ID': [10011,10022,10033,10044,10055] ,
                 'Last_Name': ['Stephenson' , 'Pizaro' , 'Kim' , 'Williams' , 'Hua'] ,
                 'First_Name': ['Grace', 'Maria', 'Lola', 'John' , 'Sofia'] ,
                 'Age' : [22,30,27,19,45] ,
@@ -26,7 +26,7 @@ print('=====================================================')
 
 # create a DataFrame <college_df> with the default index column
 college_df = pd.DataFrame(college_dict)
-student_df = pd.DataFrame(college_dict, index_col = ['Student_ID'])
+# student_df = pd.DataFrame(college_dict, index_col = ['Student_ID'])
 print()
 print(' <college_df> DataFrame with the default index column:')
 print(college_df ,"\n" )
@@ -173,13 +173,20 @@ print(College_DF.loc[:,:] , "\n")
 print('>>> college_df  dataframe')
 print(college_df.loc[:,:] , "\n")
 print()
+
+print("************************************************************************")
+print(" 4) Selection via conditions ")
+print('select students with Student_ID > 10022 from college_df DataFrame')
+print(college_df.loc['Student_ID' > 10022])
+print()
+'''
 print(" >>> student_df  DataFrame : ")
 print(student_df , "\n" )
 
 print("retrive a single value with iloc() function from student_df DataFrame")
 print("with Student_ID = 10044 ")
 print(student_df.iloc['10044'])
-
+'''
 '''
 print("**************************************************************************")
 print()

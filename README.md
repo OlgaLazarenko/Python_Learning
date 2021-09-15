@@ -78,7 +78,11 @@ indexing => selecting some rows/columns
         c) [] logical/boolean index
         d) [] multiple condtions
 3) -[] dataframe.iloc[] => iloc[] indexer => rows/columns position/integer
-4) -[] dataframe .ix[] => ix[] indexer => both: labels/names and position/integer
+4) -[] selection via conditions and callable
+        a) loc() with conditions (single, multiple)
+        b) iloc() with conditions (single, mulitple)
+        
+5) -[] dataframe .ix[] => ix[] indexer => both: labels/names and position/integer
 
 ## Section: Index Colulmn
 - [] default index column
