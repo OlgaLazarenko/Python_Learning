@@ -83,7 +83,9 @@ indexing => selecting some rows/columns
         b) iloc() with conditions (single, mulitple)
         
 5) -[] dataframe .ix[] => ix[] indexer => both: labels/names and position/integer
-
+6) -[] retrieve data using list of labels
+        a) loc()
+        b) iloc()
 ## Section: Index Colulmn
 - [] default index column
 - [] set a colulmn as index for DataFrame
