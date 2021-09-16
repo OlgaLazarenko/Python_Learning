@@ -177,27 +177,38 @@ print()
 print("************************************************************************")
 print("  6) Retrieve data using list of labels :", "\n")
 list_rows_1 = ['Student_01','Student_02','Student_03']
-list_rows_2 = ['Student_03','Student_05']
+list_rows_2 = ['Student_04','Student_05']
 list_rows_3 = ['Student_01','Student_03','Student_05']
 
 list_columns_1 = ['LastName','Age']
-list_columns_2 = ['FirstName','Grage','GraduateYear']
+list_columns_2 = ['FirstName','LastName','Age','Grage']
 list_columns_3 = ['LastName','FirstName','Major']
 
 print("  >>>  with loc() method:")
 print(College_DF.loc[list_rows_1 , list_columns_1] , "\n")
-print(College_DF.loc[list_rows_1 , list_columns_2] , "\n")
+print(College_DF.loc[list_rows_2 , list_columns_2] , "\n")
+print(College_DF.loc[ ['Student_01','Student_02'] , : ] , "\n")
+print(College_DF.loc[:, list_columns_1] , "\n")
+print(College_DF.loc[ ['Student_01','Student_04'] , :] , "\n")
+print(College_DF.loc[ ['Student_01','Student_02'] , ['FirstName','LastName'] ] , "\n")
+print(College_DF.loc[ ['Student_01','Student_05'] , ['LastName','Age']] , "\n")
+
+# print(College_DF.loc[ ['Student_01','Student_03','Student_05'] ,
+#                        ['FirstName','Age','Major'] ] ) ??? Why an error???
+
+
+
+
 '''
 print(College_DF.loc[list_rows_2 , list_columns_2] , "\n" )
 print(College_DF.loc[list_rows_3 , list_columns_3], "\n")
-'''
 
 
 print("  >>>  with iloc() methond")
 
 
 
-'''
+
 print(" 4) Selection via conditions ")
 print('select students with Student_ID > 10022 from college_df DataFrame')
 print(college_df.loc['Student_ID' > 10022])
@@ -209,8 +220,8 @@ print(student_df , "\n" )
 print("retrive a single value with iloc() function from student_df DataFrame")
 print("with Student_ID = 10044 ")
 print(student_df.iloc['10044'])
-'''
-'''
+
+
 print("**************************************************************************")
 print()
 print(" 4) iloc() method") # retrieve values belonging to a row/column with a specific index
@@ -256,12 +267,12 @@ print(College_DF.iloc[ 1:3, 0:2] , "\n")
 print(" >>> from the first to fourth rows and from the second to the last column of College_DF")
 print(College_DF.iloc[ :4, 1:] , "\n")
 
-'''
 
 
 
 
-'''
+
+
 print(college_df_my_index.loc['First_Name'])
 print()
 print()
