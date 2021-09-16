@@ -175,11 +175,34 @@ print(college_df.loc[:,:] , "\n")
 print()
 
 print("************************************************************************")
+print("  6) Retrieve data using list of labels :", "\n")
+list_rows_1 = ['Student_01','Student_02','Student_03']
+list_rows_2 = ['Student_03','Student_05']
+list_rows_3 = ['Student_01','Student_03','Student_05']
+
+list_columns_1 = ['LastName','Age']
+list_columns_2 = ['FirstName','Grage','GraduateYear']
+list_columns_3 = ['LastName','FirstName','Major']
+
+print("  >>>  with loc() method:")
+print(College_DF.loc[list_rows_1 , list_columns_1] , "\n")
+print(College_DF.loc[list_rows_1 , list_columns_2] , "\n")
+'''
+print(College_DF.loc[list_rows_2 , list_columns_2] , "\n" )
+print(College_DF.loc[list_rows_3 , list_columns_3], "\n")
+'''
+
+
+print("  >>>  with iloc() methond")
+
+
+
+'''
 print(" 4) Selection via conditions ")
 print('select students with Student_ID > 10022 from college_df DataFrame')
 print(college_df.loc['Student_ID' > 10022])
 print()
-'''
+
 print(" >>> student_df  DataFrame : ")
 print(student_df , "\n" )
 
