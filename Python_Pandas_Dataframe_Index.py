@@ -186,7 +186,8 @@ list_columns_3 = ['LastName','FirstName','Major']
 
 print("  >>>  with loc() method:")
 print(College_DF.loc[list_rows_1 , list_columns_1] , "\n")
-print(College_DF.loc[list_rows_2 , list_columns_2] , "\n")
+# print(College_DF.loc[list_rows_2 , list_columns_2] , "\n")
+'''
 print(College_DF.loc[ ['Student_01','Student_02'] , : ] , "\n")
 print(College_DF.loc[:, list_columns_1] , "\n")
 print(College_DF.loc[ ['Student_01','Student_04'] , :] , "\n")
@@ -199,7 +200,7 @@ print(College_DF.loc[ ['Student_01','Student_05'] , ['LastName','Age']] , "\n")
 
 
 
-'''
+
 print(College_DF.loc[list_rows_2 , list_columns_2] , "\n" )
 print(College_DF.loc[list_rows_3 , list_columns_3], "\n")
 
@@ -310,54 +311,6 @@ print()
 print()
 
 
-# make the column <Last_Name> as the index column, remove the default index column
-
-index_column = {'a','b','c','d','e'}
-print(' initial <college2> dataframe ')
-college2 = pd.DataFrame(college_class , index_column)
-print('*-------------------------------------------*')
-print(college2)
-print('*-------------------------------------------*')
-print()
-print()
-# make the column <Last_Name" as the index column
-print('<Last_Name> column substituted the index column')
-college2.set_index(['Last_Name'] , inplace = True)
-print(college2)
-print()
-print()
-# insert a new index column again, use index_column dictionary
 
 
-
-# make the column <First_Name" as the index column
-college2.set_index(['First_Name'] , inplace = True)
-print('----------------------------------------------')
-print()
-print('<First_Name> column substituted the index column <Last_Name>')
-print(college2)
-print()
-print('------------------------------------------------')
-
-
-# 1) Indexing Operator []
-print(" *** Indexing Operator [] ")
-print()
-print('select a single column <Last_Name>')
-print(college_class['Last_Name'])
-print()
-print('select a single column <First_Name>')
-print(college_class['First_Name'])
-print()
-print('select a single column <Grade>')
-print(college_class['Grade'])
-print('      -------------------------------------------')
-print()
-
-
-
-print(' select multiple columns')
-
-df_1 = college_class[ ["First_Name","Last_Name"] ]
-print(df_1)
 '''
