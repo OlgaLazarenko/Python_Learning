@@ -14,7 +14,7 @@ college_dict = {
                 'Last_Name': ['Stephenson' , 'Pizaro' , 'Kim' , 'Williams' , 'Hua'] ,
                 'First_Name': ['Grace', 'Maria', 'Lola', 'John' , 'Sofia'] ,
                 'Age' : [22,30,27,19,45] ,
-                'Grade' : ['B-','C','A','A+','D'] , 
+                'Grade' : ['B-','C','A','A','B'] , 
                 'Graduate_Year' :[ '2021','2022','2000','2021','2021'] , 
                 'Major' : ['Biology','Math','Art','Math','History']
                }
@@ -190,12 +190,38 @@ print(College_DF.loc[list_rows_1 , list_columns_1] , "\n")
 
 print("***********************************************************************", "\n")
 
-print(' >>> 4) Selection via Conditions and Callables ')
+print(' >>> 4) Selection via Conditions and Callables ' , "\n")
         # a) loc() with conditions (single, multiple)
         # b) iloc() with conditions (single, mulitple)
-print("4(a) loc() with conditions (single, multiple)")
+print('         4(a) loc() with conditions (single, multiple)')
+print('- students with major "Math"')
 print(college_df.loc[college_df.Major == 'Math',:], "\n")
-print(college_df.loc[college_df.loc.Graduate_Year == '2021', ['FirstName','LastName'] , "\n"]) 
+
+print('- students with grade = A')
+print( college_df.loc[college_df.Grade == 'A' , : ] , "\n" )
+
+print('- students with graduate year = 2021')
+print( college_df.loc[college_df.Graduate_Year == '2021'] , "\n")
+
+print('- students with age>25')
+print(college_df.loc[college_df.Age > 25] , "\n")
+
+print('- students with grade A and graduate year > 2000')
+print(college_df.loc[ (college_df.Grade == 'A') 
+                        & (college_df.Graduate_Year > '2000')], "\n")
+
+print("- students last and first name with the major = 'Math' and grade C")
+print(college_df.loc[ (college_df.Major == 'Math') 
+                        & (college_df.Grade == 'C')] , "\n")
+
+print("- students first name, age, major with the age > 20, the grade = A and graduate year 2021")
+print(college_df.loc[ (college_df.Age > 20) 
+                            & (college_df.Grade == 'A') 
+                                & (college_df.Graduate_Year == '2000')] , "\n'")
+
+
+
+
 '''
 print(College_DF.loc[ ['Student_01','Student_02'] , : ] , "\n")
 print(College_DF.loc[:, list_columns_1] , "\n")
