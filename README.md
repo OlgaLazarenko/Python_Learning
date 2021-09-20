@@ -68,21 +68,25 @@ Each part has its own list of goals.
 
 ## Section:  Dataframe Index
 indexing => selecting some rows/columns
-4 types of indexing (indexers):
+Types of indexing (indexers):
 1) -[] dataframe[] => indexing operator
         - [X] retrieve one column
-        - [X] select multiple column
+        - [X] select multiple columns
+
 2) -[] dataframe.loc[] => loc[] indexer => rows/columns labels/names
         a) [] index/label value
         b) [] list of labels
         c) [] logical/boolean index
         d) [] multiple condtions
+
 3) -[] dataframe.iloc[] => iloc[] indexer => rows/columns position/integer
+
 4) -[] selection via conditions and callable
         a) loc() with conditions (single, multiple)
         b) iloc() with conditions (single, mulitple)
         
 5) -[] dataframe .ix[] => ix[] indexer => both: labels/names and position/integer
+
 6) -[] retrieve data using list of labels
         a) loc()
         b) iloc()
