@@ -187,6 +187,15 @@ list_columns_3 = ['LastName','FirstName','Major']
 print("  >>>  with loc() method:")
 print(College_DF.loc[list_rows_1 , list_columns_1] , "\n")
 # print(College_DF.loc[list_rows_2 , list_columns_2] , "\n")
+
+print("***********************************************************************", "\n")
+
+print(' >>> 4) Selection via Conditions and Callables ')
+        # a) loc() with conditions (single, multiple)
+        # b) iloc() with conditions (single, mulitple)
+print("4(a) loc() with conditions (single, multiple)")
+print(college_df.loc[college_df.Major == 'Math',:], "\n")
+print(college_df.loc[college_df.loc.Graduate_Year == '2021', ['FirstName','LastName'] , "\n"]) 
 '''
 print(College_DF.loc[ ['Student_01','Student_02'] , : ] , "\n")
 print(College_DF.loc[:, list_columns_1] , "\n")
