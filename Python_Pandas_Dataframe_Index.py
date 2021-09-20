@@ -208,17 +208,37 @@ print(college_df.loc[college_df.Age > 25] , "\n")
 
 print('- students with grade A and graduate year > 2000')
 print(college_df.loc[ (college_df.Grade == 'A') 
-                        & (college_df.Graduate_Year > '2000')], "\n")
+                        & (college_df.Graduate_Year > '2000')
+                    ], "\n")
 
-print("- students last and first name with the major = 'Math' and grade C")
+print("- students with the major = 'Math' and grade C")
 print(college_df.loc[ (college_df.Major == 'Math') 
-                        & (college_df.Grade == 'C')] , "\n")
+                        & (college_df.Grade == 'C')
+                    ] , "\n")
 
 print("- students first name, age, major with the age > 20, the grade = A and graduate year 2021")
 print(college_df.loc[ (college_df.Age > 20) 
                             & (college_df.Grade == 'A') 
-                                & (college_df.Graduate_Year == '2000')] , "\n'")
+                                & (college_df.Graduate_Year == '2000')
+                    ] , "\n'")
 
+print('- students first and lasta name with age>25')
+print(college_df.loc[ (college_df.Age > 25) , 
+                        ['Last_Name','First_Name']
+                    ] , "\n")
+
+print('- students with grade A and graduate year > 2000')
+print(college_df.loc[ (college_df.Grade == 'A') 
+                        & (college_df.Graduate_Year > '2000') , 
+                        ['Last_Name','Grade','Graduate_Year']
+                    ], "\n")
+
+print("- students with Student_Id, first name, age, major, graduate year with the age > 20, the grade = A and graduate year 2021")
+print(college_df.loc[ (college_df.Age > 20) 
+                            & (college_df.Grade == 'A') 
+                                & (college_df.Graduate_Year == '2000') ,
+                       ['Student_ID','First_Name','Age','Major', 'Graduate_Year']     
+                    ] , "\n'")
 
 
 
