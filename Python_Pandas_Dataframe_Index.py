@@ -197,6 +197,10 @@ print('..... 4(a) loc() with conditions (single, multiple)')
 print('- students with major "Math"')
 print(college_df.loc[college_df.Major == 'Math',:], "\n")
 
+print('select student with age = 22')
+print(college_df.loc[college_df.Age == 22] , "\n" )
+print(college_df.loc[college_df.Age == 22 , : ] , "\n") # the output is the same with the previous line of code
+
 print('- students with grade = A')
 print( college_df.loc[college_df.Grade == 'A' , : ] , "\n" )
 
@@ -264,55 +268,34 @@ print(college_df.iloc[ list((college_df.Major == "Math")
                                 :3] , "\n")
 # columns from 0 to 3(excluded) for students with major in Math and Grade = A
 
+print('Student_ID for major in Math:')
 print(college_df.iloc[ list((college_df.Major == "Math") 
                                 &(college_df.Age > 18 )) , 
                                 0] , "\n")
-
-
-
-
-'''
-print(College_DF.loc[ ['Student_01','Student_02'] , : ] , "\n")
-print(College_DF.loc[:, list_columns_1] , "\n")
-print(College_DF.loc[ ['Student_01','Student_04'] , :] , "\n")
-print(College_DF.loc[ ['Student_01','Student_02'] , ['FirstName','LastName'] ] , "\n")
-print(College_DF.loc[ ['Student_01','Student_05'] , ['LastName','Age']] , "\n")
-
-# print(College_DF.loc[ ['Student_01','Student_03','Student_05'] ,
-#                        ['FirstName','Age','Major'] ] ) ??? Why an error???
+# column Student_ID for students with major in Math and Age>18
 
 
 
 
 
-print(College_DF.loc[list_rows_2 , list_columns_2] , "\n" )
-print(College_DF.loc[list_rows_3 , list_columns_3], "\n")
 
 
-print("  >>>  with iloc() methond")
-
-
-
-
-print(" 4) Selection via conditions ")
-print('select students with Student_ID > 10022 from college_df DataFrame')
-print(college_df.loc['Student_ID' > 10022])
-print()
-
-print(" >>> student_df  DataFrame : ")
-print(student_df , "\n" )
-
-print("retrive a single value with iloc() function from student_df DataFrame")
-print("with Student_ID = 10044 ")
-print(student_df.iloc['10044'])
 
 
 print("**************************************************************************")
+
 print()
 print(" 4) iloc() method") # retrieve values belonging to a row/column with a specific index
 # iloc() function accepts only integer types values as index values
+
+print("retrieve a single value with iloc() function")
+print("with the index 0 " , "\n")
+print(college_df.iloc[ 0] , "\n" )
+print(college_df.iloc[ 0 , :] , "\n" )
+
 print('>>> the initial dataframe "College_DF"')
 print(College_DF, "\n") 
+'''
 # the columns: FirstName, LastName, Age, Grade, GraduateYear
 # 5 rows, the index from 0 to 4
 print('select from 2nd (index 3) to 4th (index 5) rows')
