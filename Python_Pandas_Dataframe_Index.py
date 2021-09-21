@@ -193,7 +193,7 @@ print("***********************************************************************",
 print(' >>> 4) Selection via Conditions and Callables ' , "\n")
         # a) loc() with conditions (single, multiple)
         # b) iloc() with conditions (single, mulitple)
-print('         4(a) loc() with conditions (single, multiple)')
+print('..... 4(a) loc() with conditions (single, multiple)')
 print('- students with major "Math"')
 print(college_df.loc[college_df.Major == 'Math',:], "\n")
 
@@ -239,6 +239,12 @@ print(college_df.loc[ (college_df.Age > 20)
                                 & (college_df.Graduate_Year == '2000') ,
                        ['Student_ID','First_Name','Age','Major', 'Graduate_Year']     
                     ] , "\n'")
+
+print('..... 4(b) iloc() with conditions (single, multiple)')
+# print(college_df.iloc[college_df.Major == 'Math']) generates Error
+print(college_df.iloc[ list(college_df.Major == "Math")] , "\n")
+print(college_df.iloc[ list(college_df.Age > 25)])
+
 
 
 
