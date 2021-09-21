@@ -242,8 +242,31 @@ print(college_df.loc[ (college_df.Age > 20)
 
 print('..... 4(b) iloc() with conditions (single, multiple)')
 # print(college_df.iloc[college_df.Major == 'Math']) generates Error
-print(college_df.iloc[ list(college_df.Major == "Math")] , "\n")
-print(college_df.iloc[ list(college_df.Age > 25)])
+print(college_df.iloc[ list(college_df.Major == "Math")] , "\n") # all columns for students with the major in math
+print(college_df.iloc[ list(college_df.Major == "Math") , : 3] , "\n") # columns from 0 to 3(excluede) for students with the major in math
+print(college_df.iloc[ list(college_df.Major == "Math") , 3:] , "\n") # columns from 3 to then end for students with the major in math
+print(college_df.iloc[ list(college_df.Age > 18) , 2:5] , "\n" ) # columns from 2 to 5(excluded) for students with Age>18
+print(college_df.iloc[ list(college_df.Age > 18), :1] , "\n") #student ID for students with age>18
+
+
+print()
+print(">>>")
+print(college_df.iloc[ list(college_df.Age > 25)], "\n")
+print(college_df.iloc[ list(college_df.Grade == 'A')] , "\n")
+print()
+print('multiple conditions:')
+print(college_df.iloc[ list((college_df.Major == "Math") 
+                                &(college_df.Grade == 'A'))] , "\n")
+# all columns for students with major in Math and grade=A
+
+print(college_df.iloc[ list((college_df.Major == "Math") 
+                                &(college_df.Grade == 'A')) , 
+                                :3] , "\n")
+# columns from 0 to 3(excluded) for students with major in Math and Grade = A
+
+print(college_df.iloc[ list((college_df.Major == "Math") 
+                                &(college_df.Age > 18 )) , 
+                                0] , "\n")
 
 
 
