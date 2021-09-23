@@ -190,7 +190,7 @@ print(College_DF.loc[list_rows_1 , list_columns_1] , "\n")
 
 print("***********************************************************************", "\n")
 
-print(' >>> 4) Selection via Conditions and Callables ' , "\n")
+print(' >>> 4) Selection via Condition/d ' , "\n")
         # a) loc() with conditions (single, multiple)
         # b) iloc() with conditions (single, mulitple)
 print('..... 4(a) loc() with conditions (single, multiple)')
@@ -274,15 +274,17 @@ print(college_df.iloc[ list((college_df.Major == "Math")
                                 0] , "\n")
 # column Student_ID for students with major in Math and Age>18
 
-
-
-
-
-
-
-
-
 print("**************************************************************************")
+print(' >>> 5) Selection Data via Callables ' , "\n")
+print()
+print('     a) loc() and callable/function:', "\n")
+print(college_df.loc[ : , 
+                       lambda college_df :['Last_Name'] ], "\n")
+print(college_df.loc[ : , 
+                       lambda college_df :['Last_Name','First_Name','Graduate_Year'] ], "\n")
+
+
+
 
 print()
 print(" 4) iloc() method") # retrieve values belonging to a row/column with a specific index
