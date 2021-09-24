@@ -283,9 +283,16 @@ print(college_df.loc[ : ,
 print(college_df.loc[ : , 
                        lambda college_df :['Last_Name','First_Name','Graduate_Year'] ], "\n")
 
+print(College_DF.loc['Student_01':'Student_03'  , 
+                        lambda College_DF :['LastName','Age']] , "\n" )
 
+print(College_DF.loc['Student_01':'Student_04' ,
+                        lambda College_DF : ['FirstName','Grade','GraduateYear']] , "\n")
 
+print(College_DF.loc['Student_02': , 
+                        lambda College_DF : ['LastName':'Grade']] , "\n")
 
+'''
 print()
 print(" 4) iloc() method") # retrieve values belonging to a row/column with a specific index
 # iloc() function accepts only integer types values as index values
@@ -295,9 +302,17 @@ print("with the index 0 " , "\n")
 print(college_df.iloc[ 0] , "\n" )
 print(college_df.iloc[ 0 , :] , "\n" )
 
+
+print('>>> the initial dataframe "college_df"')
+print(college_df, "\n")
+
 print('>>> the initial dataframe "College_DF"')
-print(College_DF, "\n") 
-'''
+print(College_DF, "\n")
+
+
+
+
+
 # the columns: FirstName, LastName, Age, Grade, GraduateYear
 # 5 rows, the index from 0 to 4
 print('select from 2nd (index 3) to 4th (index 5) rows')
