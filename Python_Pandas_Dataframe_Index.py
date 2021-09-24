@@ -289,9 +289,20 @@ print(College_DF.loc['Student_01':'Student_03'  ,
 print(College_DF.loc['Student_01':'Student_04' ,
                         lambda College_DF : ['FirstName','Grade','GraduateYear']] , "\n")
 
-print(College_DF.loc['Student_02': , 
-                        lambda College_DF : ['LastName':'Grade']] , "\n")
+# print(College_DF.loc['Student_02': , 
+#                       lambda College_DF : ['LastName':'Grade']] , "\n") Error
 
+# print(College_DF.loc['Student_02': , 
+#                       lambda College_DF : ['LastName']] , "\n") Error
+
+print(College_DF.loc['Student_02': , 
+                      lambda College_DF : ['LastName','FirstName','GraduateYear']] , "\n") 
+
+print(College_DF.loc['Student_02': , 
+                      lambda College_DF : ['LastName','FirstName','GraduateYear']] , "\n") 
+
+print(College_DF.loc[ lambda College_DF :['Student_01','Student_02'] , 
+                      : ], "\n") 
 '''
 print()
 print(" 4) iloc() method") # retrieve values belonging to a row/column with a specific index
