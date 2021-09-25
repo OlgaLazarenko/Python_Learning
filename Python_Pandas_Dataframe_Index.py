@@ -319,8 +319,39 @@ print(College_DF.loc[ lambda College_DF : College_DF.GraduateYear > '2000' ,
 print(College_DF.loc[ lambda College_DF : College_DF.Grade == 'A' ,
                         :] , "\n")
 
-# print(College_DF.loc[ lambda College_DF :[ 'Student_04'] ,
-#                       ['LastName','FirsName','Grade']])
+print(College_DF.loc[ lambda College_DF : College_DF.LastName == 'ONeil' ,
+                        ['LastName','FirstName']] , "\n")
+
+print(College_DF.loc[ lambda College_DF :['Student_01', 'Student_03'] ,
+                                ['LastName','GraduateYear']], "\n")
+
+#print(College_DF.loc[ lambda College_DF : ['Student_01':'Student:04'] , 
+#                               ['LastName':'Grade']] , "\n") --> Invalid syntax
+
+print(College_DF.loc[ lambda College_DF : ['Student_01','Student_03','Student_05'] , 
+                                    : 'Age'] , "\n")
+
+# print(College_DF.loc[ lambda College_DF : [:'Student_02'] , :]) --> Invalid syntax
+
+# lambda for the rows:
+# print(College_DF.loc[ : , lambda College_DF : ['LastName':'Age'] ] , "\n") invalid syntax 
+print(College_DF.loc[ lambda College_DF : 'Student_01' , : ] , "\n")
+print(College_DF.loc[ lambda College_DF : ['Student_02','Student_04' ] ] , "\n")
+print(College_DF.loc[ lambda College_DF : ['Student_02','Student_04' ] , : ] , "\n")
+# print(College_DF.loc[ lambda College_DF : ['Student_02':'Student_04']] , "\n") --> Invalid syntax
+# print(College_DF.loc[ lambda College_DF : 'Grade'== 'A', : ]) --> Invalid syntax
+print(College_DF.loc[ lambda College_DF : College_DF.Grade == 'A' , : ] , "\n")
+print(College_DF.loc[ lambda College_DF : College_DF.LastName == 'Smith'] , "\n")
+print(College_DF.loc[ lambda College_DF : College_DF.LastName == 'Smith' , : ] , "\n") # the same as the previous code line
+print(College_DF.loc[ lambda College_DF : College_DF.Age > '18', 'LastName'] , "\n")
+print(College_DF.loc[ lambda College_DF : College_DF.Age > '18', ['LastName','FirstName','Age'] ] , "\n")
+
+# lambda for the column:
+print(College_DF.loc[ : , lambda College_DF : 'Grade'] , "\n"  )
+print(College_DF.loc[ : , lambda College_DF : ['LastName','GraduateYear'] ] , "\n")
+print(College_DF.loc[ : , lambda College_DF : 'FirstName'] , "\n") # first name of all student
+print(College_DF.loc[ 'Student_02' , lambda College_DF:'GraduateYear'] , "\n") # graduate year for the student with index Student_02
+print(College_DF.loc['Student_02' , lambda College_DF : ['FirstName','Age'] , "\n"])
 
 '''
 print()
