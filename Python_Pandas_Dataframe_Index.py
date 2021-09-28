@@ -334,6 +334,7 @@ print(College_DF.loc[ lambda College_DF : ['Student_01','Student_03','Student_05
 # print(College_DF.loc[ lambda College_DF : [:'Student_02'] , :]) --> Invalid syntax
 
 # lambda for the rows:
+print("lambda for the rows:--------------------")
 # print(College_DF.loc[ : , lambda College_DF : ['LastName':'Age'] ] , "\n") invalid syntax 
 print(College_DF.loc[ lambda College_DF : 'Student_01' , : ] , "\n")
 print(College_DF.loc[ lambda College_DF : ['Student_02','Student_04' ] ] , "\n")
@@ -347,11 +348,17 @@ print(College_DF.loc[ lambda College_DF : College_DF.Age > '18', 'LastName'] , "
 print(College_DF.loc[ lambda College_DF : College_DF.Age > '18', ['LastName','FirstName','Age'] ] , "\n")
 
 # lambda for the column:
+print("lambda for the column: ---------------------")
+print("index for the students for all values of the column 'Grade' : ")
 print(College_DF.loc[ : , lambda College_DF : 'Grade'] , "\n"  )
 print(College_DF.loc[ : , lambda College_DF : ['LastName','GraduateYear'] ] , "\n")
+print("First name of all students:")
 print(College_DF.loc[ : , lambda College_DF : 'FirstName'] , "\n") # first name of all student
+print("Graduate year for the student with Student_02 :")
 print(College_DF.loc[ 'Student_02' , lambda College_DF:'GraduateYear'] , "\n") # graduate year for the student with index Student_02
-print(College_DF.loc['Student_02' , lambda College_DF : ['FirstName','Age'] , "\n"])
+# print(College_DF.loc['Student_02' , lambda College_DF : ['FirstName','Age'] , "\n"]) --> Indexing Error / too many indexers
+
+
 
 '''
 print()
