@@ -277,7 +277,7 @@ print(college_df.iloc[ list((college_df.Major == "Math")
 print("**************************************************************************")
 print(' >>> 5) Selection Data via Callables ' , "\n")
 print()
-print('     a) loc() and callable/function:', "\n")
+print('     5.a) loc() and callable/function:', "\n")
 print(college_df.loc[ : , 
                        lambda college_df :['Last_Name'] ], "\n")
 print(college_df.loc[ : , 
@@ -358,8 +358,20 @@ print("Graduate year for the student with Student_02 :")
 print(College_DF.loc[ 'Student_02' , lambda College_DF:'GraduateYear'] , "\n") # graduate year for the student with index Student_02
 # print(College_DF.loc['Student_02' , lambda College_DF : ['FirstName','Age'] , "\n"]) --> Indexing Error / too many indexers
 
+print("      **********************************************************************")
+print()
+print('     5.b) iloc() and callable/function:', "\n")
+print("- First and last name of the students with index 2 and 3 ( the indexes start with 0')")
+print(College_DF.iloc[ lambda College_DF :[2,3] , : ] , "\n")
 
+print ("- All columns for the last student/with index 4:")
+print(College_DF.iloc[ lambda College_DF : [4] , :] , "\n")
 
+print('- All columns for the students with age>30 :')
+print(College_DF.iloc[ lambda College_DF : list(College_DF.Age > '30') , : ] , "\n")
+
+print('- Students with the grade F')
+print(College_DF.iloc[ lambda College_DF : list(College_DF.Grade == 'F'), : ] , "\n")
 '''
 print()
 print(" 4) iloc() method") # retrieve values belonging to a row/column with a specific index
