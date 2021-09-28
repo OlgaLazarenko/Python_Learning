@@ -84,8 +84,8 @@ Types of indexing (indexers):
 4) -[x] selecting data via conditions and callable
         a) -[x] loc() with conditions (single, multiple)
         b) - [x] iloc() with conditions (single, mulitple)
-5) -[] selecting data via callable/function
-        a) - [] loc() with callable/s
+5) -[x] selecting data via callable/function
+        a) - [x] loc() with callable/s
         b) - [] iloc() with callable/s
         
 6) -[] dataframe .ix[] => ix[] indexer => both: labels/names and position/integer
