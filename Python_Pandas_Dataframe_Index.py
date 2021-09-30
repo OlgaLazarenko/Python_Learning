@@ -190,7 +190,7 @@ print(College_DF.loc[list_rows_1 , list_columns_1] , "\n")
 
 print("***********************************************************************", "\n")
 
-print(' >>> 4) Selection via Condition/d ' , "\n")
+print(' >>> 4) Selection via Condition/ ' , "\n")
         # a) loc() with conditions (single, multiple)
         # b) iloc() with conditions (single, mulitple)
 print('..... 4(a) loc() with conditions (single, multiple)')
@@ -372,15 +372,38 @@ print(College_DF.iloc[ lambda College_DF : list(College_DF.Age > '30') , : ] , "
 
 print('- Students with the grade F')
 print(College_DF.iloc[ lambda College_DF : list(College_DF.Grade == 'F'), : ] , "\n")
+
+print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+print("Section: Index", "\n")
+student_dict = {
+                'Student_ID': [10011,10022,10033,10044,10055] ,
+                'Last_Name': ['Stephenson' , 'Pizaro' , 'Kim' , 'Williams' , 'Hua'] ,
+                'First_Name': ['Grace', 'Maria', 'Lola', 'John' , 'Sofia'] ,
+                'Age' : [22,30,27,19,45] ,
+                'Grade' : ['B-','C','A','A','B'] , 
+                'Graduate_Year' :[ '2021','2022','2000','2021','2021'] , 
+                'Major' : ['Biology','Math','Art','Math','History']
+               }
+
+
+
+# create a DataFrame <student_info> with the default index column
+student_info = pd.DataFrame(student_dict)
+print("Data Frame <student_info> with the defaul index: ")
+print(student_info , "\n")
+
+# create a Data Frame <student_info2> and assign the column Student_ID as the index
+student_info2 = pd.DataFrame(student_dict , set_index = "Student_ID" )
+print("Data Frame <student_info2> with Student_ID columns as index: ")
+print(student_info2)
+
+
 '''
 print()
 print(" 4) iloc() method") # retrieve values belonging to a row/column with a specific index
 # iloc() function accepts only integer types values as index values
 
-print("retrieve a single value with iloc() function")
-print("with the index 0 " , "\n")
-print(college_df.iloc[ 0] , "\n" )
-print(college_df.iloc[ 0 , :] , "\n" )
+
 
 
 print('>>> the initial dataframe "college_df"')
