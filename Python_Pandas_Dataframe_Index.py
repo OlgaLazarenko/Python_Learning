@@ -427,6 +427,16 @@ print(' * set index using a list and a column')
 student_info7 = pd.DataFrame(student_info)
 student_info7.set_index([my_index, 'Student_ID'] , inplace = True)
 print(student_info7 , "\n")
+print()
+
+print(" * set index using Python series")
+s1 = pd.Series(['a','b','c','d','e'])
+s2 = pd.Series(['A','B','C','D','E'])
+s3 = pd.Series([10,20,30,40,50])
+student_info8 = pd.DataFrame(student_info)
+student_info8.set_index([s1,s2,s3] , inplace = True)
+print(student_info8 , "\n")
+
 
 
 
