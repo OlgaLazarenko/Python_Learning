@@ -389,14 +389,31 @@ student_dict = {
 
 # create a DataFrame <student_info> with the default index column
 student_info = pd.DataFrame(student_dict)
-print("Data Frame <student_info> with the defaul index: ")
+print(" * Data Frame <student_info> with the defaul index: ")
 print(student_info , "\n")
 
 # create a Data Frame <student_info2> and assign the column Student_ID as the index
-student_info2 = pd.DataFrame(student_dict , set_index = "Student_ID" )
-print("Data Frame <student_info2> with Student_ID columns as index: ")
-print(student_info2)
+student_info2 = pd.DataFrame(student_dict)
+student_info2.set_index('Student_ID', inplace = True)
+print(" * Data Frame <student_info2> with Student_ID columns as index: ")
+print(student_info2 , "\n")
 
+print(" * Data Frame <student_info3> with Last_Name columns as index: ")
+student_info3 = pd.DataFrame(student_dict)
+student_info3.set_index('Last_Name' , inplace = True)
+print(student_info3, "\n")
+
+print(' * Multiple columns as index')
+student_info4 = pd.DataFrame(student_dict)
+student_info4.set_index(['Last_Name','First_Name'] , inplace = True)
+print(student_info4 , "\n")
+print()
+
+my_index = ['index0','index1','index2','index3', 'index4']
+new_index = pd.Index(my_index)
+student_info5 = pd.DataFrame(student_info)
+student_info5.set_index(new_index , inplace = True)
+print(student_info5 , "\n")
 
 '''
 print()
