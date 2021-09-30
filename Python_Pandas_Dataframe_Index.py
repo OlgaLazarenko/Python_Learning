@@ -408,12 +408,27 @@ student_info4 = pd.DataFrame(student_dict)
 student_info4.set_index(['Last_Name','First_Name'] , inplace = True)
 print(student_info4 , "\n")
 print()
-
-my_index = ['index0','index1','index2','index3', 'index4']
-new_index = pd.Index(my_index)
-student_info5 = pd.DataFrame(student_info)
-student_info5.set_index(new_index , inplace = True)
+student_info5 = pd.DataFrame(student_dict)
+student_info5.set_index(['Student_ID','Last_Name'] , inplace = True)
 print(student_info5 , "\n")
+print()
+
+print(' * set index using a list:')
+my_index = ['index0','index1','index2','index3', 'index4']
+print('list:')
+print(my_index , "\n")
+new_index = pd.Index(my_index)
+student_info6 = pd.DataFrame(student_info)
+student_info6.set_index(new_index , inplace = True)
+print(student_info6 , "\n")
+print()
+
+print(' * set index using a list and a column')
+student_info7 = pd.DataFrame(student_info)
+student_info7.set_index([my_index, 'Student_ID'] , inplace = True)
+print(student_info7 , "\n")
+
+
 
 '''
 print()
