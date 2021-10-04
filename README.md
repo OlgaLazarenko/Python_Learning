@@ -24,9 +24,59 @@ Each part has its own list of goals.
 
 
 ### DataFrame
-## Section: DataFrame functions
+## Section: DataFrame functions/
+
+# *** Create a new job for Python Pandas "General Functions"
+# Data manipulations
 - [] access a single value in a data frame or series using a row/column label pair / pandas.DataFrame.at()
 - [] access a group of rows and columns by label(s) / pandas.DataFrame.loc()
+- [] melt
+- [] pivot
+- [] pivot_table
+- [] crosstab
+- [] cut
+- [] qcut
+- [] merge(left, right[, how, on, left_on])
+- [] merge_ordered (left, right[,on, left_on])
+- [] merge_asof
+- [] concat
+- [] get_dummies
+- [] factorize
+- [] unique
+# Top-level missing data
+- [] isna()
+- [] isnull()
+- [] notna()
+- [] notnull()
+
+# Top-level conversions
+- [] to-numeric()
+
+# Top-level dealing with datetimelike
+- [] to_datetiem()
+- [] to_timedalta()
+- [] date_range()
+- [] bdate_range()
+- [] period_range()
+- [] timedelta_range()
+- [] inter_freq()
+
+# Top-level dealinign with intervals
+- [] interval_range()
+
+# Top-level evaluation
+- [] eval()
+
+# Hashing ?
+- [] util.hash_array()
+- [] util.hash_pandas_object()
+
+# Testing
+- [] test()
+
+# *** Create a new job for Pathon Pandas "DataFrame Functions" / most common
+
+
 
 ## Section: Python_Numpy
 - [] plot the data from .csv file (single graph)
@@ -86,17 +136,17 @@ Types of indexing (indexers):
         b) - [x] iloc() with conditions (single, mulitple)
 5) -[x] selecting data via callable/function
         a) - [x] loc() with callable/s
-        b) - [] iloc() with callable/s
+        b) - [x] iloc() with callable/s
         
 6) -[] dataframe .ix[] => ix[] indexer => both: labels/names and position/integer
 
 7) -[] retrieve data using list of labels
         a) loc()
         b) iloc()
-## Section: Index Colulmn
-- [] default index column
-- [] set a colulmn as index for DataFrame
-- [] set MultiIndex
+## Section: Index 
+- [x] default index 
+- [x] set a column as index
+- [x] set multi-index
 - [] drop index column
 
 
